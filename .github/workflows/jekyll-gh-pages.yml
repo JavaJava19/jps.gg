@@ -93,13 +93,13 @@ jobs:
               filePath="${filePath}\n${files[i]}"
             fi
           done
-          echo -e "commit_files="${filePath} >> $GITHUB_ENV
+          echo -e "commit_files="${${filePath}/ /\n/} >> $GITHUB_ENV
       - name: commit
         id: commit
         uses: yui-Kitamura/commit@2.0.1
         with:
           files: |
-            $commit_files
+            ${{env.commit_files}}
           commit-message: build jar file by GitHubAction(jekyll-gh-pages.yml) [skip ci]
           ref: refs/heads/${{steps.add.outputs.tgtBranch}}
         env:
