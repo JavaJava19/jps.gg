@@ -60,13 +60,6 @@ jobs:
         with:
           name: github-pages
           path: _site
-      - name: echo-dl-path
-        run: |
-          cd ${{steps.download.outputs.download-path}}
-          ls -R -l -h
-          tar xvf artifact.tar
-          cd ${{steps.download.outputs.download-path}}/./
-          ls -R -l -h
 
       - uses: actions/checkout@v3
       - name: git setting
@@ -83,13 +76,14 @@ jobs:
         id: add
         shell: bash
         run: |
-          cd ${{steps.download.outputs.download-path}}
-          cd ../
+          tar xvf artifact.tar
+          cd ${{steps.download.outputs.download-path}}/./
           ls -R -l -h
-          
           
           git add $(find)
           files=$(find)
+          echo "-------"
+          echo -e files
 
           for ((i=0; i<${#files[@]}; i++)); do
             if [ $i -eq 0 ]
