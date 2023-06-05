@@ -83,25 +83,26 @@ jobs:
         id: add
         shell: bash
         run: |
+          cd /home/runner/work/jps.gg/jps.gg/_site/./
           git add $(find)
           files=$(find)
 
           for ((i=0; i<${#files[@]}; i++)); do
             if [ $i -eq 0 ]
             then
-              filePath=${files[0]##*.\\/}
+              filePath=${files[0]}
             else
-              filePath="${filePath}\n${files[i]##*.\\/}"
+              filePath="${filePath}\n${files[i]}"
             fi
           done
-          echo "filePath="${filePath}
+          echo -e "filePath="${filePath}
           echo -e "file="${filePath} >> $GITHUB_OUTPUT
       - name: commit
         id: commit
         uses: yui-Kitamura/commit@2.0.1
         with:
           files: |
-            ${{steps.add.outputs.file}}
+            echo -e ${{steps.add.outputs.file}}
           commit-message: build jar file by GitHubAction(jekyll-gh-pages.yml) [skip ci]
           ref: refs/heads/${{steps.add.outputs.tgtBranch}}
         env:
