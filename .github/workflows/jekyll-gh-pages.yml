@@ -83,7 +83,11 @@ jobs:
         id: add
         shell: bash
         run: |
-          cd ${{steps.download.outputs.download-path}}/./
+          cd ${{steps.download.outputs.download-path}}
+          cd ../
+          ls -R -l -h
+          
+          
           git add $(find)
           files=$(find)
 
