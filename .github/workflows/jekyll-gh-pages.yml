@@ -64,8 +64,9 @@ jobs:
         run: |
           cd ${{steps.download.outputs.download-path}}
           ls -R -l -h
-          cd ${{steps.download.outputs.download-path}}/artifact.tar/./
-          dir
+          tar xvf articact.tar
+          cd ${{steps.download.outputs.download-path}}/./
+          ls -R -l -h
 
       - uses: actions/checkout@v3
       - name: git setting
