@@ -81,7 +81,7 @@ jobs:
           ls -R -l -h
           
           git add $(find)
-          files=${ls -l -h}
+          files=$(ls -l -h)
           echo "-------"
           echo -e files
 
