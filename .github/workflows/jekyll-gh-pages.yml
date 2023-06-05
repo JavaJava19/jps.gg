@@ -105,7 +105,11 @@ jobs:
           ref: refs/heads/${{steps.add.outputs.tgtBranch}}
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
-
+  # FTP job
+  transferWithFTP:
+    runs-on: ubuntu-latest
+    needs: commitDeploymentSource
+    steps:
       - name: Sync files FTP
         id: ftp_sync
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
