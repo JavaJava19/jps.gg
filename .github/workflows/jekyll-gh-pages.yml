@@ -76,6 +76,7 @@ jobs:
         id: add
         shell: bash
         run: |
+          cd ${{steps.download.outputs.download-path}}
           tar xvf artifact.tar
           cd ${{steps.download.outputs.download-path}}/./
           ls -R -l -h
