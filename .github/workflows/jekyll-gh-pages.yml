@@ -82,12 +82,11 @@ jobs:
             then
               filePath=${files[0]##*.\\/}
             else
-              filePath="${filePath}
-              ${files[i]##*.\\/}"
+              filePath="${filePath}\n${files[i]##*.\\/}"
             fi
           done
           echo "filePath="${filePath}
-          echo "file="${filePath} >> $GITHUB_OUTPUT
+          echo -e "file="${filePath} >> $GITHUB_OUTPUT
       - name: commit
         id: commit
         uses: yui-Kitamura/commit@2.0.1
