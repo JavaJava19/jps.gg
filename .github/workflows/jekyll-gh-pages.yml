@@ -99,7 +99,7 @@ jobs:
         uses: yui-Kitamura/commit@2.0.1
         with:
           files: |
-            ${{env.commit_files}}
+            "${{env.commit_files}}"
           commit-message: build jar file by GitHubAction(jekyll-gh-pages.yml) [skip ci]
           ref: refs/heads/${{steps.add.outputs.tgtBranch}}
         env:
