@@ -50,6 +50,7 @@ jobs:
         uses: actions/deploy-pages@v2
 
       - name: DL artifact
+        id: download
         uses: actions/download-artifact@v3
         with:
           name: github-pages
