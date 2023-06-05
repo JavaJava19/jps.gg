@@ -58,6 +58,7 @@ jobs:
         run: ls -R -l -h
         working-directory: ${{steps.download.outputs.download-path}}
 
+      - uses: actions/checkout@v3
       - name: git setting
         run: |
           git config --local user.email "jekyll-gh-pages.yml@workflow.javajava19.github.io"
