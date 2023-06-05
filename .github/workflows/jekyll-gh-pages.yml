@@ -5,7 +5,6 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["release"]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -33,7 +32,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./website
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
@@ -49,3 +48,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+      - name: Sync files FTP
+        id: ftp_sync
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: jps.gg
+          username: ${{ secrets.ftp_user }}
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./_site/
