@@ -93,19 +93,17 @@ jobs:
               filePath="${filePath}\n${files[i]}"
             fi
           done
-          echo -e "file="${filePath} >> $GITHUB_OUTPUT
-          echo -e ${file}
+          echo -e "commit_files="${filePath} >> $GITHUB_ENV
       - name: commit
         id: commit
         uses: yui-Kitamura/commit@2.0.1
         with:
           files: |
-            ${{ env.FILES }}
+            $commit_files
           commit-message: build jar file by GitHubAction(jekyll-gh-pages.yml) [skip ci]
           ref: refs/heads/${{steps.add.outputs.tgtBranch}}
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
-          FILES: ${${{steps.add.outputs.file}}// /\n/}
   # FTP job
   transferWithFTP:
     runs-on: ubuntu-latest
