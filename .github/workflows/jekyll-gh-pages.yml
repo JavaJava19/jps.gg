@@ -93,7 +93,7 @@ jobs:
               filePath="${filePath}\n${files[i]}"
             fi
           done
-          echo -e "commit_files=$(echo -e ${${filePath}/ /\n/})" >> $GITHUB_ENV
+          echo -e "commit_files=$(echo -e ${filePath/ /\n/})" >> $GITHUB_ENV
       - name: commit
         id: commit
         uses: yui-Kitamura/commit@2.0.1
