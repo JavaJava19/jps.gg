@@ -1,0 +1,14 @@
+# Error Page Change
+ErrorDocument 404 /index.html
+
+RewriteEngine on
+RewriteRule ^(?!index\.html$).*\.html /index.html [L,R=302]
+
+<Files ~ "^\.json$">
+Header set Pragma no-cache
+Header set Cache-Control no-cache
+</Files>
+
+# AccessControl IP/HOST
+order allow,deny
+allow from all
