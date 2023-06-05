@@ -100,11 +100,12 @@ jobs:
         uses: yui-Kitamura/commit@2.0.1
         with:
           files: |
-            ${${{steps.add.outputs.file}}// /\n/}
+            ${{ env.FILES }}
           commit-message: build jar file by GitHubAction(jekyll-gh-pages.yml) [skip ci]
           ref: refs/heads/${{steps.add.outputs.tgtBranch}}
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+          FILES: ${${{steps.add.outputs.file}}// /\n/}
   # FTP job
   transferWithFTP:
     runs-on: ubuntu-latest
