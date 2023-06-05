@@ -83,7 +83,7 @@ jobs:
         id: add
         shell: bash
         run: |
-          cd /home/runner/work/jps.gg/jps.gg/_site/./
+          cd ${{steps.download.outputs.download-path}}/./
           git add $(find)
           files=$(find)
 
