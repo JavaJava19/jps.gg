@@ -93,14 +93,14 @@ jobs:
               filePath="${filePath}\n${files[i]}"
             fi
           done
-          echo -e "filePath="${filePath}
           echo -e "file="${filePath} >> $GITHUB_OUTPUT
+          echo -e ${file}
       - name: commit
         id: commit
         uses: yui-Kitamura/commit@2.0.1
         with:
           files: |
-            echo -e ${{steps.add.outputs.file}}
+            ${{steps.add.outputs.file}}
           commit-message: build jar file by GitHubAction(jekyll-gh-pages.yml) [skip ci]
           ref: refs/heads/${{steps.add.outputs.tgtBranch}}
         env:
