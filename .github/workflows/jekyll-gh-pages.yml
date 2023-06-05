@@ -64,7 +64,7 @@ jobs:
         run: |
           cd ${{steps.download.outputs.download-path}}
           ls -R -l -h
-          tar xvf articact.tar
+          tar xvf artifact.tar
           cd ${{steps.download.outputs.download-path}}/./
           ls -R -l -h
 
