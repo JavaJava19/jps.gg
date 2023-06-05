@@ -83,7 +83,7 @@ jobs:
             then
               filePath=${files[0]##*${repoName}/}
             else
-              filePath="${filePath} ${files[$i]}"
+              filePath="${filePath}\n${files[$i]}"
             fi
           done
           echo "filePath="${filePath}
