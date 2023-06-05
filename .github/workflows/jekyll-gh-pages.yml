@@ -74,18 +74,16 @@ jobs:
         id: add
         shell: bash
         run: |
-          git add $(find ${{steps.download.outputs.download-path}})
-          files=$(find ${{steps.download.outputs.download-path}})
-          
-          repoFull=${{github.repository}}
-          repoName=${repoFull#${{github.repository_owner}}/}
+          git add $(find)
+          files=$(find)
+
           for ((i=0; i<${#files[@]}; i++)); do
             if [ $i -eq 0 ]
             then
-              filePath=${files[0]##*${repoName}/}
+              filePath=${files[0]##*.\\/}
             else
               filePath="${filePath}
-              ${files[$i]}"
+              ${files[i]##*.\\/}"
             fi
           done
           echo "filePath="${filePath}
