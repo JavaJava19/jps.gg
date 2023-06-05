@@ -52,7 +52,7 @@ jobs:
       - name: DL artifact
         uses: actions/download-artifact@v3
         with:
-          name: 'site'
+          name: github-pages
           path: _site
       - name: echo-dl-path
         run: ls -R -l -h
