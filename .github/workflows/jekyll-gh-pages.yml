@@ -50,7 +50,7 @@ jobs:
         uses: actions/deploy-pages@v2
         
   # Deployment to jps.gg orign
-  deployJpsGG_FTP:
+  commitDeploymentSource:
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -62,10 +62,10 @@ jobs:
           path: _site
       - name: echo-dl-path
         run: |
+          cd ${{steps.download.outputs.download-path}}
           ls -R -l -h
-          cd ${{steps.download.outputs.download-path}}\.\
+          cd ${{steps.download.outputs.download-path}}/artifact.tar/./
           dir
-        working-directory: ${{steps.download.outputs.download-path}}
 
       - uses: actions/checkout@v3
       - name: git setting
