@@ -48,6 +48,56 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+
+      - name: DL artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: 'site'
+          path: _site
+      - name: echo-dl-path
+        run: ls -R -l -h
+        working-directory: ${{steps.download.outputs.download-path}}
+
+      - name: git setting
+        run: |
+          git config --local user.email "jekyll-gh-pages.yml@workflow.javajava19.github.io"
+          git config --local user.name "GitHub Action"
+      - name: Get github token
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.SECRET }}
+      - name: add
+        id: add
+        shell: bash
+        run: |
+          git add $(find ${{steps.download.outputs.download-path}})
+          files=$(find ${{steps.download.outputs.download-path}})
+          
+          repoFull=${{github.repository}}
+          repoName=${repoFull#${{github.repository_owner}}/}
+          for ((i=0; i<${#files[@]}; i++)); do
+            if [ $i -eq 0 ]
+            then
+              filePath=${files[0]##*${repoName}/}
+            else
+              filePath="${filePath} ${files[$i]}"
+            fi
+          done
+          echo "filePath="${filePath}
+          echo "file="${filePath} >> $GITHUB_OUTPUT
+      - name: commit
+        id: commit
+        uses: yui-Kitamura/commit@2.0.1
+        with:
+          files: |
+            ${{steps.add.outputs.file}}
+          commit-message: build jar file by GitHubAction(jekyll-gh-pages.yml) [skip ci]
+          ref: refs/heads/${{steps.add.outputs.tgtBranch}}
+        env:
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+
       - name: Sync files FTP
         id: ftp_sync
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
