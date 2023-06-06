@@ -68,7 +68,13 @@ jobs:
           tar xvf artifact.tar
           cd ${{steps.download.outputs.download-path}}/./
           ls -R -l -h
-          
+      
+      - name: log
+        shell: bash
+        run: |
+          cd ${{steps.download.outputs.download-path}}/./
+          ls -R
+
       - name: Sync files FTP
         id: ftp_sync
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
