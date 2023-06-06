@@ -48,7 +48,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        
+
   # Deployment to jps.gg orign
   commitDeploymentSource:
     runs-on: ubuntu-latest
