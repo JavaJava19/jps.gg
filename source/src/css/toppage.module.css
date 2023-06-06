@@ -1,0 +1,195 @@
+@import url(https://fonts.googleapis.com/css?family=Sawarabi+Gothic);
+
+.SlideField{
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.Slider{
+    width: 100%;
+    height: 100vh;
+}
+
+.SlideImage{
+    width: 100%;
+    height: 100vh;
+}
+
+.Content{
+    width: 100%;
+}
+
+.WelcomePop{
+    width: 30%;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    color: white;
+    padding-top: 20px;
+
+}
+
+.WelcomeTitle{
+    font-size: 35px;
+    font-weight: 700;
+    margin: -3px;
+}
+
+.IP{
+    color: greenyellow;
+    margin-top: 31px;
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+.IP:hover{
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.Status{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Status img{
+    position: absolute;
+    top: 67%;
+    left: 22%;
+}
+
+.MOTD{
+    position: absolute;
+    top: 63%;
+    left: 37%;
+}
+
+.Copy{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.onlineStatus{
+    position: absolute;
+    top: 78%;
+    left: 37%;
+}
+
+.PlayerNum{
+    position: absolute;
+    top: 78%;
+    left: 55.5%;
+}
+
+.TopForumField{
+    width: 100%;
+    height: auto;
+    background-color:  rgb(210, 228, 245);
+    font-family: "Sawarabi Gothic";
+
+}
+
+.ForumInfo{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ForumInfoTitleLine{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-top: 1px solid rgb(214, 214, 214);
+    border-left: 1px solid rgb(214, 214, 214);
+    border-right: 1px solid rgb(214, 214, 214);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: rgb(238, 234, 234);
+    box-shadow: 0px 0px 8px -5px #777777;
+    padding: 10px;
+}
+
+.ForumTitle{
+}
+
+.ForumContribute{
+    font-size: 12px;
+    display: block;
+    text-align: left;
+    padding: 10px;
+}
+
+.ForumDate{
+    font-size: 8px;
+
+}
+
+.ForumContentBox{
+    margin-top: -30px;
+    border: 1px solid  rgb(214, 214, 214);
+    box-shadow: 0px 2px 8px -5px #777777;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.ForumContent{
+    padding: 40px;
+    white-space: pre-wrap;
+    font-size: 14px;
+
+}
+
+.ContentImage{
+    width: 64px;
+    height: 64px;
+    margin-top: 20px;
+    transition: all 0.2s ease;
+}
+
+.ContentImage:hover{
+    cursor: pointer;
+    width: 76px;
+    height: 76px;
+}
+
+.TopForum{
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    margin: 0 auto;
+    border-left: 1px solid rgb(192, 192, 192);
+    border-right: 1px solid rgb(192, 192, 192);
+}
+.ForumLinkBox{
+    margin-top: 2px;
+}
+
+.ForumLink{
+    text-decoration: none;
+    color: #0429cf;
+    transition: all .1s ease;
+}
+
+.ForumLink:hover{
+    text-decoration: none;
+    color: #7c8dd6;
+}
+
+.SkinImage{
+    width: 80%;
+    height: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

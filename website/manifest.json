@@ -1,6 +1,6 @@
 {
-  "short_name": "JapanPVPServer",
-  "name": "JapanPVPServer公式ホームページです",
+  "short_name": "JapanPvPServer",
+  "name": "JapanPvPServer公式ホームページです",
   "icons": [],
   "start_url": ".",
   "display": "standalone",
