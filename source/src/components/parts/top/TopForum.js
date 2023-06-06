@@ -18,15 +18,6 @@ const TopForum = () => {
             skin: "https://api.mineskin.org/render/head?url=http://textures.minecraft.net/texture/d9b592967ff2e3abcab86b592119f2a4cae2764479b0cbe473b70f1aa9ba4e8",
             content: "この度Youtubeチャンネル登録者が1000人を超えました！\nみなさんのご協力のおかげです！本当にありがとうございます！\nこれからもJPSをよろしくお願いします！"
         },
-        {
-            title: "クラウドファンディング開始",
-            date: "2023-05-15-0:31",
-            contribute: "Kaogon",
-            image: "./upload/1684225243812-hb6hhm.png",
-            skin: "https://api.mineskin.org/render/head?url=http://textures.minecraft.net/texture/d9b592967ff2e3abcab86b592119f2a4cae2764479b0cbe473b70f1aa9ba4e8",
-            link: "",
-            content: "この度さらなるサーバーの強化のためにクラウドファンディングを開始しました！\nサーバーがラグいなどの問題を解決するにはパーツを追加、交換が必要になります\nそのための資金が必要なのでどうかご協力お願いいたします！"
-        },
     ]
     return (
         <div className={style.TopForum}>
