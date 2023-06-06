@@ -6,7 +6,7 @@ import {
 import GameParts from '../parts/game/GameParts'
 
 const Games = () => {
-
+// --- ゲーム追加時はここに追加 ---
   const data = [
     {
       name: 'CatchTheWool',
