@@ -1,0 +1,29 @@
+.FooterField{
+    width: 100%;
+    height: 140px;
+    background-color: rgb(46, 44, 44);
+    color: white;
+    padding-bottom: 10px;
+}
+
+.FooterLinkBox{
+    display: flex;
+    justify-content: center;
+}
+
+.FooterLink{
+    margin: 20px;
+    transition: all .2s ease;
+    font-size: 35px;
+}
+
+.FooterLink:hover{
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.CopyRight{
+    font-size: 12px;
+    color: white;
+    text-align: center;
+}

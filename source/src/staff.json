@@ -1,0 +1,93 @@
+[
+    {
+        "mcid" : "az_aka",
+        "name" : "あか",
+        "skin" : "https://api.mineskin.org/render/skin?url=https://minotar.net/skin/az_aka",
+        "post" : "Admin",
+        "twitter" : "https://twitter.com/az_aka_az",
+        "youtube": "",
+        "web" : "",
+        "blog": "",
+        "message" : "味噌カツ丼週８食えます"
+    },
+    {
+        "mcid" : "az__ao",
+        "name" : "あお",
+        "skin" : "https://api.mineskin.org/render/skin?url=https://minotar.net/skin/az__ao",
+        "post" : "Admin",
+        "twitter" : "https://twitter.com/az_ao_az",
+        "youtube": "",
+        "web" : "",
+        "blog": "",
+        "message" : "プレイヤーをキルする時は毎度心が痛みます。"
+    },
+    {
+        "mcid" : "hw127",
+        "name" : "howard127",
+        "skin" : "https://api.mineskin.org/render/skin?url=https://minotar.net/skin/hw127",
+        "post" : "Developer",
+        "twitter" : "https://twitter.com/howard127_",
+        "youtube" : "",
+        "web" : "",
+        "blog": "",
+        "message" : "たくさんラーメンを食べる"
+    },
+    {
+        "mcid" : "gray27",
+        "name" : "灰猫",
+        "skin" : "https://api.mineskin.org/render/skin?url=https://minotar.net/skin/gray27",
+        "post" : "Developer",
+        "twitter" : "https://twitter.com/gray_cat27",
+        "youtube" : "https://youtube.com/@graycat27",
+        "web" : "https://yui.eng.pro/private",
+        "blog": "https://yuiktmr.blog/",
+        "webIcon": "https://yui.eng.pro/favicon.ico",
+        "blogIcon": "https://yuiktmr.blog/blog/common/yui_blog.png",
+        "message" : "本職Javaエンジニアの趣味マイクラJavaエンジニアリング勢"
+    },
+    {
+        "mcid" : "Kaogon",
+        "name" : "かおごん",
+        "skin" : "https://api.mineskin.org/render/skin?url=https://minotar.net/skin/Kaogon",
+        "post" : "Developer",
+        "twitter" : "https://twitter.com/Kaogon8",
+        "youtube" : "https://www.youtube.com/channel/UCNs8JHN4jLMkMjWbuxIjvNg",
+        "web" : "",
+        "blog": "",
+        "message" : "プラグイン作ってます！おっさんです！よろしくです！！"
+    },
+    {
+        "mcid" : "claw0422",
+        "name" : "クロウ",
+        "skin" : "https://api.mineskin.org/render/skin?url=https://minotar.net/skin/claw0422",
+        "post" : "Builder",
+        "twitter" : "",
+        "youtube" : "",
+        "web" : "",
+        "blog": "",
+        "message" : "ただひたすらに建築をがんばります!よろしくお願いしまーす"
+    },
+    {
+        "mcid" : "ThreeStraw",
+        "name" : "スリーストロー",
+        "skin" : "https://api.mineskin.org/render/skin?url=https://minotar.net/skin/ThreeStraw",
+        "post" : "Moderator",
+        "twitter" : "https://twitter.com/ThreeStrawJPS",
+        "youtube" : "",
+        "web" : "",
+        "blog": "",
+        "message" : "ささみはおいしい"
+    },
+    {
+        "mcid" : "deceitya",
+        "name" : "でせいちゃ",
+        "skin" : "https://api.mineskin.org/render/skin?url=https://minotar.net/skin/deceitya",
+        "post" : "Helper",
+        "twitter" : "https://twitter.com/deceitya",
+        "youtube" : "",
+        "web" : "",
+        "blog": "",
+        "message" : "プラグイン作ります！毎日サビ残でぽんぽんぺいんでつらみが深みです！"
+    }
+
+]
