@@ -45,7 +45,7 @@ jobs:
           rmdir --ignore-fail-on-non-empty ./website
           ls 
           echo "-----"
-          mv -f ./source/build/* ./website
+          cp -rtf ./source/build ./website
           ls ./website
           echo "-----"
           git fetch
