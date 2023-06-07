@@ -29,9 +29,12 @@ jobs:
           npm install
         working-directory: source/src
       - run: npm run build
+        working-directory: source/src
       - run: npm run lint
+        working-directory: source/src
         continue-on-error: true
       - run: npm run package
+        working-directory: source/src
       - name: Save
         run: |
           git add .
