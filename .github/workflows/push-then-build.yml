@@ -43,6 +43,7 @@ jobs:
           cp -f -rt  ./source/build ./website
           git config --local user.email "github.action@JavaJava19.github.io"
           git config --local user.name "push-then-build.yml"
-          git add ./website/*
+          cd ./website
+          git add .
           git commit -m 'npm run package [skip ci]'
           git push
