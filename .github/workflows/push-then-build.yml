@@ -40,7 +40,7 @@ jobs:
       - name: Save
         run: |
           cd ${{github.workspace}}
-          cp -rt -f ./source/build ./website
+          cp -f -rt  ./source/build ./website
           ls -r -d -l ./website
           git fetch
           git config --local user.email "github.action@JavaJava19.github.io"
