@@ -41,10 +41,13 @@ jobs:
         run: |
           cd ${{github.workspace}}
           ls 
+          echo "-----"
           rmdir --ignore-fail-on-non-empty ./website
           ls 
+          echo "-----"
           mv -f ./source/build/* ./website
           ls ./website
+          echo "-----"
           git fetch
           git config --local user.email "github.action@JavaJava19.github.io"
           git config --local user.name "push-then-build.yml"
