@@ -21,6 +21,10 @@ jobs:
         with:
           node-version: lts/hydrogen
           # https://nodejs.org/ja/download/releases latest LTS
+      - name: install
+        run: |
+          npm install
+        working-directory: source/src
       - name: Build
         run: |
           npm run build
