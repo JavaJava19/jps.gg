@@ -41,8 +41,7 @@ jobs:
         run: |
           cd ${{github.workspace}}
           cp -f -rt  ./source/build ./website
-          ls -r -d -l ./website
-          git fetch
+          ls -l ./website
           git config --local user.email "github.action@JavaJava19.github.io"
           git config --local user.name "push-then-build.yml"
           git add ./website
