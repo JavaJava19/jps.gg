@@ -28,8 +28,12 @@ jobs:
         run: |
           npm install
         working-directory: source/src
-      - name: Build
+      - run: npm run build
+      - run: npm run lint
+        continue-on-error: true
+      - run: npm run package
+      - name: Save
         run: |
-          npm run build
-        working-directory: source/src
-
+          git add .
+          git commit -m 'npm run package [skip ci]'
+          git push
