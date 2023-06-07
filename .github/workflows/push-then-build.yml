@@ -40,7 +40,7 @@ jobs:
       - name: Save
         run: |
           cd ${{github.workspace}}
-          cp -f -rt  ./source/build ./website
+          cp -f -r ./source/build/* ./website
           git config --local user.email "github.action@JavaJava19.github.io"
           git config --local user.name "push-then-build.yml"
           cd ./website
