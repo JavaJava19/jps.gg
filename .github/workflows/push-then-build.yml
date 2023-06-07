@@ -38,7 +38,7 @@ jobs:
       - name: Save
         run: |
           cd ${{github.workspace}}
-          rmdir ./website
+          rmdir --ignore-fail-on-non-empty　./website
           mv -f ./source/build/* ./website
           ls ./website
           git fetch
