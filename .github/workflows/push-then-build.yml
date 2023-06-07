@@ -38,7 +38,9 @@ jobs:
       - name: Save
         run: |
           cd ${{github.workspace}}
+          rmdir ./website
           mv -f ./source/build/* ./website
+          ls ./website
           git fetch
           git config --local user.email "github.action@JavaJava19.github.io"
           git config --local user.name "push-then-build.yml"
