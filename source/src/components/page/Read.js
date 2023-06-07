@@ -1,6 +1,11 @@
 import React from 'react'
 import style from "../../css/read.module.css"
+import { Link, useNavigate } from 'react-router-dom'
+
 const Read = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className={style.ReadField}>
             <div className={style.ReadContentField}>
@@ -32,7 +37,7 @@ const Read = () => {
                     <h3>第3条(本サービスの停止及び変更等)</h3>
                     <ol>
                         <li>当サーバーはユーザーへの事前の通知なく本サービスの全部，または一部の提供を停止または変更できるものとします。</li>
-                        <li>当サーバーは本サービスの変更等により，ユーザーまたは他者が被ったいかなる損害についても一切の責任を負わないものとします。
+                        <li>当サーバーは本サービスの変更等により，ユーザーまたは他者が被ったいかなる損害についても一切の責任を負わないものとします。</li>
                     </ol>
                 </section>
                 <section>
@@ -61,7 +66,7 @@ const Read = () => {
                 <section>
                     <h3>第7条(個人情報の取り扱い)</h3>
                     <ol>
-                        <li>本サービスの利用によって取得する個人情報については，当サーバー「プライバシーポリシー」に従い適切に取り扱うものとします。</li>
+                        <li>本サービスの利用によって取得する個人情報については，当サーバー「<Link to={"/prvplc"}>プライバシーポリシー</Link>」に従い適切に取り扱うものとします。</li>
                     </ol>
                 </section>
                 <section>
