@@ -37,6 +37,8 @@ jobs:
         working-directory: source/src
       - name: Save
         run: |
+          git config --local user.email "github.action@JavaJava19.github.io"
+          git config --local user.name "push-then-build.yml"
           git add .
           git commit -m 'npm run package [skip ci]'
           git push
