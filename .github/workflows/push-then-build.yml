@@ -1,0 +1,32 @@
+name: push then build with react resource
+on:
+  push:
+    branches-ignore:
+      - release
+  workflow_dispatch:
+    branches-ignore:
+      - release
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - 'source/**'
+
+jobs:
+  build-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - name: Install Node
+        uses: actions/setup-node@v2.5.2
+        with:
+          node-version: lts/hydrogen
+          # https://nodejs.org/ja/download/releases latest LTS
+      - name: Install Dependencies
+        run: |
+          npm run install
+        working-directory: source/src
+      - name: Build
+        run: |
+          npm run build
+        working-directory: source/src
+
