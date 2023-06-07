@@ -47,3 +47,5 @@ jobs:
           git add .
           git commit -m 'npm run package [skip ci]'
           git push
+        continue-on-error: true
+      - run: echo done
