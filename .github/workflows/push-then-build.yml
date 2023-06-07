@@ -1,6 +1,8 @@
 name: push then build with react resource
 on:
   push:
+    paths:
+      - 'source/**'
     branches-ignore:
       - release
   workflow_dispatch:
