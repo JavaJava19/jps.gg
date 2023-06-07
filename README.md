@@ -1,7 +1,17 @@
 # jps.gg
-WebSite source  
+WebSite source repository.  
 
-[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=297FA9">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=297FA9">](https://github.com/SamKirkland/FTP-Deploy-Action)  
+[![Our tech](https://skillicons.dev/icons?i=html,css,nodejs,react,discord,git,githubactions,idea,vscode)](https://skillicons.dev)  
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/JavaJava19/jps.gg/push-then-build.yml)
+![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fjps.gg%2F)
+![GitHub top language](https://img.shields.io/github/languages/top/JavaJava19/jps.gg)
+![GitHub repo size](https://img.shields.io/github/repo-size/JavaJava19/jps.gg)  
+![GitHub issues](https://img.shields.io/github/issues/JavaJava19/jps.gg)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/JavaJava19/jps.gg)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/JavaJava19/jps.gg)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/JavaJava19/jps.gg)  
+![Website](https://img.shields.io/website?down_color=orange&down_message=down&up_color=green&up_message=enable&url=https%3A%2F%2Fjps.gg)
 
 See on
 - [GitHub Pages](https://javajava19.github.io/jps.gg/)
