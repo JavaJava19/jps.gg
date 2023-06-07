@@ -13,6 +13,8 @@ on:
     paths:
       - 'source/**'
       - '.github/**'
+    types:
+      - opened
 
 jobs:
   build-source:
