@@ -40,14 +40,8 @@ jobs:
       - name: Save
         run: |
           cd ${{github.workspace}}
-          ls 
-          echo "-----"
-          rmdir --ignore-fail-on-non-empty ./website
-          ls 
-          echo "-----"
           cp -rt -f ./source/build ./website
-          ls ./website
-          echo "-----"
+          ls -r -d -l ./website
           git fetch
           git config --local user.email "github.action@JavaJava19.github.io"
           git config --local user.name "push-then-build.yml"
