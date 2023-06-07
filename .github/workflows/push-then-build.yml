@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'source/**'
+      - '.github/**'
     branches-ignore:
       - release
   workflow_dispatch:
