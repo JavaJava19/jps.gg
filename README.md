@@ -20,6 +20,7 @@ See on
 
 ## 開発規約
 ### 更新手順
++ 開発内容をissueで宣言する
 + 最新の`release`から専用のブランチを作成する
 + 所要の編集を実施し、commit,pushをする
 + `release`に対するマージのPullRequestを作成する
