@@ -11,12 +11,10 @@ WebSite source repository.
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/JavaJava19/jps.gg)](https://github.com/JavaJava19/jps.gg/pulls)
 [![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/JavaJava19/jps.gg)](https://github.com/JavaJava19/jps.gg/issues?q=is%3Aissue+is%3Aclosed)
 [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/JavaJava19/jps.gg)](https://github.com/JavaJava19/jps.gg/pulls?q=is%3Apr+is%3Aclosed)  
-[GitHubPages![Website](https://img.shields.io/website?down_color=orange&down_message=down&up_color=green&up_message=enable&url=https%3A%2F%2Fwww.jps.gg)](https://JavaJava19.github.io/jps.gg)
-[JPS.GG![Website](https://img.shields.io/website?down_color=orange&down_message=down&up_color=green&up_message=enable&url=https%3A%2F%2Fjps.gg)](https://jps.gg/)
 
-See on
-- [GitHub Pages](https://javajava19.github.io/jps.gg/)
-- [JPS.GG](https://jps.gg/)
+See this website on
+- [GitHub Pages　![Website](https://img.shields.io/website?down_color=orange&down_message=down&up_color=green&up_message=enable&url=https%3A%2F%2Fwww.jps.gg)](https://javajava19.github.io/jps.gg/)
+- [JPS.GG　![Website](https://img.shields.io/website?down_color=orange&down_message=down&up_color=green&up_message=enable&url=https%3A%2F%2Fjps.gg)](https://jps.gg/)
 
 ## 開発規約
 ### 更新手順
