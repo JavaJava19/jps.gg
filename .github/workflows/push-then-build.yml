@@ -1,0 +1,51 @@
+name: push then build with react resource
+on:
+  push:
+    paths:
+      - 'source/**'
+      - '.github/**'
+    branches-ignore:
+      - release
+  workflow_dispatch:
+    branches-ignore:
+      - release
+  pull_request:
+    paths:
+      - 'source/**'
+      - '.github/**'
+    types:
+      - opened
+
+jobs:
+  build-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - name: Install Node.js
+        uses: actions/setup-node@v2.5.2
+        with:
+          node-version: lts/hydrogen
+          # https://nodejs.org/ja/download/releases latest LTS
+      - name: install
+        run: |
+          npm install
+        working-directory: source/src
+      - run: npm run build
+        working-directory: source/src
+      - run: npm run lint
+        working-directory: source/src
+        continue-on-error: true
+      - run: npm run package
+        working-directory: source/src
+      - name: Save
+        run: |
+          cd ${{github.workspace}}
+          cp -f -r ./source/build/* ./website
+          git config --local user.email "github.action@JavaJava19.github.io"
+          git config --local user.name "push-then-build.yml"
+          cd ./website
+          git add .
+          git commit -m 'npm run package [skip ci]'
+          git push
+        continue-on-error: true
+      - run: echo done
