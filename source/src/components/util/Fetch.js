@@ -49,6 +49,7 @@ export function usePlayerCard(key) {
     useEffect(() => {
         (async () => {
             if (fetchAddress !== undefined) {
+                var port = fetchAddress === "localhost" ? 3536 : 3535;
                 await fetch(`https://${fetchAddress}:${port}/players/` + key, {
                     method: "GET",
                     mode: "cors"
@@ -67,7 +68,6 @@ export function usePlayerCard(key) {
 
                     }
                     ).catch(setError(true))
-                var port = fetchAddress === "localhost" ? 3536 : 3535;
                 await fetch(`https://${fetchAddress}:${port}/balance/` + mcid, {
                     method: "GET",
                     mode: "cors"
