@@ -25,21 +25,23 @@ const PlayerList = ({ data }) => {
 
     return (
         <div className={style.PlayerListField}>
-            <div className={style.ListContainer}>
-                {
-                    function () {
-                        if (data.error === undefined) {
-                            return data.map(pdata => (
-                                <div className={style.PlayerLine} key={pdata.uuid}>
-                                    <div className={style.ListSkin}><img src={getHead(pdata.skinURL)} alt="" /></div>
-                                    <div className={style.ListMCID}><p onClick={() => navigate("./" + pdata.name)}>{pdata.name}</p></div>
-                                    <div className={style.ListLogin}>{getLogin(pdata)}</div>
-                                </div>
-                            ))
+            <table className={style.ListContainer}>
+                <tbody>
+                    {
+                        function () {
+                            if (data.error === undefined) {
+                                return data.map(pdata => (
+                                    <tr className={style.PlayerLine} key={pdata.uuid}>
+                                        <td className={style.ListSkin}><img src={getHead(pdata.skinURL)} alt="" /></td>
+                                        <td className={style.ListMCID}><p onClick={() => navigate("./" + pdata.name)}>{pdata.name}</p></td>
+                                        <td className={style.ListLogin}>{getLogin(pdata)}</td>
+                                    </tr>
+                                ))
+                            }
                         }
-                    }
-                        ()}
-            </div>
+                            ()}
+                </tbody>
+            </table>
         </div>
     )
 }

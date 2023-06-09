@@ -1,8 +1,8 @@
 # Error Page Change
 ErrorDocument 404 /index.html
 
-RewriteEngine on
-RewriteRule ^(?!index\.html$).*\.html /index.html [L,R=302]
+#RewriteEngine on
+#RewriteRule ^(?!index\.html$).*\.html /index.html [L,R=302]
 
 <Files ~ "^\.json$">
 Header set Pragma no-cache
