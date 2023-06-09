@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useFetchAddress from "./FetchAddress";
 
 export function useStatus() {
     const [icon, setIcon] = useState();
@@ -43,28 +44,31 @@ export function usePlayerCard(key) {
     const [login, setLogin] = useState(false);
     const [lastLogin, setLastLogin] = useState("");
     const [error, setError] = useState(false);
-    
+    const fetchAddress = useFetchAddress();
+
     useEffect(() => {
         (async () => {
-            await fetch(`//ahaha.info:3535/players/` + key, {
-                method: "GET",
-                mode: "cors"
-            })
-                .then(res => res.json()).then(data => {
-                    setMcid(data.mcid)
-                    setUuid(data.uuid)
-                    if (data.skinURL === "null") {
-                        setSkin("https://api.mineskin.org/render/skin?url=https://s.namemc.com/i/bc68bf289576a899.png");
-                    } else {
-                        setSkin(`https://api.mineskin.org/render/skin?url=${data.skinURL}`);
-                    }
-                    setProfile(data.profile)
-                    setLogin(data.login)
-                    setLastLogin(data.lastLogin)
+            if (fetchAddress !== undefined)
+                await fetch(`https://${fetchAddress}:${port}/players/` + key, {
+                    method: "GET",
+                    mode: "cors"
+                })
+                    .then(res => res.json()).then(data => {
+                        setMcid(data.mcid)
+                        setUuid(data.uuid)
+                        if (data.skinURL === "null") {
+                            setSkin("https://api.mineskin.org/render/skin?url=https://s.namemc.com/i/bc68bf289576a899.png");
+                        } else {
+                            setSkin(`https://api.mineskin.org/render/skin?url=${data.skinURL}`);
+                        }
+                        setProfile(data.profile)
+                        setLogin(data.login)
+                        setLastLogin(data.lastLogin)
 
-                }
-                ).catch(setError(true))
-            await fetch(`//ahaha.info:3535/balance/` + mcid, {
+                    }
+                    ).catch(setError(true))
+            var port = fetchAddress === "localhost" ? 3536 : 3535;
+            await fetch(`https://${fetchAddress}:${port}/balance/` + mcid, {
                 method: "GET",
                 mode: "cors"
             })
@@ -76,53 +80,63 @@ export function usePlayerCard(key) {
                 }
                 ).catch(setError(true))
         })();
-    }, [key, mcid, uuid, skin, profile, balance, login, lastLogin, error]);
+    }, [key, mcid, uuid, skin, profile, balance, login, lastLogin, error, fetchAddress]);
     return { mcid, uuid, skin, profile, balance, login, lastLogin, error };
 }
 
 export function useCreateCategory(title, admin) {
     const [message, setMessage] = useState();
+    const fetchAddress = useFetchAddress();
+
     useEffect(() => {
         (async () => {
+
             const pushData = {
                 name: title,
                 admin: admin
             }
-            await fetch(`//ahaha.info:3535/thread/addcategory`, {
-                method: "POST",
-                mode: "cors",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(pushData)
+            if (fetchAddress !== undefined) {
+                var port = fetchAddress === "localhost" ? 3536 : 3535;
+                await fetch(`https://${fetchAddress}:${port}/thread/addcategory`, {
+                    method: "POST",
+                    mode: "cors",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(pushData)
 
-            })
-                .then(res => res.json()).then(setMessage).catch(setMessage)
+                })
+                    .then(res => res.json()).then(setMessage).catch(setMessage)
+            }
+
         })();
-    }, [title, admin])
+    }, [title, admin, fetchAddress])
 
     return message;
 }
 
 export function useImageCatcher(imagePath) {
     const [data, setData] = useState();
+    const fetchAddress = useFetchAddress();
 
     if (data === undefined) {
-        (async () => {
-            const pushData = {
-                path: imagePath
-            }
-            await fetch(`//ahaha.info:3535/image`, {
-                method: "POST",
-                mode: "cors",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(pushData)
+        if (fetchAddress !== undefined)
+            (async () => {
+                var port = fetchAddress === "localhost" ? 3536 : 3535;
+                const pushData = {
+                    path: imagePath
+                }
+                await fetch(`https://${fetchAddress}:${port}/image`, {
+                    method: "POST",
+                    mode: "cors",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(pushData)
 
-            })
-                .then(res => res.blob()).then(blob => setData(URL.createObjectURL(blob))).catch()
-        })();
+                })
+                    .then(res => res.blob()).then(blob => setData(URL.createObjectURL(blob))).catch()
+            })();
     } else {
         return data
     }
@@ -132,58 +146,67 @@ export function useImageCatcher(imagePath) {
 export function usePlayerList() {
     const [data, setData] = useState([]);
     const [error, setError] = useState("");
+    const fetchAddress = useFetchAddress();
 
     useEffect(() => {
         if (data.length === 0) {
-            (async () => {
-                await fetch(`//ahaha.info:3535/players/`, {
-                    method: "GET",
-                    mode: "cors"
+            if (fetchAddress !== undefined)
+                (async () => {
+                    var port = fetchAddress === "localhost" ? 3536 : 3535;
+                    await fetch(`https://${fetchAddress}:${port}/players/`, {
+                        method: "GET",
+                        mode: "cors"
 
-                })
-                    .then(res => res.json()).then(res => setData(res)).catch(err => setError(err))
-            })();
+                    })
+                        .then(res => res.json()).then(res => setData(res)).catch(err => setError(err))
+                })();
         }
-    }, [data.length])
+    }, [data.length, fetchAddress])
     return [data, error];
 }
 
 export function usePlayerMatch(mcid) {
     const [data, setData] = useState();
+    const fetchAddress = useFetchAddress();
 
     useEffect(() => {
         if (mcid !== "") {
-            (async () => {
-                await fetch(`//ahaha.info:3535/players/m/` + mcid, {
-                    method: "GET",
-                    mode: "cors"
+            if (fetchAddress !== undefined)
+                (async () => {
+                    var port = fetchAddress === "localhost" ? 3536 : 3535;
+                    await fetch(`https://${fetchAddress}:${port}/players/m/` + mcid, {
+                        method: "GET",
+                        mode: "cors"
 
-                })
-                    .then(res => res.json()).then(res => setData(res)).catch()
-            })();
-        } 
-    }, [mcid])
+                    })
+                        .then(res => res.json()).then(res => setData(res)).catch()
+                })();
+        }
+    }, [mcid, fetchAddress])
     if (data !== undefined)
         return data;
 }
 
 export function useCtwStats(uuid) {
     const [data, setData] = useState();
+    const fetchAddress = useFetchAddress();
 
     useEffect(() => {
         if (uuid !== "") {
-            (async () => {
-                await fetch(`//ahaha.info:3535/ctw/uuid/` + uuid, {
-                    method: "GET",
-                    mode: "cors"
+            if (fetchAddress !== undefined)
+                (async () => {
+                    var port = fetchAddress === "localhost" ? 3536 : 3535;
+                    await fetch(`https://${fetchAddress}:${port}/ctw/uuid/` + uuid, {
+                        method: "GET",
+                        mode: "cors"
 
-                })
-                    .then(res => res.json()).then(res => setData(res)).catch()
-            })();
+                    })
+                        .then(res => res.json()).then(res => setData(res)).catch()
+                })();
         } else {
             setData()
         }
-    }, [uuid])
+    }, [uuid, fetchAddress])
     if (data !== undefined) {
         if (data.error !== undefined) {
             setData([{ error: "データがありません" }])
@@ -195,20 +218,23 @@ export function useCtwStats(uuid) {
 
 export function useCtwWinRank() {
     const [data, setData] = useState();
+    const fetchAddress = useFetchAddress();
 
     useEffect(() => {
         if (data === undefined) {
-            (async () => {
-                await fetch(`//ahaha.info:3535/ctw/win`, {
-                    method: "GET",
-                    mode: "cors"
+            if (fetchAddress !== undefined)
+                (async () => {
+                    var port = fetchAddress === "localhost" ? 3536 : 3535;
+                    await fetch(`https://${fetchAddress}:${port}/ctw/win`, {
+                        method: "GET",
+                        mode: "cors"
 
-                })
-                    .then(res => res.json()).then(res => setData(res)).catch()
-            })();
-        } 
+                    })
+                        .then(res => res.json()).then(res => setData(res)).catch()
+                })();
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [fetchAddress])
     if (data !== undefined)
         return data;
 }
