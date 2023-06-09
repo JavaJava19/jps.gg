@@ -48,7 +48,7 @@ export function usePlayerCard(key) {
 
     useEffect(() => {
         (async () => {
-            if (fetchAddress !== undefined)
+            if (fetchAddress !== undefined) {
                 await fetch(`https://${fetchAddress}:${port}/players/` + key, {
                     method: "GET",
                     mode: "cors"
@@ -67,18 +67,19 @@ export function usePlayerCard(key) {
 
                     }
                     ).catch(setError(true))
-            var port = fetchAddress === "localhost" ? 3536 : 3535;
-            await fetch(`https://${fetchAddress}:${port}/balance/` + mcid, {
-                method: "GET",
-                mode: "cors"
-            })
-                .then(res => res.json()).then(data => {
-                    if (data.error === undefined)
-                        setBalance(data[0])
-                    else
-                        setBalance(parseInt(data.balance))
-                }
-                ).catch(setError(true))
+                var port = fetchAddress === "localhost" ? 3536 : 3535;
+                await fetch(`https://${fetchAddress}:${port}/balance/` + mcid, {
+                    method: "GET",
+                    mode: "cors"
+                })
+                    .then(res => res.json()).then(data => {
+                        if (data.error === undefined)
+                            setBalance(data[0])
+                        else
+                            setBalance(parseInt(data.balance))
+                    }
+                    ).catch(setError(true))
+            }
         })();
     }, [key, mcid, uuid, skin, profile, balance, login, lastLogin, error, fetchAddress]);
     return { mcid, uuid, skin, profile, balance, login, lastLogin, error };
@@ -120,7 +121,7 @@ export function useImageCatcher(imagePath) {
     const fetchAddress = useFetchAddress();
 
     if (data === undefined) {
-        if (fetchAddress !== undefined)
+        if (fetchAddress !== undefined) {
             (async () => {
                 var port = fetchAddress === "localhost" ? 3536 : 3535;
                 const pushData = {
@@ -137,6 +138,7 @@ export function useImageCatcher(imagePath) {
                 })
                     .then(res => res.blob()).then(blob => setData(URL.createObjectURL(blob))).catch()
             })();
+        }
     } else {
         return data
     }
@@ -150,7 +152,7 @@ export function usePlayerList() {
 
     useEffect(() => {
         if (data.length === 0) {
-            if (fetchAddress !== undefined)
+            if (fetchAddress !== undefined) {
                 (async () => {
                     var port = fetchAddress === "localhost" ? 3536 : 3535;
                     await fetch(`https://${fetchAddress}:${port}/players/`, {
@@ -160,6 +162,7 @@ export function usePlayerList() {
                     })
                         .then(res => res.json()).then(res => setData(res)).catch(err => setError(err))
                 })();
+            }
         }
     }, [data.length, fetchAddress])
     return [data, error];
@@ -171,7 +174,7 @@ export function usePlayerMatch(mcid) {
 
     useEffect(() => {
         if (mcid !== "") {
-            if (fetchAddress !== undefined)
+            if (fetchAddress !== undefined) {
                 (async () => {
                     var port = fetchAddress === "localhost" ? 3536 : 3535;
                     await fetch(`https://${fetchAddress}:${port}/players/m/` + mcid, {
@@ -181,6 +184,7 @@ export function usePlayerMatch(mcid) {
                     })
                         .then(res => res.json()).then(res => setData(res)).catch()
                 })();
+            }
         }
     }, [mcid, fetchAddress])
     if (data !== undefined)
@@ -193,7 +197,7 @@ export function useCtwStats(uuid) {
 
     useEffect(() => {
         if (uuid !== "") {
-            if (fetchAddress !== undefined)
+            if (fetchAddress !== undefined) {
                 (async () => {
                     var port = fetchAddress === "localhost" ? 3536 : 3535;
                     await fetch(`https://${fetchAddress}:${port}/ctw/uuid/` + uuid, {
@@ -203,6 +207,7 @@ export function useCtwStats(uuid) {
                     })
                         .then(res => res.json()).then(res => setData(res)).catch()
                 })();
+            }
         } else {
             setData()
         }
@@ -222,7 +227,7 @@ export function useCtwWinRank() {
 
     useEffect(() => {
         if (data === undefined) {
-            if (fetchAddress !== undefined)
+            if (fetchAddress !== undefined) {
                 (async () => {
                     var port = fetchAddress === "localhost" ? 3536 : 3535;
                     await fetch(`https://${fetchAddress}:${port}/ctw/win`, {
@@ -232,6 +237,7 @@ export function useCtwWinRank() {
                     })
                         .then(res => res.json()).then(res => setData(res)).catch()
                 })();
+            }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [fetchAddress])
