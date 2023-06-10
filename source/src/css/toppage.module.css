@@ -23,6 +23,7 @@
 
 .WelcomePop{
     width: 30%;
+    min-width: fit-content;
     height: 300px;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -34,7 +35,7 @@
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     color: white;
-    padding-top: 20px;
+    padding: 20px;
 
 }
 

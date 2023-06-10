@@ -24,8 +24,7 @@ const WelcomePops = () => {
     if (icon !== undefined)
         return (
             <div className={style.WelcomePop}>
-                <p className={style.WelcomeTitle}>Welcome to</p>
-                <p className={style.WelcomeTitle}>JapanPVPServer</p>
+                <p className={style.WelcomeTitle}>Welcome to<br />Japan&nbsp;PvP&nbsp;Server</p>
                 <div className={style.IP} onClick={() => copyIP()}>jps.gg</div>
                 <div className={style.Copy}>{copy}</div>
                 <div className={style.Status}>
