@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<TopPage />}></Route>
         <Route path="/read" element={<Read />}></Route>
-        <Route path="/prvplc" element= {<PrvPlc />}></Route>
+        <Route path="/prvplc" element={<PrvPlc />}></Route>
         <Route path="/staff" element={<Staff />}></Route>
         <Route path="/player" element={<PlayerSearch />}></Route>
         <Route path="/player/:id" element={<Player />}></Route>
