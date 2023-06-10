@@ -23,6 +23,7 @@
 
 .WelcomePop{
     width: 30%;
+    min-width: fit-content;
     height: 300px;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.6);
