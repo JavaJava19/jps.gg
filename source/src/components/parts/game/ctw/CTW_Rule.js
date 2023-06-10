@@ -17,7 +17,7 @@ const CTW_Rule = () => {
           </div>
           <div className={style.RuleHeader}>
             <div className={style.Slide}>
-              <YouTube videoId={rule.youtubeID} />
+              <YouTube className={style.Youtube} videoId={rule.youtubeID} />
             </div>
             <div className={style.Ranking}>
               <RankingParts rankdata={rankData} playerdata={playerData} />
@@ -33,7 +33,7 @@ const CTW_Rule = () => {
             <div className={style.RuleTitle}>
               賞金
             </div>
-            <div style={{border: "1px solid #777", width: "50%", margin: "40px", marginTop: "40px"}}>
+            <div className={style.JpExplanationContentField}>
               {rule.jp.map(jp => (
                 <div className={style.JpExplanationContent} key={jp.explanation}>
                   <div className={style.JpName}>{jp.name}</div>

@@ -1,18 +1,19 @@
-.PlayerSearchField{
+.PlayerSearchField {
     width: 100%;
     height: auto;
     padding-top: 140px;
-    background-color:  rgb(210, 228, 245);
+    background-color: rgb(210, 228, 245);
 }
-.PlayerField{
+
+.PlayerField {
     width: 100%;
     height: auto;
     padding-top: 140px;
-    background-color:  rgb(210, 228, 245);
+    background-color: rgb(210, 228, 245);
     padding-bottom: 100px;
 }
 
-.PlayerSearchContainer{
+.PlayerSearchContainer {
     width: 80%;
     height: 100vh;
     margin: 0 auto;
@@ -22,23 +23,23 @@
     border-right: 1px solid #777777;
 }
 
-.PlayerSearchTitle{
+.PlayerSearchTitle {
     padding-top: 120px;
     font-size: 48px;
     text-align: center;
     font-weight: 700;
 }
 
-.SearchForm{
+.SearchForm {
     width: 80%;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
-.SearchInput{
+.SearchInput {
     width: 50%;
     height: 30px;
     border-radius: 20px;
@@ -47,30 +48,30 @@
     padding-left: 15px;
 }
 
-.SearchInput:focus{
+.SearchInput:focus {
     width: 60%;
     height: 30px;
     outline: 0;
     box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
 }
 
-.ResultField{
+.ResultField {
     width: 95%;
     height: auto;
     margin: 0 auto;
     border-top: 1px dotted #777777;
 }
 
-.PlayerListField{
+.PlayerListField {
     padding: 20px;
     height: auto;
 }
 
-.ListContainer{
+.ListContainer {
     width: 100%;
 }
 
-.PlayerLine{
+.PlayerLine {
     width: 100%;
     height: 80px;
     border-bottom: 1px dotted #777;
@@ -80,15 +81,15 @@
     position: relative;
 }
 
-.ListSkin{
+.ListSkin {
     padding: 5px;
 }
 
-.ListSkin img{
+.ListSkin img {
     width: 64px;
 }
 
-.ListMCID{
+.ListMCID {
     font-size: 22px;
     height: 40px;
     display: flex;
@@ -96,32 +97,32 @@
     margin-left: 10px;
 }
 
-.ListMCID p{
+.ListMCID p {
     transition: all .2s ease;
     color: #919090;
 }
 
-.ListMCID p:hover{
+.ListMCID p:hover {
     letter-spacing: 1px;
     cursor: pointer;
 }
 
-.ListLogin{
+.ListLogin {
     text-align: right;
     position: absolute;
     right: 0;
     font-size: 14px;
 }
 
-.ListOnline{
+.ListOnline {
     color: rgb(128, 209, 6);
 }
 
-.ListOffline{
+.ListOffline {
     color: #9b9898;
 }
 
-.Profile{
+.Profile {
     width: 50%;
     margin: 0 auto;
     height: 400px;
@@ -135,7 +136,7 @@
 
 }
 
-.PlayerProfile{
+.PlayerProfile {
     width: 78%;
     color: rgb(114, 114, 114);
     display: flex;
@@ -144,17 +145,17 @@
     justify-content: center;
 }
 
-.MCID{
+.MCID {
     width: 100%;
     border: 2px dotted rgb(114, 114, 114);
     padding: 10px;
-    border-radius: 10px;    
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;    
+    align-items: center;
 }
 
-.McidField{
+.McidField {
     width: 100%;
     border-top: 1px solid rgb(114, 114, 114);
     white-space: pre-wrap;
@@ -164,17 +165,17 @@
     font-size: 14px;
 }
 
-.UUID{
+.UUID {
     width: 100%;
     border: 2px dotted rgb(114, 114, 114);
     padding: 10px;
-    border-radius: 10px;  
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;    
+    align-items: center;
 }
 
-.UuidField{
+.UuidField {
     width: 100%;
     border-top: 1px solid rgb(114, 114, 114);
     white-space: pre-wrap;
@@ -185,17 +186,17 @@
 
 }
 
-.Message{
+.Message {
     width: 100%;
     border: 2px dotted rgb(114, 114, 114);
     padding: 10px;
-    border-radius: 10px;    
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;    
+    align-items: center;
 }
 
-.MessageField{
+.MessageField {
     width: 100%;
     border-top: 1px solid rgb(114, 114, 114);
     white-space: pre-wrap;
@@ -207,7 +208,7 @@
     font-size: 14px;
 }
 
-.StatsField{
+.StatsField {
     width: 75%;
     margin: 0 auto;
     height: 800px;
@@ -225,7 +226,7 @@
 
 }
 
-.StatsTitle{
+.StatsTitle {
     width: 100%;
     height: 70px;
     text-align: center;
@@ -233,7 +234,7 @@
     border-bottom: 1px solid #c7c0c0;
 }
 
-.StatsContent{
+.StatsContent {
     width: 100%;
     height: 85%;
     display: flex;
@@ -243,7 +244,7 @@
     margin-top: 10px;
 }
 
-.StatsChildrenField{
+.StatsChildrenField {
     width: 30%;
     height: 240px;
     margin: 20px;
@@ -253,7 +254,7 @@
     background-color: rgba(211, 212, 212, 0.24);
 }
 
-.StatsChildrenTitle{
+.StatsChildrenTitle {
     width: 90%;
     font-weight: 700;
     text-align: center;
@@ -263,11 +264,292 @@
     border-bottom: 1px solid #777;
 }
 
-.StatsChildrenContent{
+.StatsChildrenContent {
     width: 80%;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 20px;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+    .PlayerSearchField {
+        width: 100%;
+        height: auto;
+        padding-top: 140px;
+        background-color: rgb(210, 228, 245);
+    }
+
+    .PlayerField {
+        width: 100%;
+        height: auto;
+        padding-top: 140px;
+        background-color: rgb(210, 228, 245);
+        padding-bottom: 100px;
+    }
+
+    .PlayerSearchContainer {
+        width: 90%;
+        height: 100vh;
+        margin: 0 auto;
+        margin-top: -120px;
+        background-color: rgb(255, 255, 255);
+        border-left: 1px solid #777777;
+        border-right: 1px solid #777777;
+    }
+
+    .PlayerSearchTitle {
+        padding-top: 120px;
+        font-size: 36px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .SearchForm {
+        width: 90%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .SearchInput {
+        width: 80%;
+        height: 30px;
+        border-radius: 20px;
+        border: 1.5px solid rgb(179, 179, 179);
+        transition: all .2s ease;
+        padding-left: 15px;
+        font-size: 16px;
+        transform: scale(0.8);
+    }
+
+    .SearchInput:focus {
+        width: 90%;
+        height: 30px;
+        outline: 0;
+        box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+        font-size: 16px;
+        transform: scale(0.8);
+    }
+
+    .ResultField {
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+        border-top: 1px dotted #777777;
+    }
+
+    .PlayerListField {
+        padding: 5px;
+        height: auto;
+    }
+
+    .ListContainer {
+        width: 100%;
+    }
+
+    .PlayerLine {
+        width: 100%;
+        height: 80px;
+        border-bottom: 1px dotted #777;
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        position: relative;
+    }
+
+    .ListSkin {
+        padding: 5px;
+    }
+
+    .ListSkin img {
+        width: 32px;
+    }
+
+    .ListMCID {
+        font-size: 14px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .ListMCID p {
+        transition: all .2s ease;
+        color: #919090;
+    }
+
+    .ListMCID p:hover {
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+
+    .ListLogin {
+        text-align: right;
+        position: absolute;
+        right: 0;
+        font-size: 10px;
+    }
+
+    .ListOnline {
+        color: rgb(128, 209, 6);
+    }
+
+    .ListOffline {
+        color: #9b9898;
+    }
+
+    .Profile {
+        width: 80%;
+        margin: 0 auto;
+        height: 400px;
+        background-color: #ffffff70;
+        border-radius: 20px;
+        border: 2px solid #e0dcdc;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0px 0px 15px -5px #777777;
+
+    }
+
+    .PlayerProfile {
+        width: 78%;
+        color: rgb(114, 114, 114);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .MCID {
+        width: 100%;
+        border: 2px dotted rgb(114, 114, 114);
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .McidField {
+        width: 100%;
+        border-top: 1px solid rgb(114, 114, 114);
+        white-space: pre-wrap;
+        margin-top: 10px;
+        padding-top: 10px;
+        margin-left: 5px;
+        font-size: 14px;
+    }
+
+    .UUID {
+        width: 100%;
+        border: 2px dotted rgb(114, 114, 114);
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .UuidField {
+        width: 100%;
+        border-top: 1px solid rgb(114, 114, 114);
+        white-space: pre-wrap;
+        margin-top: 5px;
+        padding-top: 10px;
+        margin-left: 5px;
+        font-size: 14px;
+
+    }
+
+    .Message {
+        width: 100%;
+        border: 2px dotted rgb(114, 114, 114);
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .MessageField {
+        width: 100%;
+        border-top: 1px solid rgb(114, 114, 114);
+        white-space: pre-wrap;
+        height: 100px;
+        margin-top: 10px;
+        padding-top: 10px;
+        margin-left: 5px;
+        overflow-y: auto;
+        font-size: 14px;
+    }
+
+    .StatsField {
+        width: 80%;
+        margin: 0 auto;
+        height: 800px;
+        background-color: #ffffff70;
+        border-radius: 20px;
+        border: 2px solid #e0dcdc;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: normal;
+        box-shadow: 0px 0px 15px -5px #777777;
+        margin-top: 60px;
+        color: rgb(114, 114, 114);
+
+    }
+
+    .StatsTitle {
+        width: 100%;
+        height: 70px;
+        text-align: center;
+        font-size: 36px;
+        border-bottom: 1px solid #c7c0c0;
+    }
+
+    .StatsContent {
+        width: 100%;
+        height: 85%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow-y: auto;
+        margin-top: 10px;
+    }
+
+    .StatsChildrenField {
+        width: 30%;
+        height: 240px;
+        margin: 20px;
+        border-radius: 10px;
+        border: 2px solid #e0dcdc;
+        box-shadow: 0px 0px 15px -5px #777777;
+        background-color: rgba(211, 212, 212, 0.24);
+    }
+
+    .StatsChildrenTitle {
+        width: 90%;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 10px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #777;
+    }
+
+    .StatsChildrenContent {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
 }

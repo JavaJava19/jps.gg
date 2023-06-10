@@ -27,3 +27,36 @@
     padding: 10px;
     padding-bottom: 40px;
 }
+
+@media screen and (max-width: 480px) {
+    .ReadField{
+        width: 100%;
+        height: auto;
+        background-color: rgb(210, 228, 245);
+    }
+    
+    .ReadContentField{
+        width: 90%;
+        height: auto;
+        background-color: white;
+        margin: 0 auto;
+        border-left: 1px solid rgb(192, 192, 192);
+        border-right: 1px solid rgb(192, 192, 192);
+        padding-top: 140px;
+    }
+    
+    .Title{
+        border-bottom: 1px solid #777777;
+        padding: 10px;
+        margin: 20px;
+        font-size: 36px;
+        font-weight: 700;
+    }
+    
+    .Content{
+        margin-left: 20px;
+        padding: 10px;
+        padding-bottom: 40px;
+        font-size: 12px;
+    }
+}

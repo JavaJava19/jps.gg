@@ -11,7 +11,8 @@
     z-index: 10;
 }
 
-.Logo {
+.Logo img{
+    width: 90%;
 }
 
 .Menus {
@@ -28,7 +29,7 @@
 }
 
 .Menu:hover {
-    background:  linear-gradient(90deg, rgb(75, 247, 132), rgb(236, 230, 139));
+    background: linear-gradient(90deg, rgb(75, 247, 132), rgb(236, 230, 139));
     cursor: pointer;
     background-size: 200% 100%;
     background-clip: text;
@@ -37,8 +38,8 @@
     letter-spacing: 1px;
 }
 
-.Menu::before{
-    background:  linear-gradient(90deg, rgb(75, 247, 132), rgb(236, 230, 139));
+.Menu::before {
+    background: linear-gradient(90deg, rgb(75, 247, 132), rgb(236, 230, 139));
 
     content: '';
     width: 100%;
@@ -52,7 +53,69 @@
     transition: transform .3s;
 }
 
-.Menu:hover::before{
+.Menu:hover::before {
     transform-origin: left top;
     transform: scale(1, 1);
+}
+
+.Hamburger {
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+}
+
+.LinkContainer{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 2px dotted white;
+    border-bottom: 2px dotted white;
+    width: 80%;
+}
+
+.Hamburger .Link{
+    padding: 10px;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 480px) {
+    .HeaderField {
+        width: 100%;
+        height: 120px;
+        background-color: rgba(7, 5, 5, 0.582);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        color: white;
+        position: fixed;
+        z-index: 10;
+    }
+
+    .Logo{
+        width: 80%;
+        position: relative;
+    }
+    
+    .Logo img{
+        width: 65%;
+        position: absolute;
+        top: -55px;
+        left: 10px;
+    }
+
+    .HamburgerMenu{
+        position: absolute;
+        z-index: 15;
+        font-size: 34px;
+        top: 35%;
+        right: 10px;
+        transform: translateX(-50%);
+    }
 }

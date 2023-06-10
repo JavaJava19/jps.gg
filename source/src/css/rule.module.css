@@ -66,6 +66,12 @@
     border: 0;
 }
 
+.JpExplanationContentField{
+    width: 50%;
+    border-bottom: 1px solid #777;
+    margin-top: 20px;
+}
+
 .JpName{
     width: 20%;
 }
@@ -78,4 +84,112 @@
 .JpAmount{
     width: 10%;
     font-size: 14px;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .RuleField{
+        width: 100%;
+        height: auto;
+        padding-top: 140px;
+        background-color:  rgb(210, 228, 245);
+    }
+    
+    .RuleContent{
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        background-color: white;
+        margin-top: -120px;
+        padding-top: 120px;
+    }
+    
+    .RuleTitle{
+        width: 90%;
+        font-size: 24px;
+        border-bottom: 1px solid #777;
+        padding: 10px;
+    }
+    
+    .RuleHeader{
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        padding-bottom: 40px;
+    }
+    
+    .Slide{
+        width: 100%;
+    }
+
+    .Youtube{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+
+    }
+    
+    .Ranking{
+        width: 95%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    
+    .RuleMessageContent{
+        padding: 20px;
+        margin-left: 0px;
+        font-size: 14px;
+    }
+    
+    .JpExplanationField{
+        width: 100%;
+        padding-bottom: 40px;
+        font-size: 12px;
+    }
+    
+    .JpExplanationContent{
+        display: flex;
+        padding: 10px;
+        width: 94%;
+        height: 40px;
+        align-items: center;
+        border-bottom: 1px solid #777;
+    }
+
+    .JpExplanationContentField{
+        width: 95%;
+        border: 1px solid #777;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    
+    .JpExplanationContent:last-child{
+        border: 0;
+    }
+    
+    .JpName{
+        width: 20%;
+        font-size: 12px;
+    }
+    
+    .JpExplanation{
+        width: 60%;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 12px;
+
+    }
+    
+    .JpAmount{
+        width: 15%;
+        font-size: 12px;
+        text-align: center;
+    }
 }
