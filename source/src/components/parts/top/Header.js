@@ -21,7 +21,6 @@ const Header = () => {
 
   function checkLogin() {
     if (fetchAddress === undefined) return false;
-    console.log(fetchAddress)
 
     if (cookie.token !== undefined) {
       isLogin(fetchAddress, cookie.token, removeCookie, setPlayerData, setLogin)
@@ -36,12 +35,23 @@ const Header = () => {
   }
 
 
+  function removeToken() {
+    if (cookie.token !== undefined) {
+      removeCookie("token")
+    } else {
+      if (sessionStorage !== null) {
+        window.sessionStorage.removeItem("token");
+      }
+    }
+    setLogin(false)
+    navigate("/")
+    window.location.reload();
+  }
   useEffect(() => {
     if (fetchAddress === undefined) return;
     if (playerData !== undefined) return;
     checkLogin()
-
-
+    // eslint-disable-next-line
   }, [fetchAddress, cookie, sessionStorage, setCookie, playerData])
   return (
     <div className={style.HeaderField}>
@@ -53,15 +63,16 @@ const Header = () => {
         <div className={style.Menu} onClick={() => navigate("/game")}>Games</div>
         <div className={style.Menu} onClick={() => navigate("/player")}>Player</div>
         <div className={style.Menu} onClick={() => navigate("/staff")}>Staff</div>
-        <div className={style.Menu} onClick={() => navigate("/content")}>Contact</div>
-        {login ? <LoginStatusParts 
-        playerdata={playerData} 
-        style={{ position: "absolute", right: "30px", bottom: "25px" }} 
-        headStyle={{ width: "44px", marginLeft: "8.5px" }}
-        /> : <></>}
+        <div className={style.Menu} onClick={() => navigate("/contact")}>Contact</div>
+        {login ? <LoginStatusParts
+          playerdata={playerData}
+          style={{ position: "absolute", right: "30px", bottom: "25px" }}
+          headStyle={{ width: "44px", marginLeft: "8.5px" }}
+          removeToken={removeToken}
+        /> : <div className={style.Menu} onClick={() => navigate("/login")}>Login</div>}
       </div>
       <div style={{ display: isMobileSize ? "block" : "none" }}>
-        <Hamburger login={login} playerData={playerData}/>
+        <Hamburger login={login} setLogin={setLogin} playerData={playerData} />
       </div>
     </div>
   )

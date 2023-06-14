@@ -2,7 +2,7 @@
 export const isLogin = (fetchAddress, token, removeToken, setPlayerData, setLogin) => {
     (async () => {
         var port = fetchAddress === process.env.REACT_APP_GLOBAL_IP ? 3535 : 3536;
-        var address  = fetchAddress === process.env.REACT_APP_DOMAIN || process.env.REACT_APP_LOCAL_IP ? process.env.REACT_APP_LOCAL_IP : process.env.REACT_APP_GLOBAL_IP
+        var address = fetchAddress === process.env.REACT_APP_DOMAIN || process.env.REACT_APP_LOCAL_IP ? process.env.REACT_APP_LOCAL_IP : process.env.REACT_APP_GLOBAL_IP
 
         await fetch(`https://${address}:${port}/auth`, {
             method: "GET",
@@ -25,44 +25,47 @@ export const isLogin = (fetchAddress, token, removeToken, setPlayerData, setLogi
 
 }
 
-export function login(fetchAddress, loginData, setToken, setError) {
+export function login(fetchAddress, loginData, setToken, setError,navigate) {
 
 
-    (async () => {
-        if (fetchAddress !== undefined) {
-            var port = fetchAddress === process.env.REACT_APP_GLOBAL_IP ? 3535 : 3536;
-            var address  = fetchAddress === process.env.REACT_APP_DOMAIN || process.env.REACT_APP_LOCAL_IP ? process.env.REACT_APP_LOCAL_IP : process.env.REACT_APP_GLOBAL_IP;
-            const body = {
-                mcid: loginData.mcid,
-                pass: loginData.pass
-            }
-            await fetch(`https://${address}:${port}/auth/login`, {
-                method: "POST",
-                mode: "cors",
-                headers: {
-                    'Content-Type': 'application/json'
-                    // 'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: JSON.stringify(body)
-            })
-                .then(res => res.json()).then(data => {
-                    if (data.id !== undefined) {
-                        setError({
-                            id: data.id,
-                            pass: ""
-                        })
-                        return;
-                    }
-                    if (data.pass !== undefined) {
-                        setError({
-                            id: "",
-                            pass: data.pass
-                        })
-                        return;
-                    }
+    if (fetchAddress !== undefined) {
+        var port = fetchAddress === process.env.REACT_APP_GLOBAL_IP ? 3535 : 3536;
+        var address = fetchAddress === process.env.REACT_APP_DOMAIN || process.env.REACT_APP_LOCAL_IP ? process.env.REACT_APP_LOCAL_IP : process.env.REACT_APP_GLOBAL_IP;
+        const body = {
+            mcid: loginData.mcid,
+            pass: loginData.pass
+        }
+        fetch(`https://${address}:${port}/auth/login`, {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: JSON.stringify(body)
+        })
+            .then(res => res.json()).then(data => {
+                if (data.id !== undefined) {
+                    setError({
+                        id: data.id,
+                        pass: ""
+                    })
+                    return;
+                }
+                if (data.pass !== undefined) {
+                    setError({
+                        id: "",
+                        pass: data.pass
+                    })
+                    return;
+                }
+                if(String(setToken) === "function setItem() { [native code] }"){
+                    window.sessionStorage.setItem("token",data.token)
+                }else{
                     setToken("token", data.token)
                 }
-                ).catch()
-        }
-    })();
+                navigate("/")
+            }
+            ).catch()
+    }
 }

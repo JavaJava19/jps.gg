@@ -4,6 +4,7 @@ import useFetchAddress from '../util/FetchAddress';
 import { login } from '../util/LoginUtil';
 import { useNavigate } from 'react-router-dom';
 const Login = () => {
+  // eslint-disable-next-line
   const [cookie, setCookie, removeCookie] = useCookies(["token"]);
   const sessionStorage = window.sessionStorage.getItem("token");
   const navigate = useNavigate();
@@ -37,23 +38,24 @@ const Login = () => {
     login(fetchAddress, {
       mcid: id,
       pass: pass,
-    }, use ? setCookie : setSession, setError);
+    }, use ? setCookie : setSession, setError, navigate);
 
   }
 
-  useEffect(()=>{
-    if(cookie.token !== undefined || sessionStorage !== null){
+  useEffect(() => {
+    if (cookie.token !== undefined || sessionStorage !== null) {
       navigate("/")
     }
-  },[cookie.token, sessionStorage])
+    // eslint-disable-next-line
+  }, [cookie.token, window.sessionStorage.getItem("token")])
 
   return (
     <div>
-      <form action="" onSubmit={(e)=> Login(e)}  style={{paddingTop: "140px"}}>
-        <input type="text" onChange={(e) => setId(e.target.value)}/>
-        <input type="password" onChange={(e) => setPass(e.target.value)}/>
-        <input type="checkbox" defaultChecked={use} onChange={()=> setUse(!use)}/>
-        <div onClick={(e)=> Login(e)}> Login</div>
+      <form action="" onSubmit={(e) => Login(e)} style={{ paddingTop: "140px" }}>
+        <input type="text" onChange={(e) => setId(e.target.value)} />
+        <input type="password" onChange={(e) => setPass(e.target.value)} />
+        <input type="checkbox" defaultChecked={use} onChange={() => setUse(!use)} />
+        <div onClick={(e) => Login(e)}> Login</div>
       </form>
     </div>
   )

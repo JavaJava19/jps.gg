@@ -1,8 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-const LoginStatusParts = ({ playerdata, style , headStyle,removeToken}) => {
+const LoginStatusParts = ({ playerdata, style , headStyle, removeToken}) => {
 
-
+  const navigate = useNavigate();
   function getHead() {
     if (playerdata.skinURL === undefined) {
       return "https://api.mineskin.org/render/head?url=https://s.namemc.com/i/bc68bf289576a899.png";
@@ -12,7 +13,9 @@ const LoginStatusParts = ({ playerdata, style , headStyle,removeToken}) => {
   }
 
   function logOut(){
-
+    removeToken()
+    navigate("/")
+    
   }
   if (playerdata !== undefined)
     return (
