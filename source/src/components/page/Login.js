@@ -55,7 +55,7 @@ const Login = () => {
         <input type="text" onChange={(e) => setId(e.target.value)} />
         <input type="password" onChange={(e) => setPass(e.target.value)} />
         <input type="checkbox" defaultChecked={use} onChange={() => setUse(!use)} />
-        <div onClick={(e) => Login(e)}> Login</div>
+        <input type='submit' onClick={(e) => Login(e)} value={"Login"} />
       </form>
     </div>
   )
