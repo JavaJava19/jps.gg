@@ -3,12 +3,46 @@ import { useNavigate } from 'react-router-dom'
 import logo from "../../../images/logo/cooltext436789694734263.png"
 import Hamburger from './Hamburger'
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useCookies } from 'react-cookie';
+import useFetchAddress from "../../util/FetchAddress";
+import { isLogin } from '../../util/LoginUtil';
+import { useEffect, useState } from "react";
+import LoginStatusParts from "./LoginStatusParts";
 
 const Header = () => {
 
   const navigate = useNavigate();
   const isMobileSize = useMediaQuery('(max-width:480px)');
+  const [cookie, setCookie, removeCookie] = useCookies(["token"]);
+  const sessionStorage = window.sessionStorage.getItem("token");
+  const fetchAddress = useFetchAddress();
+  const [playerData, setPlayerData] = useState();
+  const [login, setLogin] = useState(false);
 
+  function checkLogin() {
+    if (fetchAddress === undefined) return false;
+    console.log(fetchAddress)
+
+    if (cookie.token !== undefined) {
+      isLogin(fetchAddress, cookie.token, removeCookie, setPlayerData, setLogin)
+      return true;
+    } else {
+      if (sessionStorage !== null) {
+        const removeSession = window.sessionStorage.removeItem;
+        isLogin(fetchAddress, sessionStorage, removeSession, setPlayerData, setLogin)
+        return true;
+      }
+    }
+  }
+
+
+  useEffect(() => {
+    if (fetchAddress === undefined) return;
+    if (playerData !== undefined) return;
+    checkLogin()
+
+
+  }, [fetchAddress, cookie, sessionStorage, setCookie, playerData])
   return (
     <div className={style.HeaderField}>
       <div className={style.Logo}><img src={logo} alt="" /></div>
@@ -20,9 +54,14 @@ const Header = () => {
         <div className={style.Menu} onClick={() => navigate("/player")}>Player</div>
         <div className={style.Menu} onClick={() => navigate("/staff")}>Staff</div>
         <div className={style.Menu} onClick={() => navigate("/content")}>Contact</div>
+        {login ? <LoginStatusParts 
+        playerdata={playerData} 
+        style={{ position: "absolute", right: "30px", bottom: "25px" }} 
+        headStyle={{ width: "44px", marginLeft: "8.5px" }}
+        /> : <></>}
       </div>
       <div style={{ display: isMobileSize ? "block" : "none" }}>
-        <Hamburger />
+        <Hamburger login={login} playerData={playerData}/>
       </div>
     </div>
   )

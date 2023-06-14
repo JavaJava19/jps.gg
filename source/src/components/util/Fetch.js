@@ -49,8 +49,10 @@ export function usePlayerCard(key) {
     useEffect(() => {
         (async () => {
             if (fetchAddress !== undefined) {
-                var port = fetchAddress === "localhost" ? 3536 : 3535;
-                await fetch(`https://${fetchAddress}:${port}/players/` + key, {
+                var port = fetchAddress === process.env.REACT_APP_GLOBAL_IP  ? 3535 : 3536;
+                var address  = fetchAddress === process.env.REACT_APP_DOMAIN || process.env.REACT_APP_LOCAL_IP ? process.env.REACT_APP_LOCAL_IP : process.env.REACT_APP_GLOBAL_IP
+
+                await fetch(`https://${address}:${port}/players/` + key, {
                     method: "GET",
                     mode: "cors"
                 })
@@ -68,7 +70,7 @@ export function usePlayerCard(key) {
 
                     }
                     ).catch(setError(true))
-                await fetch(`https://${fetchAddress}:${port}/balance/` + mcid, {
+                await fetch(`https://${address}:${port}/balance/` + mcid, {
                     method: "GET",
                     mode: "cors"
                 })
@@ -97,8 +99,11 @@ export function useCreateCategory(title, admin) {
                 admin: admin
             }
             if (fetchAddress !== undefined) {
-                var port = fetchAddress === "localhost" ? 3536 : 3535;
-                await fetch(`https://${fetchAddress}:${port}/thread/addcategory`, {
+                var port = fetchAddress === process.env.REACT_APP_GLOBAL_IP  ? 3535 : 3536;
+                var address  = fetchAddress === process.env.REACT_APP_DOMAIN || process.env.REACT_APP_LOCAL_IP ? process.env.REACT_APP_LOCAL_IP : process.env.REACT_APP_GLOBAL_IP
+
+
+                await fetch(`https://${address}:${port}/thread/addcategory`, {
                     method: "POST",
                     mode: "cors",
                     headers: {
@@ -123,11 +128,14 @@ export function useImageCatcher(imagePath) {
     if (data === undefined) {
         if (fetchAddress !== undefined) {
             (async () => {
-                var port = fetchAddress === "localhost" ? 3536 : 3535;
+                var port = fetchAddress === process.env.REACT_APP_GLOBAL_IP  ? 3535 : 3536;
+                var address  = fetchAddress === process.env.REACT_APP_DOMAIN || process.env.REACT_APP_LOCAL_IP ? process.env.REACT_APP_LOCAL_IP : process.env.REACT_APP_GLOBAL_IP
+
+
                 const pushData = {
                     path: imagePath
                 }
-                await fetch(`https://${fetchAddress}:${port}/image`, {
+                await fetch(`https://${address}:${port}/image`, {
                     method: "POST",
                     mode: "cors",
                     headers: {
@@ -154,8 +162,11 @@ export function usePlayerList() {
         if (data.length === 0) {
             if (fetchAddress !== undefined) {
                 (async () => {
-                    var port = fetchAddress === "localhost" ? 3536 : 3535;
-                    await fetch(`https://${fetchAddress}:${port}/players/`, {
+                    var port = fetchAddress === process.env.REACT_APP_GLOBAL_IP  ? 3535 : 3536;
+                    var address  = fetchAddress === process.env.REACT_APP_DOMAIN || process.env.REACT_APP_LOCAL_IP ? process.env.REACT_APP_LOCAL_IP : process.env.REACT_APP_GLOBAL_IP
+
+
+                    await fetch(`https://${address}:${port}/players/`, {
                         method: "GET",
                         mode: "cors"
 
@@ -176,8 +187,10 @@ export function usePlayerMatch(mcid) {
         if (mcid !== "") {
             if (fetchAddress !== undefined) {
                 (async () => {
-                    var port = fetchAddress === "localhost" ? 3536 : 3535;
-                    await fetch(`https://${fetchAddress}:${port}/players/m/` + mcid, {
+                    var port = fetchAddress === process.env.REACT_APP_GLOBAL_IP  ? 3535 : 3536;
+                    var address  = fetchAddress === process.env.REACT_APP_DOMAIN || process.env.REACT_APP_LOCAL_IP ? process.env.REACT_APP_LOCAL_IP : process.env.REACT_APP_GLOBAL_IP
+
+                    await fetch(`https://${address}:${port}/players/m/` + mcid, {
                         method: "GET",
                         mode: "cors"
 
@@ -199,8 +212,11 @@ export function useCtwStats(uuid) {
         if (uuid !== "") {
             if (fetchAddress !== undefined) {
                 (async () => {
-                    var port = fetchAddress === "localhost" ? 3536 : 3535;
-                    await fetch(`https://${fetchAddress}:${port}/ctw/uuid/` + uuid, {
+                    var port = fetchAddress === process.env.REACT_APP_GLOBAL_IP  ? 3535 : 3536;
+                    var address  = fetchAddress === process.env.REACT_APP_DOMAIN || process.env.REACT_APP_LOCAL_IP ? process.env.REACT_APP_LOCAL_IP : process.env.REACT_APP_GLOBAL_IP
+
+
+                    await fetch(`https://${address}:${port}/ctw/uuid/` + uuid, {
                         method: "GET",
                         mode: "cors"
 
@@ -229,8 +245,9 @@ export function useCtwWinRank() {
         if (data === undefined) {
             if (fetchAddress !== undefined) {
                 (async () => {
-                    var port = fetchAddress === "localhost" ? 3536 : 3535;
-                    await fetch(`https://${fetchAddress}:${port}/ctw/win`, {
+                    var port = fetchAddress === process.env.REACT_APP_GLOBAL_IP ? 3535 : 3536;
+                    var address  = fetchAddress === process.env.REACT_APP_DOMAIN || process.env.REACT_APP_LOCAL_IP ? process.env.REACT_APP_LOCAL_IP : process.env.REACT_APP_GLOBAL_IP
+                    await fetch(`https://${address}:${port}/ctw/win`, {
                         method: "GET",
                         mode: "cors"
 

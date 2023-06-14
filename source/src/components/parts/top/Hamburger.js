@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { CgMenuGridO, CgCloseR } from "react-icons/cg"
 import { useNavigate } from 'react-router-dom';
 import style from "../../../css/header.module.css"
-const Hamburger = () => {
+import LoginStatusParts from './LoginStatusParts';
+const Hamburger = ({ login, playerData }) => {
     const [open, setOpen] = useState(false)
     const navigate = useNavigate();
 
@@ -20,6 +21,11 @@ const Hamburger = () => {
                 if (open) {
                     return (
                         <div className={style.Hamburger}>
+                            {login ? <LoginStatusParts
+                                playerdata={playerData}
+                                style={{ position: "absolute", right: "30%", top: "18%" }}
+                                headStyle={{ width: "44px", marginLeft: "0" }}
+                            /> : <></>}
                             <div className={style.LinkContainer}>
                                 <div className={style.Link} onClick={() => jump("/")}>Home</div>
                                 <div className={style.Link} onClick={() => jump("/read")}>Read</div>
