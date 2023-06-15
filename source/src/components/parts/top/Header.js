@@ -38,11 +38,11 @@ const Header = () => {
   function removeToken() {
     if (cookie.token !== undefined) {
       removeCookie("token")
-    } else {
-      if (sessionStorage !== null) {
-        window.sessionStorage.removeItem("token");
-      }
     }
+    if (sessionStorage !== null) {
+      window.sessionStorage.removeItem("token");
+    }
+
     setLogin(false)
     navigate("/")
     window.location.reload();
@@ -66,8 +66,8 @@ const Header = () => {
         <div className={style.Menu} onClick={() => navigate("/contact")}>Contact</div>
         {login ? <LoginStatusParts
           playerdata={playerData}
-          style={{ position: "absolute", right: "30px", bottom: "25px" }}
-          headStyle={{ width: "44px", marginLeft: "8.5px" }}
+          style={{ position: "absolute", top: "85px", right: "30px", bottom: "25px" }}
+          headStyle={{ width: "32px", marginLeft: "5px" }}
           removeToken={removeToken}
         /> : <div className={style.Menu} onClick={() => navigate("/login")}>Login</div>}
       </div>

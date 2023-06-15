@@ -3,6 +3,7 @@ import { useCookies } from 'react-cookie';
 import useFetchAddress from '../util/FetchAddress';
 import { login } from '../util/LoginUtil';
 import { useNavigate } from 'react-router-dom';
+import style from "../../css/login.module.css"
 const Login = () => {
   // eslint-disable-next-line
   const [cookie, setCookie, removeCookie] = useCookies(["token"]);
@@ -20,14 +21,14 @@ const Login = () => {
   function Login(e) {
     if (fetchAddress === undefined) return;
     e.preventDefault();
-    if (id === "") {
+    if (id === undefined) {
       setError({
         id: "IDが入力されていません",
         pass: error.pass
       })
       return;
     }
-    if (pass === "") {
+    if (pass === undefined) {
       setError({
         id: error.id,
         pass: "パスワードが入力されていません"
@@ -50,13 +51,32 @@ const Login = () => {
   }, [cookie.token, window.sessionStorage.getItem("token")])
 
   return (
-    <div>
-      <form action="" onSubmit={(e) => Login(e)} style={{ paddingTop: "140px" }}>
-        <input type="text" onChange={(e) => setId(e.target.value)} />
-        <input type="password" onChange={(e) => setPass(e.target.value)} />
-        <input type="checkbox" defaultChecked={use} onChange={() => setUse(!use)} />
-        <input type='submit' onClick={(e) => Login(e)} value={"Login"} />
-      </form>
+    <div className={style.LoginField}>
+      <div className={style.LoginForm}>
+        <div className={style.Title}><h1>Login Form</h1></div>
+        <form action="" onSubmit={(e) => Login(e)}>
+          <div className={style.MCIDForm}>
+            <input type="text" onChange={(e) => setId(e.target.value)} placeholder='MCID' />
+            <p className={style.ErrorMessage}>
+            {error.id}
+            </p>
+          </div>
+          <div className={style.PassForm}>
+            <input type="password" onChange={(e) => setPass(e.target.value)} placeholder='Password' />
+            <p className={style.ErrorMessage}>
+            {error.pass}
+            </p>
+          </div>
+          <div className={style.CookieForm} onClick={() => setUse(!use)} >
+            <input type="checkbox" defaultChecked={use} id={"check"} onChange={() => setUse(!use)} />
+            <label htmlFor='check'>入力したデータをクッキーに保存しておく</label>
+          </div>
+          <div className={style.SubmitForm}>
+            <input type='submit' onClick={(e) => Login(e)} value={"Login"} />
+
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

@@ -24,8 +24,8 @@ const LoginStatusParts = ({ playerdata, style , headStyle, removeToken}) => {
           <div style={
             {
               position: "absolute",
-              width: "64px",
-              height: "64px",
+              width: "42px",
+              height: "42px",
               borderRadius: "50%",
               backgroundColor: "white",
               right: "40px",
@@ -39,12 +39,14 @@ const LoginStatusParts = ({ playerdata, style , headStyle, removeToken}) => {
           <div style={
             {
               color: "black",
-              fontSize: "12px",
-              width: "140px",
+              position: "absolute",
+              fontSize: "10px",
+              width: "120px",
               backgroundColor: "white",
               textAlign: "center",
               borderRadius: "10px",
-              marginTop: "-5px",
+              top: "-13px",
+              right: "0px",
               border: "2px solid rgb(191, 192, 194)"
             }}>
             {playerdata.name}

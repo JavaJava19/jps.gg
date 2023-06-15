@@ -18,11 +18,11 @@ const Hamburger = ({ login, setLogin, playerData }) => {
     function removeToken() {
         if (cookie.token !== undefined) {
             removeCookie("token")
-        } else {
-            if (sessionStorage !== null) {
-                window.sessionStorage.removeItem("token");
-            }
         }
+        if (sessionStorage !== null) {
+            window.sessionStorage.removeItem("token");
+        }
+
         setLogin(false)
         jump("/")
         window.location.reload();
@@ -40,8 +40,8 @@ const Hamburger = ({ login, setLogin, playerData }) => {
                         <div className={style.Hamburger}>
                             {login ? <LoginStatusParts
                                 playerdata={playerData}
-                                style={{ position: "absolute", right: "30%", top: "18%" }}
-                                headStyle={{ width: "44px", marginLeft: "0" }}
+                                style={{ position: "absolute", right: "34%", top: "18%" }}
+                                headStyle={{ width: "32px", marginLeft: "0" }}
                                 removeToken={removeToken}
                             /> : <></>}
                             <div className={style.LinkContainer}>
@@ -51,7 +51,7 @@ const Hamburger = ({ login, setLogin, playerData }) => {
                                 <div className={style.Link} onClick={() => jump("/game")}>Games</div>
                                 <div className={style.Link} onClick={() => jump("/player")}>Player</div>
                                 <div className={style.Link} onClick={() => jump("/staff")}>Staff</div>
-                                <div className={style.Link} onClick={() => jump("/content")}>Contact</div>
+                                <div className={style.Link} onClick={() => jump("/contact")}>Contact</div>
                                 {!login ? <div className={style.Link} onClick={() => jump("/login")}>Login</div> : <></>}
                             </div>
 
