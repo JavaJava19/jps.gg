@@ -20,7 +20,7 @@ export const isLogin = (fetchAddress, token, removeToken, setPlayerData, setLogi
                 removeToken("token")
                 setLogin(false)
             }
-        }).catch(err => console.log("err"))
+        }).catch(console.error)
     })();
 
 }
@@ -66,7 +66,7 @@ export function login(fetchAddress, loginData, setToken, setError, navigate) {
                     }
                     navigate("/")
                 }
-                ).catch(console.log)
+                ).catch(console.error)
         })();
     }
 }

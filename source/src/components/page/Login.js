@@ -69,10 +69,10 @@ const Login = () => {
           </div>
           <div className={style.CookieForm} onClick={() => setUse(!use)} >
             <input type="checkbox" defaultChecked={use} id={"check"} onChange={() => setUse(!use)} />
-            <label htmlFor='check'>入力したデータをクッキーに保存しておく</label>
+            <label htmlFor='check'>入力したデータをCookieに保存しておく</label>
           </div>
           <div className={style.SubmitForm}>
-            <input type='submit' onClick={(e) => Login(e)} value={"Login"} />
+            <input type='submit' value={"Login"} />
 
           </div>
         </form>
