@@ -18,19 +18,27 @@ const Login = () => {
     pass: ""
   })
 
+  function isEmpty(str){
+    return str === undefined || str === "";
+  }
+
   function Login(e) {
     if (fetchAddress === undefined) return;
     e.preventDefault();
-    if (id === undefined) {
+    setError({
+      id: "",
+      pass: ""
+    })
+    if (isEmpty(id)) {
       setError({
         id: "IDが入力されていません",
-        pass: error.pass
+        pass: ""
       })
       return;
     }
-    if (pass === undefined) {
+    if (isEmpty(pass)) {
       setError({
-        id: error.id,
+        id: "",
         pass: "パスワードが入力されていません"
       })
       return;
