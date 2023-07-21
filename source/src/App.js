@@ -31,6 +31,7 @@ function App() {
         <Route path="/player/:id" element={<Player />}></Route>
         <Route path="/game" element={<Games />}></Route>
         <Route path="/game/ctw/rule" element={<CTWRule />}></Route>
+        <Route path="/game/survival" element={<Survival />}></Route>
         <Route path="/login" element={<Login />}></Route>
 
       </Routes>

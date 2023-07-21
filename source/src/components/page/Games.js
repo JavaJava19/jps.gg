@@ -66,6 +66,13 @@ const Games = () => {
           ))}
         </div>
       </div>
+      <section className={styles.GameField}>
+        <h2 className={styles.GameTitle}>
+          JPS サバイバル
+        </h2>
+        <p>サバイバル生活を送れるサーバにも接続可能です。<br />
+        <p><a href="/game/survival">サバイバルの詳細</a>をご覧ください</p>
+      </section>
     </div>
   )
 }
