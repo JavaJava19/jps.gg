@@ -49,24 +49,24 @@ const Games = () => {
 
   return (
 
-    <div className={styles.GameBody}>
+    <main className={styles.GameBody}>
       <div className={styles.GameField}>
-        <div className={styles.GameTitle}>
+        <h1 className={styles.GameTitle}>
           JPS Games
-        </div>
+        </h1>
         <p className={styles.PartsMemo}>
           JPSオリジナルミニゲームや、他の公開サーバなどで人気のMinecraftのゲームを幅広く遊ぶことができます。<br />
           スピード感のあるゲーム、短時間で遊べるアーケードスタイルのゲーム、
           またブロックを自在に設置でき無限の戦略が楽しめるゲームなど、たくさんのゲームを取り揃えました！<br />
           各ゲームの詳細は以下のアイコンをクリックしてご確認ください！
         </p>
-        <div className={styles.GameContainer}>
+        <section className={styles.GameContainer}>
           {transition((style, item) => (
             <GameParts style={style} item={item} />
           ))}
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
   )
 }
 
