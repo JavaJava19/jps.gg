@@ -38,7 +38,7 @@ const Survival = () => {
               <tr><td><code>/lay</code></td><td>仰向けに横たわる</td><td></td></tr>
               <tr><td><code>/belltflop</code></td><td>うつ伏せで横たわる</td>
                 <td><code>crawl</code>と似ているが、その場から移動できない</td></tr>
-              <tr><td><code>/crawl</code></td><td>這いつくばる</td><td>地上で泳いでいるような動作をする</td>
+              <tr><td><code>/crawl</code></td><td>這いつくばる</td><td>地上で泳いでいるような動作をする</td></tr>
               <tr><td><code>/spin</code></td><td>回転する</td>
                 <td>トライデントの激流の固定＆地上バージョンのよう</td></tr>
             </tbody>
