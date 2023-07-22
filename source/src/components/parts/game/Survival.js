@@ -10,7 +10,7 @@ const Survival = () => {
         <p>Minecraftほぼバニラなサバイバルモードでの生活をするサーバです</p>
       </header>
       <main>
-        <section id="sv_s2_rule">
+        <section id={sv_s2_rule}>
         <h2>生活サーバのルール</h2>
           <p>他のプレイヤーに不快な思いをさせないこと、を軸に、以下をルールとして守ってください。</p>
           <ul>
@@ -25,12 +25,12 @@ const Survival = () => {
             ただし、報告の内容やその他状況により、ロールバックが適用されないこともあります。
             後述の「町」を活用して、建築物に保護を設定して荒らしから自衛することをおすすめします。</p>
         </section>
-        <section id="sv_s2_cmd">
+        <section id={sv_s2_cmd}>
         <h2>使えるコマンド</h2>
           <table>
             <caption>サバイバルワールドに限らず使用可能なコマンド</caption>
             <thead>
-              <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
+              <tr><th scope={col}>コマンド</th><th scope={col}>用途</th><th scope={col}>備考</th></tr>
             </thead>
             <tbody>
               <tr><td><code>/sit</code></td><td>座る</td>
@@ -46,7 +46,7 @@ const Survival = () => {
           <table>
             <caption>サバイバルワールド限定コマンド</caption>
             <thead>
-              <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
+              <tr><th scope={col}>コマンド</th><th scope={col}>用途</th><th scope={col}>備考</th></tr>
             </thead>
             <tbody>
               <tr><td><code>/t spawn</code></td><td>自分の所属する町の中心地にワープする（無料）</td><td></td></tr>
@@ -56,7 +56,7 @@ const Survival = () => {
             </tbody>
           </table>
         </section>
-        <section id="sv_s2_guid">
+        <section id={sv_s2_guid}>
         <h2>初心者向けガイド</h2>
         <p>楽しみ方は自由ですが、どこから手を付けるか迷う方へのガイド</p>
           <h3>0.マイクラを普通に楽しむ</h3>
@@ -93,7 +93,7 @@ const Survival = () => {
               他プレイヤーと協力して大型建築をしてみたり。
               マインクラフトの遊び方は無限大。</p>
           <h3>6.ボス討伐</h3>
-            <p>マイクラの<abbr title='エンダードラゴン・ウィザー・エルダーガーディアン'>3大ボス</abbr>は、
+            <p>マイクラの<abbr title={エンダードラゴン・ウィザー・エルダーガーディアン}>3大ボス</abbr>は、
               通常通り発生するが討伐にはマルチサーバ固有の留意事項がある。</p>
             <h4>エンダードラゴン</h4>
               メインワールドのエンドラは有志の勇士により速やかに討伐されてしまう。
@@ -107,7 +107,7 @@ const Survival = () => {
             <h4>エルダーガーディアン</h4>
               特段注意事項は無い。攻略は各々のやり方で。
         </section><!-- sv_s2_guid -->
-        <section id="sv_s2_jp">
+        <section id={sv_s2_jp}>
         <h2>通貨JP</h2>
           <p>このサーバの経済システムでの通貨単位は<abbr>JP</abbr>で、<code>0.1JP</code>単位で管理される。</p>
           <!-- 獲得方法の一覧 -->
