@@ -112,6 +112,7 @@ const Survival = () => {
           <p>このサーバの経済システムでの通貨単位は<abbr>JP</abbr>で、<code>0.1JP</code>単位で管理される。</p>
           <!-- 獲得方法の一覧 -->
           <!-- 経済関連コマンドの一覧 -->
+        </section><!-- sv_s2_jp -->
       </main>
     </article>
     )
