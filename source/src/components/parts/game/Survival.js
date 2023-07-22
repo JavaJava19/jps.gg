@@ -1,6 +1,6 @@
 import React from 'react'
-import style from "css/game.module.css"
-import { useCtwWinRank, usePlayerList } from 'components/util/Fetch';
+import style from "../../../css/game.module.css"
+import { useCtwWinRank, usePlayerList } from '../../util/Fetch';
 const Survival = () => {
 
     return (
