@@ -11,13 +11,14 @@
     z-index: 10;
 }
 
-.Logo img{
+.Logo img {
     width: 90%;
 }
 
 .Menus {
-    width: 40%;
+    width: 50%;
     display: flex;
+    margin-right: 5%;
     justify-content: space-between;
 }
 
@@ -69,7 +70,7 @@
     text-align: center;
 }
 
-.LinkContainer{
+.LinkContainer {
     position: absolute;
     top: 25%;
     left: 50%;
@@ -79,7 +80,7 @@
     width: 80%;
 }
 
-.Hamburger .Link{
+.Hamburger .Link {
     padding: 10px;
     font-size: 22px;
 }
@@ -98,19 +99,19 @@
         z-index: 10;
     }
 
-    .Logo{
+    .Logo {
         width: 80%;
         position: relative;
     }
-    
-    .Logo img{
+
+    .Logo img {
         width: 65%;
         position: absolute;
         top: -55px;
         left: 10px;
     }
 
-    .HamburgerMenu{
+    .HamburgerMenu {
         position: absolute;
         z-index: 15;
         font-size: 34px;
