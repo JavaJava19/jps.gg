@@ -49,24 +49,24 @@ const Games = () => {
 
   return (
 
-    <div className={styles.GameBody}>
+    <main className={styles.GameBody}>
       <div className={styles.GameField}>
-        <div className={styles.GameTitle}>
+        <h1 className={styles.GameTitle}>
           JPS Games
-        </div>
-        <div className={styles.PartsMemo}>
-          オリジナルから他サーバーで人気なMinecraftのゲームを幅広く遊ぶことができます。<br />
-          スピード感のあるゲーム、短時間で遊べるアーケードスタイルのゲーム。<br />
-          またブロックを自在に設置でき無限の戦略が楽しめるゲームなどたくさんのゲームを取り揃えました！<br />
-          各ゲームの詳細は以下のアイコンをクリックして、それぞれの詳細をご確認してください！
-        </div>
-        <div className={styles.GameContainer}>
+        </h1>
+        <p className={styles.PartsMemo}>
+          JPSオリジナルミニゲームや、他の公開サーバなどで人気のMinecraftのゲームを幅広く遊ぶことができます。<br />
+          スピード感のあるゲーム、短時間で遊べるアーケードスタイルのゲーム、
+          またブロックを自在に設置でき無限の戦略が楽しめるゲームなど、たくさんのゲームを取り揃えました！<br />
+          各ゲームの詳細は以下のアイコンをクリックしてご確認ください！
+        </p>
+        <section className={styles.GameContainer}>
           {transition((style, item) => (
             <GameParts style={style} item={item} />
           ))}
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
   )
 }
 
