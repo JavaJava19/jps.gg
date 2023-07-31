@@ -5,7 +5,7 @@ import { BsTwitter, BsYoutube, BsDiscord } from "react-icons/bs"
 const Footer = () => {
 
   return (
-    <div className={style.FooterField}>
+    <footer className={style.FooterField}>
       <div className={style.FooterLinkBox}>
         <div className={style.FooterLink}>
           <a href="https://twitter.com/az_jps"><BsTwitter style={{ color: "rgb(79, 181, 240)" }} /></a>
@@ -18,10 +18,10 @@ const Footer = () => {
         </div>
       </div>
       <div className={style.CopyRight}>
-        Minecraft は Mojang AB の登録商標です。本サーバーは Mojang社から承認されておらず、Mojang社とは関係ありません。<br />
-        © 2023 Japan PVP Server
+        <p>Minecraft は Mojang AB の登録商標です。本サーバーは Mojang社から承認されておらず、Mojang社とは関係ありません。</p>
+        <small>©2023- Japan PvP Server</small>
       </div>
-    </div>
+    </footer>
   )
 }
 
