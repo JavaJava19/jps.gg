@@ -11,6 +11,7 @@ import Player from "./components/page/Player";
 import ScrollTop from "./components/util/ScrollTop";
 import Games from "./components/page/Games";
 import CTWRule from "./components/parts/game/ctw/CTW_Rule";
+import Survival from "./components/parts/game/Survival";
 import Forum from "./components/page/Forum";
 import Login from "./components/page/Login";
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/player/:id" element={<Player />}></Route>
         <Route path="/game" element={<Games />}></Route>
         <Route path="/game/ctw/rule" element={<CTWRule />}></Route>
+        <Route path="/game/survival" element={<Survival />}></Route>
         <Route path="/login" element={<Login />}></Route>
 
       </Routes>
