@@ -8,7 +8,7 @@ const Survival = () => {
         <h1 className={styles.GameTitle}>サバイバルサーバ</h1>
         <p>Minecraftほぼバニラなサバイバルモードでの生活をするサーバです</p>
       </header>
-      <main className={styles.PartsMemo}>
+      <main className={styles.GameParts}>
         <section id="sv_s2_rule">
         <h2>生活サーバのルール</h2>
           <p>他のプレイヤーに不快な思いをさせないこと、を軸に、以下をルールとして守ってください。</p>
