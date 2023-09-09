@@ -70,7 +70,8 @@ const Games = () => {
         <h2 className={styles.GameTitle}>
           JPS サバイバル
         </h2>
-        <p>サバイバル生活を送れるサーバにも接続可能です。<br />
+        <p className={styles.PartsMemo}>
+          サバイバル生活を送れるサーバにも接続可能です。<br />
           <a href="/game/survival">サバイバルの詳細</a>をご覧ください</p>
       </section>
     </main>
