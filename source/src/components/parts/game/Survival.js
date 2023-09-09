@@ -6,7 +6,7 @@ const Survival = () => {
     <article className={styles.GameBody}>
       <header>
         <h1 className={styles.GameTitle}>サバイバルサーバ</h1>
-        <p>Minecraftほぼバニラなサバイバルモードでの生活をするサーバです</p>
+        <p className={styles.PartsMemo}>Minecraftほぼバニラなサバイバルモードでの生活をするサーバです</p>
       </header>
       <main className={styles.GameParts}>
         <section id="sv_s2_rule">

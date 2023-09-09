@@ -50,7 +50,7 @@ const Games = () => {
   return (
 
     <main className={styles.GameBody}>
-      <div className={styles.GameField}>
+      <section className={styles.GameField}>
         <h1 className={styles.GameTitle}>
           JPS Games
         </h1>
@@ -65,7 +65,7 @@ const Games = () => {
             <GameParts style={style} item={item} />
           ))}
         </section>
-      </div>
+      </section>
       <section className={styles.GameField}>
         <h2 className={styles.GameTitle}>
           JPS サバイバル
