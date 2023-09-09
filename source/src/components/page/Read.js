@@ -8,9 +8,12 @@ const Read = () => {
 
     return (
         <div className={style.ReadField}>
-            <div className={style.ReadContentField}>
+            <article className={style.ReadContentField}>
             <section className={style.Content}>
                 <h2>利用規約</h2>
+                <header>
+                    <p>初版<br/><time dateTime={"2023-10-01"}>2023年10月1日</time></p>
+                </header>
                 <section>
                     <p>この利用規約(以下，「本規約」といいます。)は，JapanPvPServer(以下，「当サーバー」といいます。)
                     が提供する全てのサービス(以下，「本サービス」といいます。)の利用条件を定めるものです。</p>
@@ -192,8 +195,21 @@ const Read = () => {
                         <li>本サービスに関して紛争が生じた場合には，当サーバーの所在地を管轄する裁判所を専属的合意管轄裁判所とします。</li>
                     </ol>
                 </section>
+                <footer>
+                    <table>
+                        <caption>改版履歴</caption>
+                        <thead>
+                            <tr><th scope={"col"}>版</th><th scope={"col"}>公開日</th><th scope={"col"}>適用日</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>初版</td>
+                                <td><time dateTime={"2023-09-01"}>23/09/01</time></td><td><time dateTime={"2023-10-01"}>23/10/01</time></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </footer>
             </section>
-            </div>
+            </article>
         </div>
     )
 }
