@@ -14,6 +14,7 @@ import CTWRule from "./components/parts/game/ctw/CTW_Rule";
 import Survival from "./components/parts/game/Survival";
 import Forum from "./components/page/Forum";
 import Login from "./components/page/Login";
+import Wiki from "./components/parts/top/Wiki";
 
 function App() {
 
@@ -34,7 +35,7 @@ function App() {
         <Route path="/game/ctw/rule" element={<CTWRule />}></Route>
         <Route path="/game/survival" element={<Survival />}></Route>
         <Route path="/login" element={<Login />}></Route>
-
+        <Route path="/wiki/" element={<Wiki />}></Route> {/* wiki は301リダイレクトが設定されている */}
       </Routes>
       <Footer />
     </div>
