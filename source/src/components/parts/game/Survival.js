@@ -8,7 +8,7 @@ const Survival = () => {
         <h1 className={styles.GameTitle}>サバイバルサーバ</h1>
         <p className={styles.PartsMemo}>Minecraftほぼバニラなサバイバルモードでの生活をするサーバです</p>
       </header>
-      <main className={styles.GameParts}>
+      <main className={styles.GameContainer}>
         <section id="sv_s2_rule">
         <h2>生活サーバのルール</h2>
           <p>他のプレイヤーに不快な思いをさせないこと、を軸に、以下をルールとして守ってください。</p>
@@ -26,7 +26,7 @@ const Survival = () => {
         </section>
         <section id="sv_s2_cmd">
         <h2>使えるコマンド</h2>
-          <table>
+          <table className={styles.framed}>
             <caption>サバイバルワールドに限らず使用可能なコマンド</caption>
             <thead>
               <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
@@ -42,7 +42,7 @@ const Survival = () => {
                 <td>トライデントの激流の固定＆地上バージョンのよう</td></tr>
             </tbody>
           </table>
-          <table>
+          <table className={styles.framed}>
             <caption>サバイバルワールド限定コマンド</caption>
             <thead>
               <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>

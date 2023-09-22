@@ -85,6 +85,15 @@
     padding-top: 20px;
 }
 
+table.framed{
+    border-spacing: 0;
+}
+table.framed th,
+table.framed td {
+    border: black 1px solid;
+    border-collapse: collapse;
+}
+
 @media screen and (max-width: 480px) {
     .GameBody {
         width: 100%;
