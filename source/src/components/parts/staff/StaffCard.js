@@ -66,7 +66,7 @@ const StaffCard = ({ staff }) => {
     return (
         <div className={style.StaffCard}>
             <div className={style.Skin}>
-                <img src={staff.skin} alt="" />
+                <img src={staff.skin} alt="staff minecraft skin" />
             </div>
             <div className={style.StaffInfo}>
                 <div className={style.Name}>{staff.name}</div>

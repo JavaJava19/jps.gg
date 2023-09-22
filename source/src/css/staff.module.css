@@ -29,6 +29,7 @@
 
 .Skin img {
     margin-left: 25%;
+    max-height: 405px;
 }
 
 .StaffInfo {
