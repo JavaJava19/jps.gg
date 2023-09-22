@@ -52,6 +52,9 @@ const Survival = () => {
               <tr><td><code>/t spawn <i>町名</i></code></td><td>指定した町の中心地にワープする</td><td>JPの支払いが必要</td></tr>
               <tr><td><code>/n spawn</code></td><td>自分の所属する町が所属する国にワープする</td><td></td></tr>
               <tr><td><code>/n spawn <i>国名</i></code></td><td>指定した国にワープする</td><td>JPの支払いが必要</td></tr>
+              <tr><td><code>/js rp</code></td><td>初期スポーン地点にワープする</td><td>無料</td></tr>
+              <tr><td><code>/js pvp</code></td><td>PvPモードのON/OFFを切り替える</td>
+                <td>ON/OFFが切り替わると全員に状態が通知される</td></tr>
             </tbody>
           </table>
         </section>
