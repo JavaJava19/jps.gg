@@ -48,9 +48,9 @@ const Survival = () => {
               <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><td><code>/t spawn</code></td><td>自分の所属する町の中心地にワープする（無料）</td><td></td></tr>
+              <tr><td><code>/t spawn</code></td><td>自分の所属する町の中心地にワープする</td><td></td></tr>
               <tr><td><code>/t spawn <i>町名</i></code></td><td>指定した町の中心地にワープする</td><td>JPの支払いが必要</td></tr>
-              <tr><td><code>/n spawn</code></td><td>自分の所属する町が所属する国にワープする（無料）</td><td></td></tr>
+              <tr><td><code>/n spawn</code></td><td>自分の所属する町が所属する国にワープする</td><td></td></tr>
               <tr><td><code>/n spawn <i>国名</i></code></td><td>指定した国にワープする</td><td>JPの支払いが必要</td></tr>
             </tbody>
           </table>
