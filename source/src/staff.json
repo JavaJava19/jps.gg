@@ -88,6 +88,20 @@
         "web" : "",
         "blog": "",
         "message" : "プラグイン作ります！毎日サビ残でぽんぽんぺいんでつらみが深みです！"
+    },
+
+    {
+        "mcid" : "Yui-Kitamura LLC.",
+        "name" : "合同会社北村由衣",
+        "skin" : "https://yui.eng.pro/llc/resource/yui_stand.png",
+        "post" : "協働企業",
+        "twitter" : "https://twitter.com/yuiktmr",
+        "youtube" : "https://www.youtube.com/@yuiktmr",
+        "web" : "https://yui-kitamura.llc/",
+        "webIcon": "https://yui-kitamura.llc/favicon.ico",
+        "blog": "https://github.com/sponsors/yui-KitamuraLLC",
+        "blogIcon": "https://yui.eng.pro/llc/resource/fav_gglFt_p24.png",
+        "message" : "プラグイン製作を中心に、JPSのインフラ周りもサポート"
     }
 
 ]
