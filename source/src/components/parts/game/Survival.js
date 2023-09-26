@@ -32,6 +32,9 @@ const Survival = () => {
               <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
+              <tr><td><code>/hub</code></td><td>ロビーに戻る</td><td>いつでもどこからでもロビーへ</td></tr>
+              <tr><td><code>/tell <i>プレイヤー名</i> <i>メッセージ</i></code></td>
+                <td>相手と"ささやき"で個人チャットをする</td><td></td></tr>
               <tr><td><code>/sit</code></td><td>座る</td>
                 <td>カーペット、雪、階段、ハーフブロックを右クリック(道具などを使用するキー)でも同じ事が可能</td></tr>
               <tr><td><code>/lay</code></td><td>仰向けに横たわる</td><td></td></tr>
@@ -64,7 +67,7 @@ const Survival = () => {
           <h3>0.マイクラを普通に楽しむ</h3>
             <p>シングルワールドでのサバイバル生活と同様、資材を集め、建物を建て、マイクラ生活をする。
             資材集めなどをゼロから始めるのは大変なので、<mark>町に入る</mark>と楽になるかもしれない</p>
-          <h3>1.町</h3>
+          <h3>1.町と国</h3>
             <p>町と国という概念があります（プラグインtowny）。<br />
               町は数チャンクの地域、国は複数の町で構成された組織。</p>
             <p>資金に余力がある人は、自らの町を作成すると良い。
@@ -74,17 +77,64 @@ const Survival = () => {
               町の人工物などは全て消え去って更地になってしまうので注意が必要。</p>
             <p>町の設定として、モンスターが入域できないように設定ができ、安心安全な領域にできる。
               <small>スケルトンホースはモンスター扱い。悲しい別れに注意</small></p>
+            <table className={styles.framed}>
+              <caption>Towny関連コマンド</caption>
+              <thead>
+              <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
+              </thead>
+              <tbody>
+              <tr><td><code>/t new <i>名称</i></code></td><td>新しい町を設立する</td><td>立っている1チャンク範囲が町になる</td></tr>
+              <tr><td><code>/t here</code></td><td>現在いる場所の町の情報を表示する</td><td></td></tr>
+              <tr><td><code>/t invite <i>プレイヤー名</i></code></td><td>町にプレイヤーを招待する</td><td></td></tr>
+              <tr><td><code>/accept</code></td><td>招待を受けた側が承諾する</td><td></td></tr>
+              <tr><td><code>/t deposit <i>1234</i></code></td><td>町の共通口座に資金を拠出する</td><td></td></tr>
+              <tr><td><code>/t withdraw <i>1234</i></code></td><td>町の共通口座から資金を引き出す</td>
+                <td>他人が預けた資産を引き出す事にもなりうるので注意</td></tr>
+              <tr><td><code>/t bankhistory</code></td><td>町の共通口座の入出金履歴を表示する</td><td>当日分のみ</td></tr>
+              <tr><td><code>/t claim</code></td><td>現在いる場所を町の領土として取得する</td><td>既存領土と要隣接</td></tr>
+              <tr><td><code>/t claim outpost</code></td><td>"前哨基地"として町から離れた地点で領土を取得する</td><td></td></tr>
+              <tr><td><code>/n join <i>既存国名</i></code></td><td>既存の国の属地になる</td><td></td></tr>
+              <tr><td><code>/n new <i>名称</i></code></td><td>町を首都とする国を設立する</td><td></td></tr>
+              <tr><td>前述の t を n に置き換える</td><td>町と同じ操作を国に対して実行できる</td><td></td></tr>
+              <tr><td><code>/n ally add <i>他国名称</i></code></td><td>他国と同盟関係になる</td><td></td></tr>
+              <tr><td><code>/n enemy add <i>他国名称</i></code></td><td>他国と敵対関係になる</td><td></td></tr>
+              <tr><td><code>/plot set <i>区分</i></code></td><td>区画用途を定義する</td><td>闘技場(arena),農地(farm),商店街(shop)など</td></tr>
+              </tbody>
+            </table>
           <h3>2.拠点</h3>
-            <p>サバイバル生活を送るにあたり、拠点を建てることになるが、
-              <mark>所属する町に建てましょう</mark>。<br />
+            <p>サバイバル生活を送るにあたり建築をすることになるが、<mark>所属する町に建てよう</mark>。
               野宿でも問題はないが、チェストの管理等が煩雑になる。</p>
             <p>拠点には資材を貯めておくチェストを置くことになるが、
-              看板を側面に貼り付ける（※記入しようとしない）ことで自分だけが開けられるようになる。
-              同様、ドアも本体あるいは設置している基盤ブロックへ看板を貼り付けることで、
-              自分だけが開けられるようになる。</p>
+              看板を側面に貼り付ける（※記入しようとしない）ことで自分だけが開けられるようになる。<br />
+              同様に、ドアも、本体あるいは隣接ブロックに看板を貼り付けることで、自分だけが開けられるようになる。</p>
+          <table className={styles.framed}>
+            <caption>保護関連コマンド（LWC）</caption>
+            <thead>
+            <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
+            </thead>
+            <tbody>
+            <tr><td><code>/cinfo</code></td><td>保護対象ブロックの保護データを見る</td><td>入力後対象物を殴る</td></tr>
+            <tr><td><code>/unlock</code></td><td>保護状態を解除する</td><td>他プレイヤーが破壊も含め自由に触れるようになる</td></tr>
+            <tr><td><code>/cpublic</code></td><td>緩い保護を設定する</td><td>他プレイヤーも中身は触れるが、破壊はできなくする</td></tr>
+            <tr><td><code>/lock</code></td><td>自身のみが触れる保護を設定する</td><td>unlock後に再設定する</td></tr>
+            <tr><td><code>/chopper on</code></td><td>チェスト等の中身がホッパーで吸い出されることを許可する</td>
+              <td>既定ではoff。悪意ある他人がホッパーで中身を吸い出せないようにするため。</td></tr>
+            </tbody>
+          </table>
           <h3>3.出店する</h3>
             <p>JPを獲得する手立てになる。出店はチェスト1つから、お好きなアイテムで。</p>
             <p>初期リス付近や、町・国のどこかに商店を建てたり、他プレイヤーとも協力して商店街を作ってもよし。</p>
+            <table className={styles.framed}>
+              <caption>お店の管理コマンド</caption>
+              <thead>
+              <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
+              </thead>
+              <tbody>
+              <tr><td><code>/qs create <i>1234</i></code></td><td>手に持っているアイテムを指定価格で販売するショップを作る</td>
+                <td>先にチェストを置いておき、入力後直ちに殴る</td></tr>
+              <tr><td colSpan={3}>自動生成される看板を右クリックすることで、管理メニューが表示される</td></tr>
+              </tbody>
+            </table>
           <h3>4.住環境を整える</h3>
             <p>食料の供給元を自身の町の中で確保するために、畑・牧場を作ってみよう。
               JPを支払って他ユーザから購入し続けるよりもお財布に優しくなれる。</p>
