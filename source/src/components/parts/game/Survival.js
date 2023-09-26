@@ -8,7 +8,7 @@ const Survival = () => {
         <h1 className={styles.GameTitle}>サバイバルサーバ</h1>
         <p className={styles.PartsMemo}>Minecraftほぼバニラなサバイバルモードでの生活をするサーバです</p>
       </header>
-      <main className={styles.GameParts}>
+      <main className={styles.GameContainer}>
         <section id="sv_s2_rule">
         <h2>生活サーバのルール</h2>
           <p>他のプレイヤーに不快な思いをさせないこと、を軸に、以下をルールとして守ってください。</p>
@@ -26,7 +26,7 @@ const Survival = () => {
         </section>
         <section id="sv_s2_cmd">
         <h2>使えるコマンド</h2>
-          <table>
+          <table className={styles.framed}>
             <caption>サバイバルワールドに限らず使用可能なコマンド</caption>
             <thead>
               <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
@@ -35,23 +35,26 @@ const Survival = () => {
               <tr><td><code>/sit</code></td><td>座る</td>
                 <td>カーペット、雪、階段、ハーフブロックを右クリック(道具などを使用するキー)でも同じ事が可能</td></tr>
               <tr><td><code>/lay</code></td><td>仰向けに横たわる</td><td></td></tr>
+              <tr><td><code>/crawl</code></td><td>這いつくばる</td><td>地上で泳いでいるような動作をする</td></tr>
               <tr><td><code>/belltflop</code></td><td>うつ伏せで横たわる</td>
                 <td><code>crawl</code>と似ているが、その場から移動できない</td></tr>
-              <tr><td><code>/crawl</code></td><td>這いつくばる</td><td>地上で泳いでいるような動作をする</td></tr>
               <tr><td><code>/spin</code></td><td>回転する</td>
                 <td>トライデントの激流の固定＆地上バージョンのよう</td></tr>
             </tbody>
           </table>
-          <table>
+          <table className={styles.framed}>
             <caption>サバイバルワールド限定コマンド</caption>
             <thead>
               <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
             </thead>
             <tbody>
-              <tr><td><code>/t spawn</code></td><td>自分の所属する町の中心地にワープする（無料）</td><td></td></tr>
+              <tr><td><code>/t spawn</code></td><td>自分の所属する町の中心地にワープする</td><td></td></tr>
               <tr><td><code>/t spawn <i>町名</i></code></td><td>指定した町の中心地にワープする</td><td>JPの支払いが必要</td></tr>
-              <tr><td><code>/n spawn</code></td><td>自分の所属する町が所属する国にワープする（無料）</td><td></td></tr>
+              <tr><td><code>/n spawn</code></td><td>自分の所属する町が所属する国にワープする</td><td></td></tr>
               <tr><td><code>/n spawn <i>国名</i></code></td><td>指定した国にワープする</td><td>JPの支払いが必要</td></tr>
+              <tr><td><code>/js rp</code></td><td>初期スポーン地点にワープする</td><td>無料</td></tr>
+              <tr><td><code>/js pvp</code></td><td>PvPモードのON/OFFを切り替える</td>
+                <td>ON/OFFが切り替わると全員に状態が通知される</td></tr>
             </tbody>
           </table>
         </section>
