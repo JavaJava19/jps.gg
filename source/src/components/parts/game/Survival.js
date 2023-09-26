@@ -7,6 +7,9 @@ const Survival = () => {
       <header>
         <h1 className={styles.GameTitle}>サバイバルサーバ</h1>
         <p className={styles.PartsMemo}>Minecraftほぼバニラなサバイバルモードでの生活をするサーバです</p>
+        <ul>
+          <li><a href={"https://map.jps.gg/"}>サバイバルサーバのマップ</a></li>
+        </ul>
       </header>
       <main className={styles.GameContainer}>
         <section id="sv_s2_rule">
