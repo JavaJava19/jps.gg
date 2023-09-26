@@ -92,6 +92,7 @@ table.framed th,
 table.framed td {
     border: black 1px solid;
     border-collapse: collapse;
+    padding: 0 4px;
 }
 
 @media screen and (max-width: 480px) {
