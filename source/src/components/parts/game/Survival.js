@@ -29,7 +29,7 @@ const Survival = () => {
         </section>
         <section id="sv_s2_cmd">
         <h2>使えるコマンド</h2>
-          <table className={styles.framed}>
+          <table id="tbl_publiccommand" className={styles.framed}>
             <caption>サバイバルワールドに限らず使用可能なコマンド</caption>
             <thead>
               <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
@@ -48,7 +48,7 @@ const Survival = () => {
                 <td>トライデントの激流の固定＆地上バージョンのよう</td></tr>
             </tbody>
           </table>
-          <table className={styles.framed}>
+          <table id="tbl_survivalcommand" className={styles.framed}>
             <caption>サバイバルワールド限定コマンド</caption>
             <thead>
               <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
@@ -67,9 +67,12 @@ const Survival = () => {
         <section id="sv_s2_guid">
         <h2>初心者向けガイド</h2>
         <p>楽しみ方は自由ですが、どこから手を付けるか迷う方へのガイド</p>
+          <section id="sv_s3_guid_0">
           <h3>0.マイクラを普通に楽しむ</h3>
             <p>シングルワールドでのサバイバル生活と同様、資材を集め、建物を建て、マイクラ生活をする。
             資材集めなどをゼロから始めるのは大変なので、<mark>町に入る</mark>と楽になるかもしれない</p>
+          </section>
+          <section id="sv_s3_guid_1">
           <h3>1.町と国</h3>
             <p>町と国という概念があります（プラグインtowny）。<br />
               町は数チャンクの地域、国は複数の町で構成された組織。</p>
@@ -80,7 +83,7 @@ const Survival = () => {
               町の人工物などは全て消え去って更地になってしまうので注意が必要。</p>
             <p>町の設定として、モンスターが入域できないように設定ができ、安心安全な領域にできる。
               <small>スケルトンホースはモンスター扱い。悲しい別れに注意</small></p>
-            <table className={styles.framed}>
+            <table id="tbl_townycommand" className={styles.framed}>
               <caption>Towny関連コマンド</caption>
               <thead>
               <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
@@ -104,13 +107,15 @@ const Survival = () => {
               <tr><td><code>/plot set <i>区分</i></code></td><td>区画用途を定義する</td><td>闘技場(arena),農地(farm),商店街(shop)など</td></tr>
               </tbody>
             </table>
+          </section>
+          <section id="sv_s3_guid_2">
           <h3>2.拠点</h3>
             <p>サバイバル生活を送るにあたり建築をすることになるが、<mark>所属する町に建てよう</mark>。
               野宿でも問題はないが、チェストの管理等が煩雑になる。</p>
             <p>拠点には資材を貯めておくチェストを置くことになるが、
               看板を側面に貼り付ける（※記入しようとしない）ことで自分だけが開けられるようになる。<br />
               同様に、ドアも、本体あるいは隣接ブロックに看板を貼り付けることで、自分だけが開けられるようになる。</p>
-          <table className={styles.framed}>
+          <table id="tbl_lwccommand" className={styles.framed}>
             <caption>保護関連コマンド（LWC）</caption>
             <thead>
             <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
@@ -124,10 +129,12 @@ const Survival = () => {
               <td>既定ではoff。悪意ある他人がホッパーで中身を吸い出せないようにするため。</td></tr>
             </tbody>
           </table>
+          </section>
+          <section id="sv_s3_guid_3">
           <h3>3.出店する</h3>
             <p>JPを獲得する手立てになる。出店はチェスト1つから、お好きなアイテムで。</p>
             <p>初期リス付近や、町・国のどこかに商店を建てたり、他プレイヤーとも協力して商店街を作ってもよし。</p>
-            <table className={styles.framed}>
+            <table id="tbl_shopcommand" className={styles.framed}>
               <caption>お店の管理コマンド</caption>
               <thead>
               <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
@@ -138,15 +145,21 @@ const Survival = () => {
               <tr><td colSpan={3}>自動生成される看板を右クリックすることで、管理メニューが表示される</td></tr>
               </tbody>
             </table>
+          </section>
+          <section id="sv_s3_guid_4">
           <h3>4.住環境を整える</h3>
             <p>食料の供給元を自身の町の中で確保するために、畑・牧場を作ってみよう。
               JPを支払って他ユーザから購入し続けるよりもお財布に優しくなれる。</p>
             <p>余裕が出てきたら、町にシンボルとなる建築物を建ててみるのも良いだろう。</p>
+          </section>
+          <section id="sv_s3_guid_5">
           <h3>5.遊ぶ</h3>
             <p>遊ぶ、遊ぶ、遊ぶ。自由にマインクラフトで遊ぶ。
               地下で鉱石をひたすら集めたり、希少資源を探し求めたり、
               他プレイヤーと協力して大型建築をしてみたり。
               マインクラフトの遊び方は無限大。</p>
+          </section>
+          <section id="sv_s3_guid_6">
           <h3>6.ボス討伐</h3>
             <p>マイクラの<abbr>3大ボス</abbr>（エンダードラゴン・ウィザー・エルダーガーディアン）は、
               通常通り発生するが討伐にはマルチサーバ固有の留意事項がある。</p>
@@ -161,6 +174,7 @@ const Survival = () => {
                 音で驚かせてしまったり、知らずに踏み入れて被害に遭うことを防げる。</p>
             <h4>エルダーガーディアン</h4>
               <p>特段注意事項は無い。攻略は各々のやり方で。</p>
+          </section>
         </section>{/* <!-- sv_s2_guid --> */}
       </main>
     </article>
