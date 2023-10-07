@@ -158,6 +158,28 @@ const Survival = () => {
               地下で鉱石をひたすら集めたり、希少資源を探し求めたり、
               他プレイヤーと協力して大型建築をしてみたり。
               マインクラフトの遊び方は無限大。</p>
+            <section id="sv_s4_ac">
+            <h4>死んでしまった！</h4>
+              <p>JPSのサバイバルでは、<strong>AngelChest</strong>という遺品救済システムが導入されています。
+              死亡した場所に、遺品が詰め込まれたチェストが生成され、<strong>死亡から10分間</strong>保持されます。
+              この時間の間にAngelChestをクリックするとアイテムと経験値がインベントリに復活します。
+              しかし、この時間を過ぎてしまうと、ロストすることになります。</p>
+              <figure>
+                <img src="https://user-images.githubusercontent.com/64903817/273405807-26fdd486-afbf-458a-896a-adb8770e21f8.png"
+                     height="200px" alt="AngelChestの見た目。プレイヤー名と残り時間、死因が表示されている"/>
+                <figcaption>AngelChestの見た目</figcaption>
+              </figure>
+              <table id="tbl_angelchestcommand" className={styles.framed}>
+                <caption>AngelChestに関連したコマンド</caption>
+                <thead>
+                <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
+                </thead>
+                <tbody>
+                <tr><td><code>/acunlock</code></td><td>AngelChestを他の人が回収できるようにします</td>
+                  <td>遠隔地で信頼できる他プレイヤーに収容してもらいたい時などに使用</td></tr>
+                </tbody>
+              </table>
+            </section>
           </section>
           <section id="sv_s3_guid_6">
           <h3>6.ボス討伐</h3>
