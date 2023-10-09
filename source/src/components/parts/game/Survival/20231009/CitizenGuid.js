@@ -5,7 +5,7 @@ const CitizenGuid = () => {
     return (
     <article className={styles.GameBody}>
       <header>
-        <h1 className={styles.GameTitle}>一般住民向け手引き</h1>
+        <h1 className={styles.GameTitle}>一般住民向けガイド</h1>
         <h2>JPS Townyの使い方</h2>
         <p>このガイドは一般市民向けです。町や国の管理者は<a href="./MayorGuid">運営者向けガイド</a>の確認をお願いします。</p>
         <nav>

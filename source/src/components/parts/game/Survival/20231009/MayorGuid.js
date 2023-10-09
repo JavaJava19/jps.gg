@@ -5,9 +5,9 @@ const MayorGuid = () => {
     return (
     <article className={styles.GameBody}>
       <header>
-        <h1 className={styles.GameTitle}>町や国の運営者向け手引き</h1>
+        <h1 className={styles.GameTitle}>町や国の運営者向けガイド</h1>
         <h2>JPS Townyの使い方</h2>
-        <p>このガイドは町長用です。一般の参加者は<a href="./CitizenGuid">市民ガイド</a>の確認をお願いします。</p>
+        <p>このガイドは町長向けです。一般の参加者は<a href="./CitizenGuid">市民ガイド</a>の確認をお願いします。</p>
         <nav>
           <ol>
             <li><a href="#s2_n1">町と国</a></li>

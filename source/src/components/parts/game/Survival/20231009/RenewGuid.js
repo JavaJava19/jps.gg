@@ -80,11 +80,11 @@ const RenewGuid = () => {
         </section>
         <section id="s2_link">
           <h2>手引きドキュメントへのリンク</h2>
-          <p>町や国の運営者向けと、一般住民向けに、以下の手引書を公開しています</p>
+          <p>町や国の運営者向けと、一般住民向けに、以下のガイドブックを公開しています</p>
           <nav>
             <ul>
-              <li><a href="./BossGuid">町や国の運営者向け手引き</a></li>
-              <li><a href="./CitizenGuid">一般住民向け手引き</a></li>
+              <li><a href="./BossGuid">町や国の運営者向けガイド</a></li>
+              <li><a href="./CitizenGuid">一般住民向けガイド</a></li>
             </ul>
           </nav>
         </section>
