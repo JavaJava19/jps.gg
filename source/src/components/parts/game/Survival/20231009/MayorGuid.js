@@ -12,10 +12,11 @@ const MayorGuid = () => {
         <nav>
           <ol>
             <li><a href="#s2_n1">町と国</a></li>
-            <li><a href="#s2_n2">できること</a></li>
+            <li><a href="#s2_n2">できること</a><ul>
+              <li><a href="#s3_n2_town">町で出来ること</a></li>
+              <li><a href="#s3_n2_nation">国で出来ること</a></li>
+            </ul></li>
             <li><a href="#s2_n3">レベル</a></li>
-            <li><a href="#s2_n4">コマンド</a></li>
-            <li><a href="#s2_n5">用語集</a></li>
             <li><a href="#s2_link">関連リンク</a></li>
           </ol>
         </nav>
