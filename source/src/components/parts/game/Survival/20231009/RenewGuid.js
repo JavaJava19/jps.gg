@@ -73,10 +73,10 @@ const RenewGuid = () => {
           <p>チャット欄に表示されるMinecraftIDに、所属している町や国が表示されます。
             また、町や国のレベルによって、そこの町長や国の長にはバッチも付加されます。</p>
           <p>例： azNation国、azCity町に属している場合（かつ、VIP購入特典つき）<br/>
-            <span style={"background-color:dark-gray"}><span style={"color:white"}>[</span><span
-             style={"color:aqua"}>azNation</span><span style={"color:white"}>/</span><span
-             style={"color:aqua"}>azCity</span><span style={"color:white"}>]</span><span
-             style={"color:yellow"}>[VIP]</span><span style={"color:white"}>az_aka: こんにちは</span></span></p>
+            <span style={{backgroundColor:"darkgray"}}><span style={{color:"white"}}>[</span><span
+             style={{color:"aqua"}}>azNation</span><span style={{color:"white"}}>/</span><span
+             style={{color:"aqua"}}>azCity</span><span style={{color:"white"}}>]</span><span
+             style={{color:"yellow"}}>[VIP]</span><span style={{color:"white"}}>az_aka: こんにちは</span></span></p>
         </section>
         <section id="s2_link">
           <h2>手引きドキュメントへのリンク</h2>
