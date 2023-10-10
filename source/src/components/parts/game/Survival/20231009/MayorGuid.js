@@ -41,8 +41,8 @@ const MayorGuid = () => {
             <dt>町</dt><dd>生活の基盤。1チャンク単位の区画（プロット）に対して用途を設定し、運用ができる</dd>
             <dt>国</dt><dd>他の町と協力して、より大きな組織にできる</dd>
           </dl>
-          <p>他にも町対抗イベント、国対抗イベントなど所属することによって参加できるイベントがございます。
-            詳しくはイベント告知時にお知らせいたします。</p>
+          <p>他にも町対抗イベント、国対抗イベントなど所属することによって参加できるイベントがあります。
+            詳しくはイベント告知時にお知らせします。</p>
         </section>
         <section id="s2_n2">
           <h2>2. できること</h2>
@@ -132,7 +132,22 @@ const MayorGuid = () => {
                   </dl>
                 </td></tr>
                 <tr><td><code>/plot set perm outsider destory on</code></td><td>立っている区画での部外者による破壊を許可する</td>
-                  <td>plotではなくtownでも指定は可能</td></tr>
+                  <td>plotではなくtownでも指定は可能<br/>
+                    <i>outsider</i>の箇所は他に以下の指定が可能
+                    <dl>
+                      <dt>friend</dt><dd>友達</dd>
+                      <dt>resident</dt><dd>居住者</dd>
+                      <dt>ally</dt><dd>(国の)同盟相手</dd>
+                    </dl>
+                    <i>destory</i>の箇所は他に以下の指定が可能
+                    <dl>
+                      <dt>build</dt><dd>建築</dd>
+                      <dt>switch</dt><dd>レッドストーン回路</dd>
+                      <dt>ItemUse</dt><dd>火打石・エンダーパール等</dd>
+                    </dl>
+                    </td></tr>
+                <tr><td><code>/resident friend add <i>playerName</i></code></td><td>町や国の関係を超えた友人関係</td>
+                  <td><code>/resident friend list</code>で指名リストを確認できます</td></tr>
                 <tr><td><code>/plot toggle <i>fire|explosion</i></code></td><td>立っている区画での着火や爆発を制御します</td>
                   <td></td></tr>
                 </tbody>
@@ -168,16 +183,60 @@ const MayorGuid = () => {
                 この貸付額を上回って維持費の徴収に失敗すると、<strong>町は削除</strong>され、建築物等がすべて没収されてしまいます。</p>
               <p>まず銀行残高の枯渇が起きないように適切に税金を設定すること、そして、残高を適正に監視してください。</p>
             </section>
-
           </section>
           <section id="s3_n2_nation">
-
+            <h3>国で出来ること</h3>
+            <p>国では、直接土地を取得したり、区画に対して設定をすることはできません。国を構成する町にそれらの機能は任されます。<br/>
+              代わりに、複数の町が連盟でひとつの国を設立することで、互いに協力して、より大きな施設を作って共有したりすることができます。</p>
+            <p>また、町同士の距離の確保について制限がありますが、同じ国の町同士ではこの制限がなくなり、近接して発展させることができます。</p>
+            <section id="s4_n2_nation_startup">
+              <h4>設立と拡大</h4>
+              <p>まず町が存在していることが前提条件となります。
+                どの国にも属していない町の町長が、町の銀行預金を使用して国を設立することができます。
+                国の設立コストは1,000JPです。</p>
+              <p>国の領土拡大には、町自体の領地を拡大する、あるいは、他の町を国に招待することが必要です。</p>
+              <p>他の国と同盟関係を結び、区画を共有することなどができます。</p>
+              <table id="tbl_nationStartupCommand" className={styles.framed}>
+                <thead>
+                <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
+                </thead>
+                <tbody>
+                <tr><td><code>/nation new <i>nationName</i></code></td><td>国を設立する</td>
+                  <td><i>nationName</i>は自由に名前を決めてください</td></tr>
+                <tr><td><code>/nation add <i>townName</i></code></td><td>他の町を国に招待する</td>
+                  <td><i>townName</i>は相手方の町の名前を指定してください</td></tr>
+                <tr><td><code>/nation ally add <i>nationName</i></code></td><td>他の国との同盟関係を申し入れる</td><td></td></tr>
+                </tbody>
+              </table>
+            </section>
+            <section id="s4_n2_nation_cost">
+              <h4>国の維持費</h4>
+              <p>町と同様、毎日維持費が掛かります。</p>
+              <p>国の銀行へ直接JPを預け入れたり、配下の町から国税を徴収して、運用していきましょう。</p>
+              <table id="tbl_nationTaxCommand" className={styles.framed}>
+                <thead>
+                <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
+                </thead>
+                <tbody>
+                <tr><td><code>/nation deposit <i>money</i></code></td><td>国の銀行にJPを払い込みます</td>
+                  <td>bankに設定されているplotでのみ操作可能</td></tr>
+                <tr><td><code>/nation toggle taxpercent</code></td><td>町への課税方式の切り替え</td>
+                  <td>町の銀行預金残高に指定の％を掛けた額で受け取る または 固定額で受け取る</td></tr>
+                <tr><td><code>/nation set tax <i>num</i></code></td><td>受け取る値を設定</td>
+                  <td>%モードの場合はその率（0～50）、固定額の場合はその値</td></tr>
+                <tr><td><code>/nation set taxpercentcap <i>money</i></code></td><td>町に課される税額の上限</td>
+                  <td></td></tr>
+                </tbody>
+              </table>
+            </section>
           </section>
 
         </section>
         <section id="s2_n3">
-          <h2>3. 町のルール</h2>
-          <p>
+          <h2>3. レベル</h2>
+          <p>町と国にはレベルがあります。<br/>
+            町と国は人口に応じてレベルが設定されます</p>
+
 
           </p>
         </section>
