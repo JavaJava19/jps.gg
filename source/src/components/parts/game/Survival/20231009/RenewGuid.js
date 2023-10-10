@@ -83,7 +83,7 @@ const RenewGuid = () => {
           <p>町や国の運営者向けと、一般住民向けに、以下のガイドブックを公開しています</p>
           <nav>
             <ul>
-              <li><a href="./BossGuid">町や国の運営者向けガイド</a></li>
+              <li><a href="./MayorGuid">町や国の運営者向けガイド</a></li>
               <li><a href="./CitizenGuid">一般住民向けガイド</a></li>
             </ul>
           </nav>
