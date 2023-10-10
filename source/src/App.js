@@ -15,6 +15,9 @@ import Survival from "./components/parts/game/Survival";
 import Forum from "./components/page/Forum";
 import Login from "./components/page/Login";
 import Wiki from "./components/parts/top/Wiki";
+import RenewGuid from "./components/parts/game/Survival/20231009/RenewGuid";
+import MayorGuid from "./components/parts/game/Survival/20231009/MayorGuid";
+import CitizenGuid from "./components/parts/game/Survival/20231009/CitizenGuid";
 
 function App() {
 
@@ -34,6 +37,9 @@ function App() {
         <Route path="/game" element={<Games />}></Route>
         <Route path="/game/ctw/rule" element={<CTWRule />}></Route>
         <Route path="/game/survival" element={<Survival />}></Route>
+        <Route path="/game/survival/20231009/RenewGuid" element={<RenewGuid />}></Route>
+        <Route path="/game/survival/20231009/MayorGuid" element={<MayorGuid />}></Route>
+        <Route path="/game/survival/20231009/CitizenGuid" element={<CitizenGuid />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/wiki/" element={<Wiki />}></Route> {/* wiki は301リダイレクトが設定されている */}
       </Routes>
