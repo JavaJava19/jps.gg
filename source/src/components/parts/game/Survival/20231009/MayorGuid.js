@@ -7,12 +7,13 @@ const MayorGuid = () => {
       <header>
         <h1 className={styles.GameTitle}>町や国の運営者向けガイド</h1>
         <h2>JPS Townyの使い方</h2>
-        <p>このガイドは町長および国の管理者（Mayor）向けです。一般の参加者は<a href="./CitizenGuid">市民ガイド</a>の確認をお願いします。</p>
+        <p>このガイドは町長（Mayor）および国の管理者（King）向けです。
+          一般の参加者は<a href="./CitizenGuid">市民ガイド</a>の確認をお願いします。</p>
         <nav>
           <ol>
             <li><a href="#s2_n1">町と国</a></li>
             <li><a href="#s2_n2">できること</a></li>
-            <li><a href="#s2_n3">町のルール</a></li>
+            <li><a href="#s2_n3">レベル</a></li>
             <li><a href="#s2_n4">コマンド</a></li>
             <li><a href="#s2_n5">用語集</a></li>
             <li><a href="#s2_link">関連リンク</a></li>
@@ -26,6 +27,9 @@ const MayorGuid = () => {
           <p>町は、市民を集めることでよりたくさんの区画を取れるようになります。
             ただし、取っている区画が多ければ多いほど、維持費が加算されていきます。<br/>
             うまく税金を調整して適切に町を経営していきましょう。</p>
+          <h2>国の管理者とは</h2>
+          <p>Towny用語ではKingですが、本資料では国の指導者と記載します。</p>
+          <p>一般に、首都となる町の町長が、国の指導者になります。</p>
         </section>
         <section id="s2_n1">
           <h2>1. 町と国</h2>
