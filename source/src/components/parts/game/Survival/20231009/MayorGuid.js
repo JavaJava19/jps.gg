@@ -109,6 +109,7 @@ const MayorGuid = () => {
                 </td></tr>
                 </tbody>
               </table>
+            </section>
             <section id="s4_n2_town_perm">
             <h4>土地の管理</h4>
               <p>取得した土地は、町のみんなで使うことや、制限をかけて販売するなど、細かな設定をすることができます。<br/>
