@@ -212,7 +212,7 @@ const MayorGuid = () => {
             </section>
             <section id="s4_n2_nation_cost">
               <h4>国の維持費</h4>
-              <p>町と同様、毎日維持費が掛かります。</p>
+              <p>町と同様、毎日維持費が掛かります。維持費は<a href="#tbl_levels">後述のレベルによって</a>変動します</p>
               <p>国の銀行へ直接JPを預け入れたり、配下の町から国税を徴収して、運用していきましょう。</p>
               <table id="tbl_nationTaxCommand" className={styles.framed}>
                 <thead>
@@ -231,33 +231,52 @@ const MayorGuid = () => {
               </table>
             </section>
           </section>
-
         </section>
         <section id="s2_n3">
           <h2>3. レベル</h2>
           <p>町と国にはレベルがあります。<br/>
             町と国は人口に応じてレベルが設定されます</p>
-
-
-          </p>
-        </section>
-        <section id="s2_n4">
-          <h2>4. コマンド</h2>
-          <p>
-
-          </p>
-        </section>
-        <section id="s2_n5">
-          <h2>5. 用語集</h2>
-          <p>
-
-          </p>
+          <p>レベルによって取得できる区画数が変動しますが、区画数が増えると維持費にも影響します。<br/>
+            町長や国の管理者は、アシスタントと共に税金や区画を手放す等の調整もして、うまく運用しましょう。
+            （<a href="#s4_n2_town_cost">町の維持費</a></p>
+          <table id="tbl_levels" className={styles.framed}>
+            <thead>
+            <tr><th scope="col">レベル</th><th scope="col">町の到達条件</th><th scope="col">国の到達条件</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>Lv.1</td>
+              <td><ul><li>必要人数：1人</li><li>上限区画数：9</li><li>アウトポスト上限数：1</li></ul></td>
+              <td><ul><li>必要人数：20人</li><li>維持費：2,000JP</li><li>管理者プレフィックス：(青)#</li></ul></td></tr>
+            <tr><td>Lv.2</td>
+              <td><ul><li>必要人数：3人</li><li>上限区画数：20</li><li>アウトポスト上限数：2</li><li>町長プレフィックス：(白)＠</li></ul></td>
+              <td><ul><li>必要人数：30人</li><li>維持費：3,000JP</li><li>管理者プレフィックス：(青)##</li></ul></td>
+            </tr>
+            <tr><td>Lv.3</td>
+              <td><ul><li>必要人数：8人</li><li>上限区画数：40</li><li>アウトポスト上限数：4</li><li>町長プレフィックス：(白)＠＠</li></ul></td>
+              <td><ul><li>必要人数：40人</li><li>維持費：4,000JP</li><li>管理者プレフィックス：(青)###</li></ul></td>
+            </tr>
+            <tr><td>Lv.4</td>
+              <td><ul><li>必要人数：15人</li><li>上限区画数：100</li><li>アウトポスト上限数：8</li><li>町長プレフィックス：(白)＠＠＠</li></ul></td>
+              <td><ul><li>必要人数：50人</li><li>維持費：5,000JP</li><li>管理者プレフィックス：(赤)#</li></ul></td>
+            </tr>
+            <tr><td>Lv.5</td>
+              <td><ul><li>必要人数：30人</li><li>上限区画数：144</li><li>アウトポスト上限数：12</li><li>町長プレフィックス：(青)＠</li></ul></td>
+              <td rowSpan={2}>国の上限レベルはLv.4</td>
+            </tr>
+            <tr><td>Lv.6</td>
+              <td><ul><li>必要人数：50人</li><li>上限区画数：288</li><li>アウトポスト上限数：20</li><li>町長プレフィックス：(青)＠＠</li></ul></td>
+            </tr>
+            </tbody>
+          </table>
         </section>
         <section id="s2_link">
           <h2>関連リンク</h2>
-          <p>
-
-          </p>
+            <nav>
+              <ul>
+                <li><a href="./RenewGuid">23年10月9日更新情報</a></li>
+                <li><a href="./CitizenGuid">一般住民向けガイド</a></li>
+              </ul>
+            </nav>
         </section>
       </main>
     </article>
