@@ -14,8 +14,7 @@ const CitizenGuid = () => {
             <li><a href="#s2_n2">町を発展させよう！</a></li>
             <li><a href="#s2_n3">JPを稼ごう！</a></li>
             <li><a href="#s2_n4">自分で町をつくってみよう！</a></li>
-            <li><a href="#s2_n5">タウニー用語</a></li>
-            <li><a href="#s2_n6">コマンド一覧</a></li>
+            <li><a href="#s2_n5">コマンド一覧</a></li>
             <li><a href="#s2_link">関連リンク</a></li>
           </ol>
         </nav>
@@ -46,12 +45,6 @@ const CitizenGuid = () => {
           </p>
         </section>
         <section id="s2_n5">
-          <h2>5. タウニー用語</h2>
-          <p>
-
-          </p>
-        </section>
-        <section id="s2_n6">
           <h2>5. コマンド一覧</h2>
           <p>
 
