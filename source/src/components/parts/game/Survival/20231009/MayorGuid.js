@@ -7,19 +7,6 @@ const MayorGuid = () => {
       <header>
         <h1 className={styles.GameTitle}>町や国の運営者向けガイド</h1>
         <h2>JPS Townyの使い方</h2>
-        <p>このガイドは町長（Mayor）および国の管理者（King）向けです。
-          一般の参加者は<a href="./CitizenGuid">市民ガイド</a>の確認をお願いします。</p>
-        <nav>
-          <ol>
-            <li><a href="#s2_n1">町と国</a></li>
-            <li><a href="#s2_n2">できること</a><ul>
-              <li><a href="#s3_n2_town">町で出来ること</a></li>
-              <li><a href="#s3_n2_nation">国で出来ること</a></li>
-            </ul></li>
-            <li><a href="#s2_n3">レベル</a></li>
-            <li><a href="#s2_link">関連リンク</a></li>
-          </ol>
-        </nav>
       </header>
       <main className={styles.GameContainer}>
         <section id="s2_intro">
