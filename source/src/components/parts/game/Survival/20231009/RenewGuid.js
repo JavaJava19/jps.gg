@@ -6,7 +6,7 @@ const RenewGuid = () => {
     <article className={styles.GameBody}>
       <header>
         <h1 className={styles.GameTitle}>サバイバルサーバ アップデートのお知らせ</h1>
-        <p><time datetime="2023-10-09 12:00:00">2023年10月9日 正午</time>リリース<br/>
+        <p><time dateTime="2023-10-09 12:00:00">2023年10月9日 正午</time>リリース<br/>
           <address>Japan PvP Server (JPS) 運営チーム</address>より</p>
         <p>いつもJPSをご利用いただきありがとうございます。
           サバイバルサーバーのアップデート内容をお知らせします。</p>
@@ -58,7 +58,7 @@ const RenewGuid = () => {
                 詳しくは<a href="./BossGuid">町や国の運営者向け手引き</a>をご覧ください。</li>
             </ul></li>
           </ul>
-          <p>なお、上記"維持費"は<time datetime="2023-10-16">10月16日</time>より適用されます</p>
+          <p>なお、上記"維持費"は<time dateTime="2023-10-16">10月16日</time>より適用されます</p>
         </section>
         <section id="s2_n4">
           <h2>4. 破綻システムの導入</h2>
@@ -73,10 +73,10 @@ const RenewGuid = () => {
           <p>チャット欄に表示されるMinecraftIDに、所属している町や国が表示されます。
             また、町や国のレベルによって、そこの町長や国の長にはバッチも付加されます。</p>
           <p>例： azNation国、azCity町に属している場合（かつ、VIP購入特典つき）<br/>
-            <span style="background-color:dark-gray"><span style="color:white">[</span><span
-             style="color:aqua">azNation</span><span style="color:white">/</span><span
-             style="color:aqua">azCity</span><span style="color:white">]</span><span
-             style="color:yellow">[VIP]</span><span style="color:white">az_aka: こんにちは</span></span></p>
+            <span style={{backgroundColor:"darkgray"}}><span style={{color:"white"}}>[</span><span
+             style={{color:"aqua"}}>azNation</span><span style={{color:"white"}}>/</span><span
+             style={{color:"aqua"}}>azCity</span><span style={{color:"white"}}>]</span><span
+             style={{color:"yellow"}}>[VIP]</span><span style={{color:"white"}}>az_aka: こんにちは</span></span></p>
         </section>
         <section id="s2_link">
           <h2>手引きドキュメントへのリンク</h2>
