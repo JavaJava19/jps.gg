@@ -40,7 +40,7 @@ const CitizenGuid = () => {
                 Discordの掲示板を眺めて、好みの町を探そう！</p>
               <p><a href="https://discord.gg/jps"><img
                   src="https://user-images.githubusercontent.com/64903817/273965000-c2fc740c-4dcc-4409-a036-3df513d01549.png"
-                  alt="Discord" height="24px" style={{verticalAlign:"text-bottom"}}/>JPSのDiscordサーバ</a>には、
+                  alt="Discord" height="24px" style={{verticalAlign:"text-bottom",marginRight:"5px"}}/>JPSのDiscordサーバ</a>には、
                 町・国の募集掲示板があります。様々な町や国が、住民を募集していますので、
                 掲載内容を読んで自分に合ってそうな所を探してみましょう！</p>
               <p>町によっては、個別に専用Discordサーバを用意している所もあります。
