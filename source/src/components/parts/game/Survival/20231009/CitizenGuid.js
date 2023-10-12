@@ -172,9 +172,29 @@ const CitizenGuid = () => {
         </section>
         <section id="s2_n5">
           <h2>5. コマンド一覧</h2>
-          <p>
-
-          </p>
+          <table id="tbl_townyCommand" className={styles.framed}>
+            <thead>
+            <tr><th scope="col">コマンド</th><th scope="col">用途</th><th scope="col">備考</th></tr>
+            </thead>
+            <tbody>
+            <tr><td><code>/town</code></td><td>所属している町の税金などを確認できます</td><td></td></tr>
+            <tr><td><code>/town join <i>townName</i></code></td><td>openに設定されている町に参加します</td><td></td></tr>
+            <tr><td><code>/town deposit <i>money</i></code></td><td>町の銀行に預け入れます</td>
+              <td>町のホームまたは銀行プロットでのみ実行可能</td></tr>
+            <tr><td><code>/town spawn</code></td><td>自分の町のスポーン地点へ移動します</td><td></td></tr>
+            <tr><td><code>/town spawn <i>townName</i></code></td><td>指定した町のスポーン地点へ移動します</td>
+              <td>移動コスト500JP</td></tr>
+            <tr><td><code>/plot claim</code></td><td>土地が売りに出されている場合、その土地を購入します</td><td></td></tr>
+            <tr><td><code>/g</code></td><td>チャット送信先を、建築サーバ全体に切り替えます</td>
+              <td rowSpan="5"><img
+                  src="https://user-images.githubusercontent.com/64903817/274629466-c39d213c-44cb-4653-a8ea-60a74a4269ed.png"
+                  alt="チャット送信先を切り替えた時の通知の表示事例" height="476px"/></td></tr>
+            <tr><td><code>/l</code></td><td>チャット送信先を、ローカルに切り替えます（半径100マス以内）</td></tr>
+            <tr><td><code>/tc</code></td><td>チャット送信先を、町のメンバー限定に切り替えます</td></tr>
+            <tr><td><code>/nc</code></td><td>チャット送信先を、自国のメンバー限定に切り替えます</td></tr>
+            <tr><td><code>/ac</code></td><td>チャット送信先を、同盟関係にある国のメンバー限定に切り替えます</td></tr>
+            </tbody>
+          </table>
         </section>
         <section id="s2_link">
           <h2>関連リンク</h2>
