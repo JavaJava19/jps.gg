@@ -92,20 +92,14 @@ const MayorGuid = () => {
                 <tr><th scope="col">コマンド</th><th scope="col">用途</th></tr>
                 </thead>
                 <tbody>
-                <tr><td><code>/town rank add <i>playerName</i> <i>assistant|builder|recruiter|helper|taxfree</i></code></td>
+                <tr><td><code>/town rank add <i>playerName</i> <i>assistant|helper</i></code></td>
                   <td>playerを指定の役職に割り当てます</td><td></td></tr>
                 <tr><td colspan="3">
                   <dl>
                     <dt><ruby>assistant<rp>（</rp><rt>アシスタント</rt><rp>）</rp></ruby></dt>
                     <dd>町の領土拡張・住民の招待 が可能な役職</dd>
-                    <dt><ruby>builder<rp>（</rp><rt>ビルダー</rt><rp>）</rp></ruby></dt>
-                    <dd>所有権を持たずとも、町のどこでも建築が可能</dd>
-                    <dt><ruby>recruiter<rp>（</rp><rt>リクルーター</rt><rp>）</rp></ruby></dt>
-                    <dd>住民の招待・区画の住民への販売 が可能</dd>
                     <dt><ruby>helper<rp>（</rp><rt>ヘルパー></rt><rp>）</rp></ruby></dt>
                     <dd>住民の招待・区画の住民への販売・住民の追放 が可能</dd>
-                    <dt><ruby>taxfree<rp>（</rp><rt>免税者</rt><rp>）</rp></ruby></dt>
-                    <dd>税金が免除される</dd>
                   </dl>
                 </td></tr>
                 </tbody>
@@ -133,7 +127,7 @@ const MayorGuid = () => {
                     <dt>shop</dt><dd>商業区画。チェスト設置でショップ作成が簡単になる</dd>
                   </dl>
                 </td></tr>
-                <tr><td><code>/plot set perm outsider destory on</code></td><td>立っている区画での部外者による破壊を許可する</td>
+                <tr><td><code>/plot set perm <i>outsider</i> <i>destory</i> on</code></td><td>立っている区画での部外者による破壊を許可する</td>
                   <td>plotではなくtownでも指定は可能<br/>
                     <i>outsider</i>の箇所は他に以下の指定が可能
                     <dl>
