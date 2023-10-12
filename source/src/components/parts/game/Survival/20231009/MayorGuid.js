@@ -220,7 +220,7 @@ const MayorGuid = () => {
             町と国は人口に応じてレベルが設定されます</p>
           <p>レベルによって取得できる区画数が変動しますが、区画数が増えると維持費にも影響します。<br/>
             町長やキングは、アシスタントと共に税金や区画を手放す等の調整もして、うまく運用しましょう。
-            （<a href="#s4_n2_town_cost">町の維持費</a></p>
+            （<a href="#s4_n2_town_cost">町の維持費</a>も参照）</p>
           <table id="tbl_levels" className={styles.framed}>
             <thead>
             <tr><th scope="col">レベル</th><th scope="col">町の到達条件</th><th scope="col">国の到達条件</th></tr>
