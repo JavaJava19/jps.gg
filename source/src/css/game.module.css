@@ -95,6 +95,12 @@ table.framed td {
     padding: 0 4px;
 }
 
+code {
+    background-color: #eee;
+    color: #111;
+    padding: 0 2px;
+}
+
 @media screen and (max-width: 480px) {
     .GameBody {
         width: 100%;
