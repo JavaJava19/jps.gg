@@ -6,5 +6,8 @@ https://jps.gg/prvplc
 https://jps.gg/game
 https://jps.gg/game/ctw/rule
 https://jps.gg/game/survival
+https://jps.gg/game/survival/20231009/RenewGuid
+https://jps.gg/game/survival/20231009/MayorGuid
+https://jps.gg/game/survival/20231009/CitizenGuid
 
 https://jps.gg/staff
