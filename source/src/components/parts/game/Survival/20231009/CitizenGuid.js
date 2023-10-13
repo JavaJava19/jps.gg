@@ -189,7 +189,7 @@ const CitizenGuid = () => {
               <td rowSpan="5"><img
                   src="https://user-images.githubusercontent.com/64903817/274629466-c39d213c-44cb-4653-a8ea-60a74a4269ed.png"
                   alt="チャット送信先を切り替えた時の通知の表示事例" height="476px"/></td></tr>
-            <tr><td><code>/l</code></td><td>チャット送信先を、ローカルに切り替えます（半径100マス以内）</td></tr>
+            <tr><td><code>/l</code> ※ローカルのL</td><td>チャット送信先を、ローカルに切り替えます（半径100マス以内）</td></tr>
             <tr><td><code>/tc</code></td><td>チャット送信先を、町のメンバー限定に切り替えます</td></tr>
             <tr><td><code>/nc</code></td><td>チャット送信先を、自国のメンバー限定に切り替えます</td></tr>
             <tr><td><code>/ac</code></td><td>チャット送信先を、同盟関係にある国のメンバー限定に切り替えます</td></tr>
