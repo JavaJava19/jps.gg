@@ -61,6 +61,7 @@ const Survival = () => {
               <tr><td><code>/js rp</code></td><td>初期スポーン地点にワープする</td><td>無料</td></tr>
               <tr><td><code>/js pvp</code></td><td>PvPモードのON/OFFを切り替える</td>
                 <td>ON/OFFが切り替わると全員に状態が通知される</td></tr>
+              <tr><td><code>/back</code></td><td>資源サーバから建築サーバへ戻る</td><td><ins><time dateTime="2023-10-13">10月13日</time>追加</ins></td></tr>
             </tbody>
           </table>
         </section>

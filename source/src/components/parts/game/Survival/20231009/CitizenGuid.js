@@ -193,6 +193,7 @@ const CitizenGuid = () => {
             <tr><td><code>/tc</code></td><td>チャット送信先を、町のメンバー限定に切り替えます</td></tr>
             <tr><td><code>/nc</code></td><td>チャット送信先を、自国のメンバー限定に切り替えます</td></tr>
             <tr><td><code>/ac</code></td><td>チャット送信先を、同盟関係にある国のメンバー限定に切り替えます</td></tr>
+            <tr><td><code>/back</code></td><td>資源サーバから建築サーバに帰還します</td><td></td></tr>
             </tbody>
           </table>
         </section>
