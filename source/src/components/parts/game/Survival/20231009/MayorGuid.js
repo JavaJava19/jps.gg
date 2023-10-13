@@ -79,13 +79,13 @@ const MayorGuid = () => {
                 <tr><th scope="col">コマンド</th><th scope="col">用途</th></tr>
                 </thead>
                 <tbody>
-                <tr><td><code>/town rank add <i>playerName</i> <i>assistant|helper</i></code></td>
-                  <td>playerを指定の役職に割り当てます</td><td></td></tr>
-                <tr><td colspan="3">
+                <tr><td><code>/town rank add <i>playerName</i> <i>assistant</i>|<i>helper</i></code></td>
+                  <td>playerを指定の役職に割り当てます</td></tr>
+                <tr><td colspan="2">
                   <dl>
                     <dt><ruby>assistant<rp>（</rp><rt>アシスタント</rt><rp>）</rp></ruby></dt>
                     <dd>町の領土拡張・住民の招待 が可能な役職</dd>
-                    <dt><ruby>helper<rp>（</rp><rt>ヘルパー></rt><rp>）</rp></ruby></dt>
+                    <dt><ruby>helper<rp>（</rp><rt>ヘルパー</rt><rp>）</rp></ruby></dt>
                     <dd>住民の招待・区画の住民への販売・住民の追放 が可能</dd>
                   </dl>
                 </td></tr>
