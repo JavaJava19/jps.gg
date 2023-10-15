@@ -81,7 +81,7 @@ const MayorGuid = () => {
                 <tbody>
                 <tr><td><code>/town rank add <i>playerName</i> <i>assistant</i>|<i>helper</i></code></td>
                   <td>playerを指定の役職に割り当てます</td></tr>
-                <tr><td colspan="2">
+                <tr><td colSpan="2">
                   <dl>
                     <dt><ruby>assistant<rp>（</rp><rt>アシスタント</rt><rp>）</rp></ruby></dt>
                     <dd>町の領土拡張・住民の招待 が可能な役職</dd>
@@ -138,7 +138,9 @@ const MayorGuid = () => {
             </section>
             <section id="s4_n2_town_cost">
             <h4>町の維持費</h4>
-              <p>町は毎日維持費を支払わなければなりません。毎日正午に、町の銀行から定められた額が徴収されます。<br/>
+              <p>町は毎日維持費を支払わなければなりません。毎日正午に、<a
+                href="#tbl_levels">町のレベルに応じて定められた額</a>が町の銀行から徴収されます。
+                維持費は、おおよそ<code>住民数×300JP</code>に設定されています。<br/>
                 原資となる資金は、コマンドで銀行に預けるか、もしくは住民から税金を毎日集めることで、確保できます。</p>
               <p>維持費を支払うことができなければ、町は破産状態となり、土地を没収され、建築物などを失う可能性があります</p>
               <table id="tbl_townBankCommand" className={styles.framed}>
@@ -223,30 +225,31 @@ const MayorGuid = () => {
             （<a href="#s4_n2_town_cost">町の維持費</a>も参照）</p>
           <table id="tbl_levels" className={styles.framed}>
             <thead>
-            <tr><th scope="col">レベル</th><th scope="col">町の到達条件</th><th scope="col">国の到達条件</th></tr>
+            <tr><th scope="col" rowSpan="2">レベル</th><th scope="col" colSpan="2">町</th><th scope="col" colSpan="2">国</th></tr>
+            <tr><th scope="col">到達条件</th><th scope="col">ステータス</th><th scope="col">到達条件</th><th scope="col">ステータス</th></tr>
             </thead>
             <tbody>
             <tr><td>Lv.1</td>
-              <td><ul><li>必要人数：1人</li><li>上限区画数：9</li><li>アウトポスト上限数：1</li></ul></td>
-              <td><ul><li>必要人数：20人</li><li>維持費：2,000JP</li><li>キングプレフィックス：(青)#</li></ul></td></tr>
+              <td>必要人数：1人</td><td><ul><li>維持費：300JP</li><li>上限区画数：9</li><li>アウトポスト上限数：1</li></ul></td>
+              <td>必要人数：20人</td><td><ul><li>維持費：2,000JP</li><li>キングプレフィックス：(青)#</li></ul></td></tr>
             <tr><td>Lv.2</td>
-              <td><ul><li>必要人数：3人</li><li>上限区画数：20</li><li>アウトポスト上限数：2</li><li>町長プレフィックス：(白)＠</li></ul></td>
-              <td><ul><li>必要人数：30人</li><li>維持費：3,000JP</li><li>キングプレフィックス：(青)##</li></ul></td>
+              <td>必要人数：3人</td><td><ul><li>維持費：900JP</li><li>上限区画数：20</li><li>アウトポスト上限数：2</li><li>町長プレフィックス：(白)＠</li></ul></td>
+              <td>必要人数：30人</td><td><ul><li>維持費：3,000JP</li><li>キングプレフィックス：(青)##</li></ul></td>
             </tr>
             <tr><td>Lv.3</td>
-              <td><ul><li>必要人数：8人</li><li>上限区画数：40</li><li>アウトポスト上限数：4</li><li>町長プレフィックス：(白)＠＠</li></ul></td>
-              <td><ul><li>必要人数：40人</li><li>維持費：4,000JP</li><li>キングプレフィックス：(青)###</li></ul></td>
+              <td>必要人数：8人</td><td><ul><li>維持費：2,400JP</li><li>上限区画数：40</li><li>アウトポスト上限数：4</li><li>町長プレフィックス：(白)＠＠</li></ul></td>
+              <td>必要人数：40人</td><td><ul><li>維持費：4,000JP</li><li>キングプレフィックス：(青)###</li></ul></td>
             </tr>
             <tr><td>Lv.4</td>
-              <td><ul><li>必要人数：15人</li><li>上限区画数：100</li><li>アウトポスト上限数：8</li><li>町長プレフィックス：(白)＠＠＠</li></ul></td>
-              <td><ul><li>必要人数：50人</li><li>維持費：5,000JP</li><li>キングプレフィックス：(赤)#</li></ul></td>
+              <td>必要人数：15人</td><td><ul><li>維持費：4,500JP</li><li>上限区画数：100</li><li>アウトポスト上限数：8</li><li>町長プレフィックス：(白)＠＠＠</li></ul></td>
+              <td>必要人数：50人</td><td><ul><li>維持費：5,000JP</li><li>キングプレフィックス：(赤)#</li></ul></td>
             </tr>
             <tr><td>Lv.5</td>
-              <td><ul><li>必要人数：30人</li><li>上限区画数：144</li><li>アウトポスト上限数：12</li><li>町長プレフィックス：(青)＠</li></ul></td>
+              <td>必要人数：30人</td><td><ul><li>維持費：9,000JP</li><li>上限区画数：144</li><li>アウトポスト上限数：12</li><li>町長プレフィックス：(青)＠</li></ul></td>
               <td rowSpan={2}>国の上限レベルはLv.4</td>
             </tr>
             <tr><td>Lv.6</td>
-              <td><ul><li>必要人数：50人</li><li>上限区画数：288</li><li>アウトポスト上限数：20</li><li>町長プレフィックス：(青)＠＠</li></ul></td>
+              <td>必要人数：50人</td><td><ul><li>維持費：15,000JP</li><li>上限区画数：288</li><li>アウトポスト上限数：20</li><li>町長プレフィックス：(青)＠＠</li></ul></td>
             </tr>
             </tbody>
           </table>
