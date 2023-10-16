@@ -101,6 +101,12 @@ code {
     padding: 0 2px;
 }
 
+table#tbl_levels ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 5px;
+}
+
 @media screen and (max-width: 480px) {
     .GameBody {
         width: 100%;
