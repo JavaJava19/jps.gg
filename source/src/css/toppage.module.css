@@ -201,6 +201,13 @@
     height: auto;
     background-color: rgb(210, 245, 255);
 }
+.AboutUsContent{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(238, 234, 234);
+}
 
 @media screen and (max-width: 480px) {
     .WelcomePop{

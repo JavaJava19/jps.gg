@@ -3,7 +3,8 @@ import style from "../../../css/toppage.module.css";
 
 const AboutUs = () => {
     return (
-        <section>
+        <section className={style.AboutUs}>
+        <section className={style.AboutUsContent}>
             <h2>Japan PvP Server (JPS) へようこそ</h2>
             <p>JPSは、Discordサーバを中心に、24時間常時開放のMinecraftサーバなどで形成されているコミュニティです</p>
             <p>コミュニティの核は、<ruby>あかさん<rp>(</rp><rt>az_aka</rt><rp>)</rp></ruby>
@@ -29,6 +30,7 @@ const AboutUs = () => {
                 <h3>TikTokチャンネル</h3>
                 <p><a href={"https://www.tiktok.com/@jpsgg"}>JPSのTikTokアカウント</a>では、次回イベントの告知動画などをアップしています</p>
             </section>
+        </section>
         </section>
     )
 }
