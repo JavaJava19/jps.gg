@@ -196,6 +196,11 @@
     margin-bottom: 10px;
 }
 
+.AboutUs {
+    width: 100%;
+    height: auto;
+    background-color: rgb(210, 245, 255);
+}
 
 @media screen and (max-width: 480px) {
     .WelcomePop{
