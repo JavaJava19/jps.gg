@@ -13,7 +13,9 @@ const AboutUs = () => {
             <section>
                 <h3>Discordサーバー</h3>
                 <p><a href={"https://discord.app/"}>Discord</a>は無料で利用可能なコミュニケーションアプリです。ブラウザ版・スマホアプリ版が存在しています。<br/>
-                   <a href={"https://discord.gg/jps"}>参加リンク</a>からJPS参加型サーバへ参加してください</p>
+                   <a href={"https://discord.gg/jps"}><img
+                       src="https://user-images.githubusercontent.com/64903817/273965000-c2fc740c-4dcc-4409-a036-3df513d01549.png"
+                       alt="Discord" height="24px" style={{verticalAlign:"text-bottom",marginRight:"5px"}}/>JPS参加型サーバへ参加</a>してください</p>
             </section>
             <section>
                 <h3>Minecraftサーバー</h3>
