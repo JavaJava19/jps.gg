@@ -14,7 +14,7 @@ const TopPage = () => {
       <div className={style.TopForumField}>
         <TopForum />
       </div>
-      <div className={style.AboutUs}>
+      <div className={style.AboutUsField}>
         <AboutUs />
       </div>
     </main>
