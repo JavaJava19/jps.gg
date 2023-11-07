@@ -32,16 +32,16 @@ const RenewGuid20231107 = () => {
               <td><code><i>playerName</i></code>省略で自身の残高を表示</td></tr>
             <tr><td><code>/jpsbank pay <i>playerName</i> <i>amount</i> <i>message</i></code></td>
               <td>送金します。</td>
-              <td><i>amount</i>は自身の所持金残高の範囲内で、小数第1位まで指定可能<br><i>message</i>は全角25文字程度まで可能</td></tr>
+              <td><i>amount</i>は自身の所持金残高の範囲内で、小数第1位まで指定可能<br/><i>message</i>は全角25文字程度まで可能</td></tr>
             <tr><td><code>/jpsbank passbook</code></td><td>通帳を取得します</td>
               <td><small>署名済みの本として村人取引にも使えるかも</small></td></tr>
             <tr><td><code>/jpsbank rank <i>page-number</i>|<i>playerName</i>|me|</code></td>
               <td>所持金ランキングを表示します</td>
-              <td>トップからの順次表示は、rankに続けてページ番号を入力<br>
+              <td>トップからの順次表示は、rankに続けてページ番号を入力<br/>
                 指定プレイヤーあるいは自身(me)の前後数人分のランキングも表示可能</td></tr>
             <tr><td><code>/jpsbank townRank <i>page-number</i>|<i>(town-|nation-)name</i></code></td>
               <td>町と国の銀行残高ランキングを表示します</td>
-              <td>トップからの順次表示は、rankに続けてページ番号を入力<br>
+              <td>トップからの順次表示は、rankに続けてページ番号を入力<br/>
                 指定の町や国の前後のランキングも表示可能。
                 表示するためには、接頭辞<code>town-</code>または<code>nation-<code>を付けて実行してください</td></tr>
             <tr><td><code>/jpsbank loan in <i>amount</i></code></td><td>JPS銀行から資金を借ります</td>
