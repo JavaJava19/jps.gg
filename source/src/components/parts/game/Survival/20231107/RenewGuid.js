@@ -43,7 +43,7 @@ const RenewGuid20231107 = () => {
               <td>町と国の銀行残高ランキングを表示します</td>
               <td>トップからの順次表示は、rankに続けてページ番号を入力<br/>
                 指定の町や国の前後のランキングも表示可能。
-                表示するためには、接頭辞<code>town-</code>または<code>nation-<code>を付けて実行してください</td></tr>
+                表示するためには、接頭辞<code>town-</code>または<code>nation-</code>を付けて実行してください</td></tr>
             <tr><td><code>/jpsbank loan in <i>amount</i></code></td><td>JPS銀行から資金を借ります</td>
               <td>借入額に応じて、鈍足効果が付与されます</td></tr>
             <tr><td><code>/jpsbank loan return <i>amount</i></code></td><td>JPS銀行に借金を返済します</td>
