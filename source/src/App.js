@@ -18,6 +18,7 @@ import Wiki from "./components/parts/top/Wiki";
 import RenewGuid from "./components/parts/game/Survival/20231009/RenewGuid";
 import MayorGuid from "./components/parts/game/Survival/20231009/MayorGuid";
 import CitizenGuid from "./components/parts/game/Survival/20231009/CitizenGuid";
+import RenewGuid20231107 from "./components/parts/game/Survival/20231107/RenewGuid";
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/game/survival/20231009/RenewGuid" element={<RenewGuid />}></Route>
         <Route path="/game/survival/20231009/MayorGuid" element={<MayorGuid />}></Route>
         <Route path="/game/survival/20231009/CitizenGuid" element={<CitizenGuid />}></Route>
+        <Route path="/game/survival/20231107/RenewGuid" element={<RenewGuid20231107 />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/wiki/" element={<Wiki />}></Route> {/* wiki は301リダイレクトが設定されている */}
       </Routes>
