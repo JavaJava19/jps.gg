@@ -29,7 +29,7 @@ const RenewGuid20231107 = () => {
             <tbody>
             <tr><td><code>/jpsbank</code></td><td>サブコマンドのヘルプが表示されます</td><td></td></tr>
             <tr><td><code>/jpsbank money <i>playerName</i></code></td><td>所持金残高を表示します</td>
-              <td><code><i>playerName</i>省略で自身の残高を表示</td></tr>
+              <td><code><i>playerName</i></code>省略で自身の残高を表示</td></tr>
             <tr><td><code>/jpsbank pay <i>playerName</i> <i>amount</i> <i>message</i></code></td>
               <td>送金します。</td>
               <td><i>amount</i>は自身の所持金残高の範囲内で、小数第1位まで指定可能<br><i>message</i>は全角25文字程度まで可能</td></tr>
