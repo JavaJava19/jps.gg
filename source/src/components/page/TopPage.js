@@ -15,7 +15,7 @@ const TopPage = () => {
         description: 'Welcome to JPS! DiscordとMinecraftのコミュニティサーバーへようこそ',
         url: 'https://jps.gg/'
       }
-    }/>
+    } />
     <main>
       <div className={style.SlideField}>
         <Slider props={<WelcomePops/>}/>
