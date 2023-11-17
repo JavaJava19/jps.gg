@@ -1,8 +1,17 @@
 import React from 'react'
 import styles from "../../../../../css/game.module.css"
+import UpdateOgp from "../../../../util/UpdateOgp"
 const RenewGuid20231107 = () => {
 
     return (
+    <>
+    <UpdateOgp pageMeta={
+      {
+        title: '23/11/7 Minecraftサーバアップデート | JapanPvPServer',
+        description: '2023年11月7日のJPS-Minecraftサーバーアップデートの内容をお知らせします',
+        url: 'https://jps.gg/game/survival/20231107/RenewGuid'
+      }
+    }/>
     <article className={styles.GameBody}>
       <header>
         <h1 className={styles.GameTitle}>Minecraftサーバ アップデートのお知らせ</h1>
@@ -66,6 +75,7 @@ const RenewGuid20231107 = () => {
         </section>
       </main>
     </article>
+    </>
     )
 }
 
