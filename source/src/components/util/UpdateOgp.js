@@ -47,7 +47,7 @@ function UpdateOgp({pageMeta}) {
         //
         const ogpImage = document.querySelector('META[name="og:image"]');
         ogpImage.setAttribute('content', pageOgImg);
-    }, []);
+    }, [pageTitle, pageDescription, pageOgUrl, pageOgImg]);
 
     return null;
 }
