@@ -10,24 +10,24 @@ const TopPage = () => {
 
   return (
     <>
-    <UpdateOgp pageMeta={
-      {
-        title: 'Top | JapanPvPServer',
-        description: 'Welcome to JPS! DiscordとMinecraftのコミュニティサーバーへようこそ',
-        url: 'https://jps.gg/'
-      }
-    }/>
-    <main>
-      <div className={style.SlideField}>
-        <Slider props={<WelcomePops/>}/>
-      </div>
-      <div className={style.TopForumField}>
-        <TopForum />
-      </div>
-      <div className={style.AboutUsField}>
-        <AboutUs />
-      </div>
-    </main>
+      <UpdateOgp pageMeta={
+        {
+          title: 'Top | JapanPvPServer',
+          description: 'Welcome to JPS! DiscordとMinecraftのコミュニティサーバーへようこそ',
+          url: 'https://jps.gg/'
+        }
+      }/>
+      <main>
+        <div className={style.SlideField}>
+          <Slider props={<WelcomePops/>}/>
+        </div>
+        <div className={style.TopForumField}>
+          <TopForum />
+        </div>
+        <div className={style.AboutUsField}>
+          <AboutUs />
+        </div>
+      </main>
     </>
   )
 }
