@@ -34,7 +34,7 @@ function UpdateOgp({pageMeta}) {
         descEle.setAttribute('content', pageDescription);
         //
         const ogpTitle = document.querySelector('META[name="og:title"]');
-        ogpTitle.setAttribute('content', pageTitle);
+        ogpTitle.setAttribute('content', pageOgTitle);
         //
         const ogpDesc = document.querySelector('META[name="og:description"]');
         ogpDesc.setAttribute('content', pageDescription);
