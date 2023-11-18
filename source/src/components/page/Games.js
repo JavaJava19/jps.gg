@@ -4,6 +4,7 @@ import {
   useTransition,
 } from '@react-spring/web'
 import GameParts from '../parts/game/GameParts'
+import UpdateOgp from "../util/UpdateOgp"
 
 const Games = () => {
 // --- ゲーム追加時はここに追加 ---

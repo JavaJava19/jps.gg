@@ -5,6 +5,8 @@ import { AiOutlineMessage, AiOutlineKey } from "react-icons/ai"
 import { CgProfile } from "react-icons/cg"
 import style from "../../css/player.module.css"
 import CtwStats from '../parts/player/CtwStats'
+import UpdateOgp from "../util/UpdateOgp"
+
 const Player = () => {
   const params = useParams();
   const data = usePlayerMatch(params.id);

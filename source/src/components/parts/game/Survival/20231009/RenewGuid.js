@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "../../../../../css/game.module.css"
+import UpdateOgp from "../../../../util/UpdateOgp"
 const RenewGuid = () => {
 
     return (

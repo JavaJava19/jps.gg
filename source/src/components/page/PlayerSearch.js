@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import style from "../../css/player.module.css"
 import PlayerList from '../parts/search/PlayerList';
 import { usePlayerList } from '../util/Fetch';
+import UpdateOgp from "../util/UpdateOgp"
 
 const PlayerSearch = () => {
   const [mcid, setMcid] = useState("");

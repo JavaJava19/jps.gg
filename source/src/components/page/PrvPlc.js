@@ -1,5 +1,7 @@
 import React from 'react'
 import style from "../../css/read.module.css"
+import UpdateOgp from "../util/UpdateOgp"
+
 const PlvPlc = () => {
     return (
         <>

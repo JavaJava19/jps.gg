@@ -1,6 +1,7 @@
 import React from 'react'
 import style from "../../css/read.module.css"
 import { Link } from 'react-router-dom'
+import UpdateOgp from "../util/UpdateOgp"
 
 const Read = () => {
 

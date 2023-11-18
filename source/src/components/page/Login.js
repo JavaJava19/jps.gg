@@ -4,6 +4,8 @@ import useFetchAddress from '../util/FetchAddress';
 import { login } from '../util/LoginUtil';
 import { useNavigate } from 'react-router-dom';
 import style from "../../css/login.module.css"
+import UpdateOgp from "../util/UpdateOgp"
+
 const Login = () => {
   // eslint-disable-next-line
   const [cookie, setCookie, removeCookie] = useCookies(["token"]);
