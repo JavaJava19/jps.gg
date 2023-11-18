@@ -4,7 +4,7 @@ import style from "../../../../css/rule.module.css"
 import RankingParts from '../RankingParts';
 import { useCtwWinRank, usePlayerList } from '../../../util/Fetch';
 import YouTube from 'react-youtube';
-import UpdateOgp from "../util/UpdateOgp"
+import UpdateOgp from "../../../util/UpdateOgp"
 
 const CTW_Rule = () => {
 
