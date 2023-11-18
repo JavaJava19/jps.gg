@@ -31,8 +31,8 @@ const Player = () => {
     <>
     <UpdateOgp pageMeta={
       {
-        title: {data.name} + 'のプレイヤーページ | JapanPvPServer',
-        description: 'JPSのMinecraftプレイヤー'+ data.name+'のプレイヤーページです',
+        title: data.name +'のプレイヤーページ｜JapanPvPServer',
+        description: 'JPSのMinecraftプレイヤー'+ data.name +'のプレイヤーページです',
         url: 'https://jps.gg/player/'+ params.id
       }
     }/>
