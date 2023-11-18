@@ -7,6 +7,14 @@ const Read = () => {
     //const navigate = useNavigate();
 
     return (
+        <>
+        <UpdateOgp pageMeta={
+          {
+            title: '利用規約 | JapanPvPServer',
+            description: 'JPSの利用規約を掲載しています',
+            url: 'https://jps.gg/read'
+          }
+        }/>
         <div className={style.ReadField}>
             <article className={style.ReadContentField}>
             <section className={style.Content}>
@@ -211,6 +219,7 @@ const Read = () => {
             </section>
             </article>
         </div>
+        </>
     )
 }
 

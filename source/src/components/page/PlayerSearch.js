@@ -28,6 +28,14 @@ const PlayerSearch = () => {
 
 
   return (
+    <>
+    <UpdateOgp pageMeta={
+      {
+        title: 'JPSのプレイヤー検索ページ | JapanPvPServer',
+        description: 'JPSのMinecraftプレイヤーを検索するページです',
+        url: 'https://jps.gg/player'
+      }
+    }/>
     <div className={style.PlayerSearchField}>
       <div className={style.PlayerSearchContainer}>
         <div className={style.PlayerSearchTitle}>
@@ -45,6 +53,7 @@ const PlayerSearch = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

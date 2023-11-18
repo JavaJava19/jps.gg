@@ -59,6 +59,14 @@ const Login = () => {
   }, [cookie.token, window.sessionStorage.getItem("token")])
 
   return (
+    <>
+    <UpdateOgp pageMeta={
+      {
+        title: 'ログイン | JapanPvPServer',
+        description: 'ユーザ用ページのログインができます（将来的に）',
+        url: 'https://jps.gg/login'
+      }
+    }/>
     <div className={style.LoginField}>
       <div className={style.LoginForm}>
         <div className={style.Title}><h1>Login Form</h1></div>
@@ -86,6 +94,7 @@ const Login = () => {
         </form>
       </div>
     </div>
+    </>
   )
 }
 

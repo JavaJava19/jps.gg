@@ -3,6 +3,14 @@ import styles from "../../../../../css/game.module.css"
 const CitizenGuid = () => {
 
     return (
+    <>
+    <UpdateOgp pageMeta={
+      {
+        title: 'サバイバルサーバ 一般住民向けガイド｜JapanPvPServer',
+        description: 'JPSのサバイバルサーバで一般住民のプレイヤー向けのガイド',
+        url: 'https://jps.gg/game/survival/20231009/CitizenGuid'
+      }
+    }/>
     <article className={styles.GameBody}>
       <header>
         <h1 className={styles.GameTitle}>一般住民向けガイド</h1>
@@ -208,6 +216,7 @@ const CitizenGuid = () => {
         </section>
       </main>
     </article>
+    </>
     )
 }
 

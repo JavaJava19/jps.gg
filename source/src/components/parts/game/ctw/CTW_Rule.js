@@ -10,6 +10,14 @@ const CTW_Rule = () => {
   const playerData = usePlayerList();
   if (rankData !== undefined && playerData !== undefined)
     return (
+      <>
+        <UpdateOgp pageMeta={
+          {
+            title: 'Catch The Wool | JapanPvPServer',
+            description: 'JPSのミニゲーム"Catch The Wool"の紹介ページです',
+            url: 'https://jps.gg/game/ctw/rule'
+          }
+        }/>
       <div className={style.RuleField}>
         <div className={style.RuleContent}>
           <div className={style.RuleTitle}>

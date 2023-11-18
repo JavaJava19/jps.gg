@@ -26,6 +26,14 @@ const Player = () => {
   }
   if (data === undefined) return <div>Loading...</div>
   return (
+    <>
+    <UpdateOgp pageMeta={
+      {
+        title: {data.name} + 'のプレイヤーページ | JapanPvPServer',
+        description: 'JPSのMinecraftプレイヤー'+ data.name+'のプレイヤーページです',
+        url: 'https://jps.gg/player/'+ params.id
+      }
+    }/>
     <div className={style.PlayerField}>
       <div className={style.Profile}>
         <div className={style.Skin}>
@@ -69,6 +77,7 @@ const Player = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

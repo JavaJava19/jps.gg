@@ -3,6 +3,14 @@ import styles from "../../../../../css/game.module.css"
 const MayorGuid = () => {
 
     return (
+    <>
+    <UpdateOgp pageMeta={
+      {
+        title: 'サバイバルサーバ 町や国の運営者向けガイド｜JapanPvPServer',
+        description: 'JPSのサバイバルサーバで町や国の運営者をしているプレイヤー向けのガイド',
+        url: 'https://jps.gg/game/survival/20231009/MayorGuid'
+      }
+    }/>
     <article className={styles.GameBody}>
       <header>
         <h1 className={styles.GameTitle}>町や国の運営者向けガイド</h1>
@@ -265,6 +273,7 @@ const MayorGuid = () => {
         </section>
       </main>
     </article>
+    </>
     )
 }
 

@@ -3,6 +3,14 @@ import styles from "../../../../../css/game.module.css"
 const RenewGuid = () => {
 
     return (
+    <>
+    <UpdateOgp pageMeta={
+      {
+        title: '23/10/9 サバイバルサーバアップデートのお知らせ｜JapanPvPServer',
+        description: '2023年10月9日のサバイバルサーバアップデート内容のお知らせです',
+        url: 'https://jps.gg/game/survival/20231009/RenewGuid'
+      }
+    }/>
     <article className={styles.GameBody}>
       <header>
         <h1 className={styles.GameTitle}>サバイバルサーバ アップデートのお知らせ</h1>
@@ -93,6 +101,7 @@ const RenewGuid = () => {
 
       </main>
     </article>
+    </>
     )
 }
 

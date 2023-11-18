@@ -2,6 +2,14 @@ import React from 'react'
 import style from "../../css/read.module.css"
 const PlvPlc = () => {
     return (
+        <>
+        <UpdateOgp pageMeta={
+          {
+            title: 'プライバシーポリシー | JapanPvPServer',
+            description: 'JPSのプライバシーポリシーを掲載しています',
+            url: 'https://jps.gg/prvplc'
+          }
+        }/>
         <div className={style.ReadField}>
             <div className={style.ReadContentField}>
             <section className={style.Content}>
@@ -129,6 +137,7 @@ const PlvPlc = () => {
             </section>
             </div>
         </div>
+        </>
     )
 }
 
