@@ -33,19 +33,19 @@ function UpdateOgp({pageMeta}) {
         const descEle = document.querySelector('META[name="description"]');
         descEle.setAttribute('content', pageDescription);
         //
-        const ogpTitle = document.querySelector('META[name="og:title"]');
+        const ogpTitle = document.querySelector('META[property="og:title"]');
         ogpTitle.setAttribute('content', pageOgTitle);
         //
-        const ogpDesc = document.querySelector('META[name="og:description"]');
+        const ogpDesc = document.querySelector('META[property="og:description"]');
         ogpDesc.setAttribute('content', pageDescription);
         //
-        const ogpSiteName = document.querySelector('META[name="og:site_name"]');
+        const ogpSiteName = document.querySelector('META[property="og:site_name"]');
         ogpSiteName.setAttribute('content', pageOgSiteName);
         //
-        const ogpUrl = document.querySelector('META[name="og:url"]');
+        const ogpUrl = document.querySelector('META[property="og:url"]');
         ogpUrl.setAttribute('content', pageOgUrl);
         //
-        const ogpImage = document.querySelector('META[name="og:image"]');
+        const ogpImage = document.querySelector('META[property="og:image"]');
         ogpImage.setAttribute('content', pageOgImg);
     }, [pageTitle, pageDescription, pageOgTitle, pageOgSiteName, pageOgUrl, pageOgImg]);
 
