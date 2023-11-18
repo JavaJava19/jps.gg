@@ -52,7 +52,7 @@ const Games = () => {
     <>
     <UpdateOgp pageMeta={
       {
-        title: 'ミニゲーム一覧 | JapanPvPServer',
+        title: 'ミニゲーム一覧｜JapanPvPServer',
         description: 'JPSのミニゲーム一覧ページです。各ゲームの紹介に移動できます',
         url: 'https://jps.gg/game'
       }

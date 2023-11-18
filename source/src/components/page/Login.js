@@ -64,7 +64,7 @@ const Login = () => {
     <>
     <UpdateOgp pageMeta={
       {
-        title: 'ログイン | JapanPvPServer',
+        title: 'ログイン｜JapanPvPServer',
         description: 'ユーザ用ページのログインができます（将来的に）',
         url: 'https://jps.gg/login'
       }

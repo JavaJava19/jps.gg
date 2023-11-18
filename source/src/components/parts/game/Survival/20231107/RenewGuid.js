@@ -7,7 +7,7 @@ const RenewGuid20231107 = () => {
     <>
     <UpdateOgp pageMeta={
       {
-        title: '23/11/7 Minecraftサーバアップデート | JapanPvPServer',
+        title: '23/11/7 Minecraftサーバアップデート｜JapanPvPServer',
         description: '2023年11月7日のJPS-Minecraftサーバーアップデートの内容をお知らせします',
         url: 'https://jps.gg/game/survival/20231107/RenewGuid'
       }

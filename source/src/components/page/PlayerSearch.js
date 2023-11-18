@@ -32,7 +32,7 @@ const PlayerSearch = () => {
     <>
     <UpdateOgp pageMeta={
       {
-        title: 'JPSのプレイヤー検索ページ | JapanPvPServer',
+        title: 'JPSのプレイヤー検索ページ｜JapanPvPServer',
         description: 'JPSのMinecraftプレイヤーを検索するページです',
         url: 'https://jps.gg/player'
       }

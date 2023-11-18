@@ -15,7 +15,7 @@ const CTW_Rule = () => {
       <>
         <UpdateOgp pageMeta={
           {
-            title: 'Catch The Wool | JapanPvPServer',
+            title: 'Catch The Wool｜JapanPvPServer',
             description: 'JPSのミニゲーム"Catch The Wool"の紹介ページです',
             url: 'https://jps.gg/game/ctw/rule'
           }

@@ -11,7 +11,7 @@ const Read = () => {
         <>
         <UpdateOgp pageMeta={
           {
-            title: '利用規約 | JapanPvPServer',
+            title: '利用規約｜JapanPvPServer',
             description: 'JPSの利用規約を掲載しています',
             url: 'https://jps.gg/read'
           }

@@ -7,7 +7,7 @@ const PlvPlc = () => {
         <>
         <UpdateOgp pageMeta={
           {
-            title: 'プライバシーポリシー | JapanPvPServer',
+            title: 'プライバシーポリシー｜JapanPvPServer',
             description: 'JPSのプライバシーポリシーを掲載しています',
             url: 'https://jps.gg/prvplc'
           }
