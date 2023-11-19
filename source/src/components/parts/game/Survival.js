@@ -1,8 +1,17 @@
 import React from 'react'
 import styles from "../../../css/game.module.css"
+import UpdateOgp from "../../util/UpdateOgp"
 const Survival = () => {
 
     return (
+    <>
+    <UpdateOgp pageMeta={
+      {
+        title: 'サバイバルサーバ｜JapanPvPServer',
+        description: 'JPSの常設サバイバルサーバーの紹介です。ルールやコマンドを掲載しています',
+        url: 'https://jps.gg/game/survival'
+      }
+    }/>
     <article className={styles.GameBody}>
       <header>
         <h1 className={styles.GameTitle}>サバイバルサーバ</h1>
@@ -201,6 +210,7 @@ const Survival = () => {
         </section>{/* <!-- sv_s2_guid --> */}
       </main>
     </article>
+    </>
     )
 }
 

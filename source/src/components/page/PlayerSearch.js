@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import style from "../../css/player.module.css"
 import PlayerList from '../parts/search/PlayerList';
 import { usePlayerList } from '../util/Fetch';
+import UpdateOgp from "../util/UpdateOgp"
 
 const PlayerSearch = () => {
   const [mcid, setMcid] = useState("");
@@ -28,6 +29,14 @@ const PlayerSearch = () => {
 
 
   return (
+    <>
+    <UpdateOgp pageMeta={
+      {
+        title: 'JPSのプレイヤー検索ページ｜JapanPvPServer',
+        description: 'JPSのMinecraftプレイヤーを検索するページです',
+        url: 'https://jps.gg/player'
+      }
+    }/>
     <div className={style.PlayerSearchField}>
       <div className={style.PlayerSearchContainer}>
         <div className={style.PlayerSearchTitle}>
@@ -45,6 +54,7 @@ const PlayerSearch = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

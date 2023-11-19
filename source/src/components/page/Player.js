@@ -5,6 +5,8 @@ import { AiOutlineMessage, AiOutlineKey } from "react-icons/ai"
 import { CgProfile } from "react-icons/cg"
 import style from "../../css/player.module.css"
 import CtwStats from '../parts/player/CtwStats'
+import UpdateOgp from "../util/UpdateOgp"
+
 const Player = () => {
   const params = useParams();
   const data = usePlayerMatch(params.id);
@@ -26,6 +28,14 @@ const Player = () => {
   }
   if (data === undefined) return <div>Loading...</div>
   return (
+    <>
+    <UpdateOgp pageMeta={
+      {
+        title: data.name +'のプレイヤーページ｜JapanPvPServer',
+        description: 'JPSのMinecraftプレイヤー'+ data.name +'のプレイヤーページです',
+        url: 'https://jps.gg/player/'+ params.id
+      }
+    }/>
     <div className={style.PlayerField}>
       <div className={style.Profile}>
         <div className={style.Skin}>
@@ -69,6 +79,7 @@ const Player = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
