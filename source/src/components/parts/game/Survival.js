@@ -18,6 +18,16 @@ const Survival = () => {
         <p className={styles.PartsMemo}>Minecraftほぼバニラなサバイバルモードでの生活をするサーバです</p>
         <ul>
           <li><a href={"https://map.jps.gg/"}>サバイバルサーバのマップ</a></li>
+          <li><a href={"/game/survival/20231009/MayorGuid"}>町や国の運営者向けガイド</a></li>
+          <li><a hreF={"/game/survival/20231009/CitizenGuid"}>一般住民向けガイド</a></li>
+          <li>これまでの更新情報<ul>
+            <li><a href={"/game/survival/20231009/RenewGuid"}><time
+                 dateTime={"2023-10-09"}>23/10/09</time>更新情報</a>
+                 （運営サーバ・資源サーバの導入、町制度の調整など）</li>
+            <li><a href={"/game/survival/20231107/RenewGuid"}><time
+                 dateTime={"2023-11-07"}>23/11/07</time>更新情報</a>
+                 （経済システムの更新。コマンド<code>/jpsbank</code>の説明など）</li>
+            </ul></li>
         </ul>
       </header>
       <main className={styles.GameContainer}>
@@ -70,7 +80,8 @@ const Survival = () => {
               <tr><td><code>/js rp</code></td><td>初期スポーン地点にワープする</td><td>無料</td></tr>
               <tr><td><code>/js pvp</code></td><td>PvPモードのON/OFFを切り替える</td>
                 <td>ON/OFFが切り替わると全員に状態が通知される</td></tr>
-              <tr><td><code>/back</code></td><td>資源サーバから建築サーバへ戻る</td><td><ins><time dateTime="2023-10-13">10月13日</time>追加</ins></td></tr>
+              <tr><td><code>/back</code></td><td>資源サーバから建築サーバへ戻る</td>
+                <td><ins><time dateTime="2023-10-13">10月13日</time>追加</ins></td></tr>
             </tbody>
           </table>
         </section>
@@ -114,7 +125,8 @@ const Survival = () => {
               <tr><td>前述の t を n に置き換える</td><td>町と同じ操作を国に対して実行できる</td><td></td></tr>
               <tr><td><code>/n ally add <i>他国名称</i></code></td><td>他国と同盟関係になる</td><td></td></tr>
               <tr><td><code>/n enemy add <i>他国名称</i></code></td><td>他国と敵対関係になる</td><td></td></tr>
-              <tr><td><code>/plot set <i>区分</i></code></td><td>区画用途を定義する</td><td>闘技場(arena),農地(farm),商店街(shop)など</td></tr>
+              <tr><td><code>/plot set <i>区分</i></code></td><td>区画用途を定義する</td>
+                <td>闘技場(arena),農地(farm),商店街(shop)など</td></tr>
               </tbody>
             </table>
           </section>
