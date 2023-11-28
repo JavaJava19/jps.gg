@@ -4,12 +4,22 @@ import style from "../../../../css/rule.module.css"
 import RankingParts from '../RankingParts';
 import { useCtwWinRank, usePlayerList } from '../../../util/Fetch';
 import YouTube from 'react-youtube';
+import UpdateOgp from "../../../util/UpdateOgp"
+
 const CTW_Rule = () => {
 
   const rankData = useCtwWinRank();
   const playerData = usePlayerList();
   if (rankData !== undefined && playerData !== undefined)
     return (
+      <>
+        <UpdateOgp pageMeta={
+          {
+            title: 'Catch The Wool｜JapanPvPServer',
+            description: 'JPSのミニゲーム"Catch The Wool"の紹介ページです',
+            url: 'https://jps.gg/game/ctw/rule'
+          }
+        }/>
       <div className={style.RuleField}>
         <div className={style.RuleContent}>
           <div className={style.RuleTitle}>
@@ -54,6 +64,7 @@ const CTW_Rule = () => {
 
         </div>
       </div>
+      </>
     )
 }
 

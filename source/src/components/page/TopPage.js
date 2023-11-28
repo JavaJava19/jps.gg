@@ -12,7 +12,7 @@ const TopPage = () => {
     <>
       <UpdateOgp pageMeta={
         {
-          title: 'Top | JapanPvPServer',
+          title: 'Top｜JapanPvPServer',
           description: 'Welcome to JPS! DiscordとMinecraftのコミュニティサーバーへようこそ',
           url: 'https://jps.gg/'
         }

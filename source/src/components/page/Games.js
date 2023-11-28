@@ -4,6 +4,7 @@ import {
   useTransition,
 } from '@react-spring/web'
 import GameParts from '../parts/game/GameParts'
+import UpdateOgp from "../util/UpdateOgp"
 
 const Games = () => {
 // --- ゲーム追加時はここに追加 ---
@@ -48,7 +49,14 @@ const Games = () => {
   })
 
   return (
-
+    <>
+    <UpdateOgp pageMeta={
+      {
+        title: 'ミニゲーム一覧｜JapanPvPServer',
+        description: 'JPSのミニゲーム一覧ページです。各ゲームの紹介に移動できます',
+        url: 'https://jps.gg/game'
+      }
+    }/>
     <main className={styles.GameBody}>
       <section className={styles.GameField}>
         <h1 className={styles.GameTitle}>
@@ -75,6 +83,7 @@ const Games = () => {
           <a href="/game/survival">サバイバルの詳細</a>をご覧ください</p>
       </section>
     </main>
+    </>
   )
 }
 

@@ -1,12 +1,21 @@
 import React from 'react'
 import style from "../../css/read.module.css"
 import { Link } from 'react-router-dom'
+import UpdateOgp from "../util/UpdateOgp"
 
 const Read = () => {
 
     //const navigate = useNavigate();
 
     return (
+        <>
+        <UpdateOgp pageMeta={
+          {
+            title: '利用規約｜JapanPvPServer',
+            description: 'JPSの利用規約を掲載しています',
+            url: 'https://jps.gg/read'
+          }
+        }/>
         <div className={style.ReadField}>
             <article className={style.ReadContentField}>
             <section className={style.Content}>
@@ -211,6 +220,7 @@ const Read = () => {
             </section>
             </article>
         </div>
+        </>
     )
 }
 
