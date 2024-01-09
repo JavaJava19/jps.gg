@@ -1,6 +1,7 @@
 import React from 'react'
 import style from "../../../css/toppage.module.css";
 import ForumInfo from './ForumInfo';
+import CalendarImg from "../../../images/calendar/now.png";
 
 const TopForum = () => {
     const json = [
@@ -21,10 +22,12 @@ const TopForum = () => {
     ]
     return (
         <div className={style.TopForum}>
+            <img src={CalendarImg} alt={'今月のイベントカレンダー'} height={800} className={style.topEventCalendar}/>
+
             <div className={style.ForumInfo}>
 
             </div>
-            {json.map(data=> (
+            {json.map(data => (
                 <ForumInfo data={data} key={data.title}/>
             ))}
         </div>

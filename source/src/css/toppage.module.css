@@ -92,6 +92,11 @@
     left: 55.5%;
 }
 
+.topEventCalendar{
+    display: block;
+    margin: auto;
+}
+
 .TopForumField{
     width: 100%;
     height: auto;
