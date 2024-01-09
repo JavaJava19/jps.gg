@@ -5,6 +5,7 @@ import WelcomePops from '../parts/top/WelcomePops';
 import TopForum from '../parts/top/TopForum';
 import AboutUs from '../parts/top/AboutUs';
 import UpdateOgp from '../util/UpdateOgp';
+import CalendarImg from '../../images/calendar/now.png';
 
 const TopPage = () => {
 
@@ -22,6 +23,7 @@ const TopPage = () => {
           <Slider props={<WelcomePops/>}/>
         </div>
         <div className={style.TopForumField}>
+          <img src={CalendarImg} alt={'今月のイベントカレンダー'}
           <TopForum />
         </div>
         <div className={style.AboutUsField}>
