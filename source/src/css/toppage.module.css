@@ -95,6 +95,8 @@
 .topEventCalendar{
     display: block;
     margin: auto;
+    max-width: 70%;
+    max-height: 100%;
 }
 
 .TopForumField{
