@@ -22,7 +22,7 @@ const TopForum = () => {
     ]
     return (
         <div className={style.TopForum}>
-            <img src={CalendarImg} alt={'今月のイベントカレンダー'} height={800} className={style.topEventCalendar}/>
+            <img src={CalendarImg} alt={'今月のイベントカレンダー'} className={style.topEventCalendar}/>
 
             <div className={style.ForumInfo}>
 
