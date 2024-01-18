@@ -4,6 +4,7 @@ ErrorDocument 404 /index.html
 RewriteEngine on
 #RewriteRule ^(?!index\.html$).*\.html /index.html [L,R=302]
 RewriteRule calendar/now$ https://raw.githubusercontent.com/JavaJava19/jps.gg/release/source/src/images/calendar/now.png [L,R=302]
+RewriteRule ^(.well-known/pki-validation/dfded740b1edada30cdc11bcf6d47d04.txt)$ https://jps.gg/$1
 
 <Files ~ "^\.json$">
 Header set Pragma no-cache
